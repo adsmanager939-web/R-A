@@ -106,13 +106,13 @@ export default function CollaborationSection() {
             {[...logoPartners, ...logoPartners].map((partner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 mx-8 flex items-center justify-center"
+                className="flex-shrink-0 mx-8 flex items-center justify-center w-40 h-20"
                 data-testid={`partner-logo-${index}`}
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-16 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                  className="max-h-16 max-w-full w-auto h-auto object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                 />
               </div>
             ))}
