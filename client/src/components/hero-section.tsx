@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-sm font-semibold mb-4 text-white/80">Professional Fraud Investigation & Asset Recovery</div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            TRUSTED BY MORE THAN 200,000 CLIENTS
+            TRUSTED BY MORE THAN 200,000 CANADIANS
           </h1>
           <p className="text-lg md:text-xl mb-10 text-white/90 leading-relaxed max-w-3xl mx-auto">
             Leverage AI-driven insights to investigate financial crime and fraud, illuminate blockchain transactions, and resolve crypto cases with speed and confidence. Our veteran investigators use advanced forensics tools to track fund flows across banking systems and multiple blockchains, delivering actionable intelligence for asset recovery and criminal prosecution.

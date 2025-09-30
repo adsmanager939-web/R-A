@@ -36,8 +36,8 @@ export default function Header() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2" data-testid="trust-clients">
                 <Users className="w-4 h-4 text-[#d4af37]" />
-                <span className="hidden sm:inline">200,000+ Clients Served</span>
-                <span className="sm:hidden">200K+ Clients</span>
+                <span className="hidden sm:inline">200,000+ Canadians Served</span>
+                <span className="sm:hidden">200K+ Canadians</span>
               </div>
               <div className="flex items-center gap-2" data-testid="trust-rating">
                 <Award className="w-4 h-4 text-[#d4af37]" />
@@ -68,7 +68,7 @@ export default function Header() {
             <div className="flex items-center gap-8">
               <Logo variant="white" />
               <div className="hidden lg:block text-[10px] text-white/70 font-semibold uppercase tracking-widest border-l border-white/20 pl-8" style={{ letterSpacing: '0.15em' }}>
-                Trusted by more than 200,000 clients
+                Trusted by more than 200,000 canadians
               </div>
             </div>
             
