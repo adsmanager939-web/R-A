@@ -1,27 +1,30 @@
-import { Users, Award, Globe, Briefcase } from "lucide-react";
+import { useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight, User } from "lucide-react";
 
 export default function TeamSection() {
-  const teamStats = [
-    {
-      icon: Users,
-      value: "1,300+",
-      label: "Expert Professionals"
-    },
-    {
-      icon: Award,
-      value: "50+",
-      label: "Years Combined Experience"
-    },
-    {
-      icon: Globe,
-      value: "75+",
-      label: "Countries Represented"
-    },
-    {
-      icon: Briefcase,
-      value: "24/7",
-      label: "Global Support"
-    }
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: "start",
+    slidesToScroll: 1
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  // Placeholder team members - images will be added later
+  const teamMembers = [
+    { id: 1, name: "Team Member 1", position: "Position Title" },
+    { id: 2, name: "Team Member 2", position: "Position Title" },
+    { id: 3, name: "Team Member 3", position: "Position Title" },
+    { id: 4, name: "Team Member 4", position: "Position Title" },
+    { id: 5, name: "Team Member 5", position: "Position Title" },
+    { id: 6, name: "Team Member 6", position: "Position Title" },
   ];
 
   return (
@@ -34,38 +37,56 @@ export default function TeamSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {teamStats.map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
-              data-testid={`team-stat-${index}`}
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-[#d4af37]" />
-              </div>
-              <div className="text-3xl font-bold text-[#1a3a52] mb-2">{stat.value}</div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-white rounded-xl p-8 shadow-lg">
-          <h3 className="text-2xl font-bold text-[#1a3a52] mb-6">Specialized Expertise</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-              <h4 className="font-bold text-[#1a3a52] mb-2">Fraud Investigators</h4>
-              <p className="text-gray-600">Former law enforcement officers and certified fraud examiners with decades of experience</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-[#1a3a52] mb-2">Legal Counsel</h4>
-              <p className="text-gray-600">Specialized attorneys in financial crime, asset recovery, and international law</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-[#1a3a52] mb-2">Technology Experts</h4>
-              <p className="text-gray-600">Blockchain analysts and cybersecurity specialists using cutting-edge forensic tools</p>
+        <div className="relative">
+          {/* Carousel */}
+          <div className="overflow-hidden" ref={emblaRef} data-testid="team-carousel">
+            <div className="flex gap-8">
+              {teamMembers.map((member) => (
+                <div 
+                  key={member.id}
+                  className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
+                  data-testid={`team-member-${member.id}`}
+                >
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                    {/* Placeholder for team member image */}
+                    <div className="aspect-[3/4] bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] flex items-center justify-center">
+                      <User className="w-24 h-24 text-[#d4af37]/30" />
+                    </div>
+                    
+                    {/* Team member info */}
+                    <div className="p-6 text-center">
+                      <h3 className="text-xl font-bold text-[#1a3a52] mb-2">{member.name}</h3>
+                      <p className="text-gray-600">{member.position}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={scrollPrev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10"
+            aria-label="Previous team member"
+            data-testid="carousel-prev"
+          >
+            <ChevronLeft className="w-6 h-6 text-[#1a3a52]" />
+          </button>
+          
+          <button
+            onClick={scrollNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10"
+            aria-label="Next team member"
+            data-testid="carousel-next"
+          >
+            <ChevronRight className="w-6 h-6 text-[#1a3a52]" />
+          </button>
+        </div>
+
+        {/* Instructions for scrolling */}
+        <div className="text-center mt-8 text-gray-500 text-sm">
+          Use the arrow buttons or swipe to view more team members
         </div>
       </div>
     </section>
