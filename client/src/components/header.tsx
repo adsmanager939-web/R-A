@@ -34,8 +34,19 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center text-xs md:text-sm">
             <div className="flex items-center gap-6">
-              <div className="font-semibold text-white/90 tracking-wide" data-testid="trust-tagline">
-                TRUSTED BY MORE THAN 200,000 CLIENTS
+              <div className="flex items-center gap-2" data-testid="trust-clients">
+                <Users className="w-4 h-4 text-[#d4af37]" />
+                <span className="hidden sm:inline">200,000+ Clients Served</span>
+                <span className="sm:hidden">200K+ Clients</span>
+              </div>
+              <div className="flex items-center gap-2" data-testid="trust-rating">
+                <Award className="w-4 h-4 text-[#d4af37]" />
+                <span>4.9/5 Rating</span>
+              </div>
+              <div className="flex items-center gap-2" data-testid="trust-success">
+                <TrendingUp className="w-4 h-4 text-[#d4af37]" />
+                <span className="hidden md:inline">86% Success Rate</span>
+                <span className="md:hidden">86% Success</span>
               </div>
             </div>
             <a 
@@ -54,7 +65,12 @@ export default function Header() {
       <div className="bg-gradient-to-r from-[#0a1929] via-[#1a3a52] to-[#0a1929] backdrop-blur-lg shadow-2xl border-b border-[#d4af37]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Logo variant="white" />
+            <div className="flex items-center gap-8">
+              <Logo variant="white" />
+              <div className="hidden lg:block text-[10px] text-white/70 font-semibold uppercase tracking-widest border-l border-white/20 pl-8" style={{ letterSpacing: '0.15em' }}>
+                Trusted by more than 200,000 clients
+              </div>
+            </div>
             
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
