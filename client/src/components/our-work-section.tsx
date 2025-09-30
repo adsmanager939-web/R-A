@@ -2,7 +2,7 @@ import { DollarSign, Users, Award, TrendingUp } from "lucide-react";
 
 export default function OurWorkSection() {
   const stats = [
-    { icon: DollarSign, value: "$2.4B+", label: "Funds Recovered" },
+    { icon: DollarSign, value: "$890M", label: "Funds Recovered" },
     { icon: Users, value: "200,000+", label: "Clients Served" },
     { icon: Award, value: "92%", label: "Success Rate" },
     { icon: TrendingUp, value: "1,300+", label: "Expert Team" }
