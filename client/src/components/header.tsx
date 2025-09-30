@@ -45,8 +45,8 @@ export default function Header() {
               </div>
               <div className="flex items-center gap-2" data-testid="trust-success">
                 <TrendingUp className="w-4 h-4 text-[#d4af37]" />
-                <span className="hidden md:inline">86% Success Rate</span>
-                <span className="md:hidden">86% Success</span>
+                <span className="hidden md:inline">92% Success Rate</span>
+                <span className="md:hidden">92% Success</span>
               </div>
             </div>
             <a 

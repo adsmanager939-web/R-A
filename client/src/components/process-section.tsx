@@ -22,7 +22,7 @@ export default function ProcessSection() {
     {
       number: 3,
       title: "Recover the Funds",
-      description: "Conducting a thorough preliminary assessment, we carefully evaluate each case's recovery potential, leveraging our 86% success rate to guide our approach. We prioritize secure, legally compliant transactions to ensure a safe recovery process."
+      description: "Conducting a thorough preliminary assessment, we carefully evaluate each case's recovery potential, leveraging our 92% success rate to guide our approach. We prioritize secure, legally compliant transactions to ensure a safe recovery process."
     }
   ];
 
@@ -32,7 +32,7 @@ export default function ProcessSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How We Help You Recover Your Funds</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our proven 3-step process has helped over 200,000 clients recover their lost funds with an 86% success rate.
+            Our proven 3-step process has helped over 200,000 clients recover their lost funds with a 92% success rate.
           </p>
         </div>
         

@@ -47,7 +47,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Proven Track Record</h3>
-                <p className="text-muted-foreground">Our relentless pursuit of justice has led to the closure of numerous fraud operations, arrest of key perpetrators, and substantial financial recoveries with an 86% success rate.</p>
+                <p className="text-muted-foreground">Our relentless pursuit of justice has led to the closure of numerous fraud operations, arrest of key perpetrators, and substantial financial recoveries with a 92% success rate.</p>
               </div>
             </div>
           </div>

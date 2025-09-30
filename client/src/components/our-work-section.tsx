@@ -4,7 +4,7 @@ export default function OurWorkSection() {
   const stats = [
     { icon: DollarSign, value: "$2.4B+", label: "Funds Recovered" },
     { icon: Users, value: "200,000+", label: "Clients Served" },
-    { icon: Award, value: "86%", label: "Success Rate" },
+    { icon: Award, value: "92%", label: "Success Rate" },
     { icon: TrendingUp, value: "1,300+", label: "Expert Team" }
   ];
 
