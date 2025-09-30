@@ -34,19 +34,8 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center text-xs md:text-sm">
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2" data-testid="trust-clients">
-                <Users className="w-4 h-4 text-[#d4af37]" />
-                <span className="hidden sm:inline">200,000+ Clients Served</span>
-                <span className="sm:hidden">200K+ Clients</span>
-              </div>
-              <div className="flex items-center gap-2" data-testid="trust-rating">
-                <Award className="w-4 h-4 text-[#d4af37]" />
-                <span>4.9/5 Rating</span>
-              </div>
-              <div className="flex items-center gap-2" data-testid="trust-success">
-                <TrendingUp className="w-4 h-4 text-[#d4af37]" />
-                <span className="hidden md:inline">86% Success Rate</span>
-                <span className="md:hidden">86% Success</span>
+              <div className="font-semibold text-white/90 tracking-wide" data-testid="trust-tagline">
+                TRUSTED BY MORE THAN 200,000 CLIENTS
               </div>
             </div>
             <a 
