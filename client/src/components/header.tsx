@@ -17,10 +17,14 @@ export default function Header() {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About Us" },
-    { id: "how-it-works", label: "How It Works" },
-    { id: "success-stories", label: "Success Stories" },
-    { id: "contact", label: "Contact" },
+    { id: "investigations", label: "Investigations" },
+    { id: "collaboration", label: "Collaboration" },
+    { id: "our-work", label: "Our Work" },
+    { id: "testimonials", label: "Testimonials" },
+    { id: "about", label: "About us" },
+    { id: "team", label: "Team" },
+    { id: "locations", label: "Locations" },
+    { id: "help", label: "Help" },
   ];
 
   return (
