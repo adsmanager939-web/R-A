@@ -66,7 +66,7 @@ export default function CollaborationSection() {
           </p>
         </div>
 
-        <div className="mb-16">
+        <div className="mb-16 max-w-4xl mx-auto">
           <img 
             src={collaborationImage} 
             alt="International collaboration and partnership" 
