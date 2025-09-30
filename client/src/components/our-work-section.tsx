@@ -11,19 +11,19 @@ export default function OurWorkSection() {
   const caseStudies = [
     {
       title: "International Crypto Fraud Recovery",
-      amount: "$4.2M",
+      amount: "$200M",
       type: "Cryptocurrency Scam",
       description: "Successfully recovered funds from a sophisticated crypto investment scheme affecting 150+ victims across 12 countries."
     },
     {
       title: "Romance Scam Investigation",
-      amount: "$850K",
+      amount: "$16M",
       type: "Romance Fraud",
       description: "Tracked perpetrators across multiple jurisdictions and recovered funds for victims of an organized romance scam network."
     },
     {
       title: "Investment Fraud Case",
-      amount: "$1.8M",
+      amount: "$365M",
       type: "Ponzi Scheme",
       description: "Dismantled a fake investment platform and secured asset recovery for 200+ affected investors."
     }
