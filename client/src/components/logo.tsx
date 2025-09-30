@@ -34,7 +34,7 @@ export default function Logo({ className = "", variant = "default" }: LogoProps)
         <div className={`text-[10px] uppercase tracking-widest font-semibold ${
           isWhite ? "text-white/70" : "text-[#1a3a52]/60"
         }`} style={{ letterSpacing: '0.15em' }}>
-          Fraud Recovery Experts
+          & Associates
         </div>
       </div>
     </div>
