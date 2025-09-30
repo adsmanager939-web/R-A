@@ -29,18 +29,23 @@ export default function InvestigationsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="space-y-8 max-w-5xl mx-auto">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 text-center"
+              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex items-start gap-6"
               data-testid={`investigation-step-${index}`}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-full flex items-center justify-center flex-shrink-0">
                 <step.icon className="w-10 h-10 text-[#d4af37]" />
               </div>
-              <h3 className="text-xl font-bold text-[#1a3a52] mb-4">{step.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-left">{step.description}</p>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl font-bold text-[#d4af37]">{index + 1}.</span>
+                  <h3 className="text-xl font-bold text-[#1a3a52]">{step.title}</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              </div>
             </div>
           ))}
         </div>
