@@ -9,8 +9,10 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="bg-[#1a3a52] text-white py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-95"></div>
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="text-sm font-semibold mb-4 text-white/80">TRUSTED BY MORE THAN 200,000 CLIENTS</div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -40,17 +42,17 @@ export default function HeroSection() {
             </Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl">
               <div className="text-4xl font-bold mb-2" data-testid="stat-recovered">4.9 / 5</div>
-              <div className="text-white/90 font-medium">Client Rating</div>
+              <div className="text-white font-medium">Client Rating</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl">
               <div className="text-4xl font-bold mb-2" data-testid="stat-cases">86%</div>
-              <div className="text-white/90 font-medium">Success Rate</div>
+              <div className="text-white font-medium">Success Rate</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl">
               <div className="text-4xl font-bold mb-2" data-testid="stat-support">1,300+</div>
-              <div className="text-white/90 font-medium">Expert Team</div>
+              <div className="text-white font-medium">Expert Team</div>
             </div>
           </div>
         </div>
