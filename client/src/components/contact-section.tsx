@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const [formKey, setFormKey] = useState(0);
   
   const form = useForm<InsertContactSubmission>({
     resolver: zodResolver(insertContactSubmissionSchema),
@@ -39,6 +40,7 @@ export default function ContactSection() {
         description: "A fraud specialist will contact you within 2 hours.",
       });
       form.reset();
+      setFormKey(prev => prev + 1);
     },
     onError: (error: any) => {
       toast({
@@ -176,7 +178,7 @@ export default function ContactSection() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel>Type of Scam *</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <Select key={formKey} onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger data-testid="select-scam-type">
                               <SelectValue placeholder="Select scam type" />
