@@ -58,17 +58,17 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <div className="bg-white/98 backdrop-blur-lg shadow-lg border-b border-gray-100">
+      <div className="bg-gradient-to-r from-[#0a1929] via-[#1a3a52] to-[#0a1929] backdrop-blur-lg shadow-2xl border-b border-[#d4af37]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Logo />
+            <Logo variant="white" />
             
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="relative px-4 py-2 text-[#1a3a52] font-semibold text-sm uppercase tracking-wide hover:text-[#d4af37] transition-all group"
+                  className="relative px-4 py-2 text-white/90 font-semibold text-sm uppercase tracking-wide hover:text-[#d4af37] transition-all group"
                   data-testid={`nav-${item.id}`}
                   style={{ letterSpacing: '0.05em' }}
                 >
@@ -89,7 +89,7 @@ export default function Header() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="lg:hidden" data-testid="button-mobile-menu">
-                  <MenuIcon className="h-6 w-6 text-[#1a3a52]" />
+                  <MenuIcon className="h-6 w-6 text-white" />
                 </Button>
               </SheetTrigger>
               <SheetContent className="bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] text-white border-l border-[#d4af37]/20">
