@@ -25,13 +25,13 @@ export default function Logo({ className = "", variant = "default" }: LogoProps)
         </div>
       </div>
       
-      <div className="flex flex-col">
+      <div className="flex flex-col -mt-1">
         <div className={`text-2xl font-bold tracking-tight ${
           isWhite ? "text-white" : "text-[#1a3a52]"
         }`} style={{ fontFamily: 'Georgia, serif' }}>
           TrueClaim
         </div>
-        <div className={`text-[10px] uppercase tracking-widest font-semibold ${
+        <div className={`text-[10px] uppercase tracking-widest font-semibold -mt-1 ${
           isWhite ? "text-white/70" : "text-[#1a3a52]/60"
         }`} style={{ letterSpacing: '0.15em' }}>
           & Associates
