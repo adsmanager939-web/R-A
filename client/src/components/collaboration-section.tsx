@@ -1,5 +1,18 @@
 import { Building2, Globe, Users, FileCheck } from "lucide-react";
-import ciaLogo from "@assets/Govt-logos - Copy (2)_1759259216713.png";
+import ciaLogo from "@assets/Govt-logos - Copy (2)_1759259283932.png";
+import hsbc from "@assets/1280px-HSBC_logo_(2018).svg_1759259266986.png";
+import wealthsimple from "@assets/Capture 12_1759259271299.png";
+import crypto from "@assets/crypto-com-vector-logo_1759259274018.png";
+import fcac from "@assets/download (1)2_1759259276530.png";
+import scotiabank from "@assets/download_1759259278402.png";
+import cibc from "@assets/download1_1759259280258.png";
+import fintrac from "@assets/download3_1759259282166.png";
+import dhs from "@assets/Govt-logos - Copy (3)_1759259285578.png";
+import dia from "@assets/Govt-logos - Copy (4)_1759259286964.png";
+import canadaGov from "@assets/images5_1759259288482.png";
+import kraken from "@assets/kraken-vector-logo_1759259289917.png";
+import rbc from "@assets/Royal-Bank-of-Canada-Logo_1759259293197.png";
+import td from "@assets/TD-Toronto-Dominion-Bank-Logo-2009-present_1759259295411.jpg";
 
 export default function CollaborationSection() {
   const partners = [
@@ -27,11 +40,19 @@ export default function CollaborationSection() {
 
   const logoPartners = [
     { name: "Central Intelligence Agency", logo: ciaLogo },
-    { name: "Central Intelligence Agency", logo: ciaLogo },
-    { name: "Central Intelligence Agency", logo: ciaLogo },
-    { name: "Central Intelligence Agency", logo: ciaLogo },
-    { name: "Central Intelligence Agency", logo: ciaLogo },
-    { name: "Central Intelligence Agency", logo: ciaLogo },
+    { name: "HSBC", logo: hsbc },
+    { name: "Wealthsimple", logo: wealthsimple },
+    { name: "Crypto.com", logo: crypto },
+    { name: "Financial Consumer Agency of Canada", logo: fcac },
+    { name: "Scotiabank", logo: scotiabank },
+    { name: "CIBC", logo: cibc },
+    { name: "FINTRAC", logo: fintrac },
+    { name: "Department of Homeland Security", logo: dhs },
+    { name: "Defense Intelligence Agency", logo: dia },
+    { name: "Government of Canada", logo: canadaGov },
+    { name: "Kraken", logo: kraken },
+    { name: "Royal Bank of Canada", logo: rbc },
+    { name: "TD Bank", logo: td },
   ];
 
   return (
