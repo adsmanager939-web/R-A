@@ -67,9 +67,6 @@ export default function Header() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-8">
               <Logo variant="white" />
-              <div className="hidden lg:block text-[10px] text-white/70 font-semibold uppercase tracking-widest border-l border-white/20 pl-8" style={{ letterSpacing: '0.15em' }}>
-                Trusted by more than 200,000 canadians
-              </div>
             </div>
             
             <nav className="hidden lg:flex items-center gap-1">
