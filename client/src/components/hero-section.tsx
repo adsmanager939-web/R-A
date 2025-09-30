@@ -9,7 +9,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="bg-primary text-white py-24 md:py-32">
+    <section id="home" className="bg-[#1a3a52] text-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
