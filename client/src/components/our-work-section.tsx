@@ -83,29 +83,33 @@ export default function OurWorkSection() {
           ))}
         </div>
 
-        <div className="mb-16 max-w-5xl mx-auto">
-          <img 
-            src={arrestImage} 
-            alt="Fraudsters arrested by authorities" 
-            className="w-full h-auto rounded-xl shadow-2xl"
-            data-testid="img-arrests"
-          />
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <img 
+              src={arrestImage} 
+              alt="Fraudsters arrested by authorities" 
+              className="w-full h-auto rounded-xl shadow-2xl"
+              data-testid="img-arrests"
+            />
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {impactStats.map((stat, index) => (
-            <div 
-              key={index}
-              className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
-              data-testid={`impact-stat-${index}`}
-            >
-              <div className="w-20 h-20 bg-[#d4af37]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-10 h-10 text-[#d4af37]" />
+          <div className="space-y-6">
+            {impactStats.map((stat, index) => (
+              <div 
+                key={index}
+                className="flex items-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                data-testid={`impact-stat-${index}`}
+              >
+                <div className="w-16 h-16 bg-[#d4af37]/20 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                  <stat.icon className="w-8 h-8 text-[#d4af37]" />
+                </div>
+                <div>
+                  <div className="text-3xl font-bold mb-1">{stat.value}</div>
+                  <div className="text-white/80">{stat.label}</div>
+                </div>
               </div>
-              <div className="text-4xl font-bold mb-2">{stat.value}</div>
-              <div className="text-white/80">{stat.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
