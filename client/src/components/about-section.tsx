@@ -5,9 +5,9 @@ export default function AboutSection() {
     <section id="about" className="py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About TrueClaim</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">A Team of Seasoned Professionals</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We are a specialized team of fraud investigators and legal professionals dedicated to helping scam victims recover their lost funds.
+            Our team includes over 1,300 skilled lawyers and fraud investigators, each bringing specialized expertise to every case. With deep industry knowledge and advanced investigative tools, we handle even the most complex fraud cases with precision and dedication.
           </p>
         </div>
         
@@ -26,8 +26,8 @@ export default function AboutSection() {
                 <ShieldIcon className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Licensed Investigators</h3>
-                <p className="text-muted-foreground">Our team includes licensed private investigators with decades of experience in financial fraud cases.</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Global Reach</h3>
+                <p className="text-muted-foreground">Our globally distributed and multilingual team provides round-the-clock support across multiple continents, allowing for swift and effective responses no matter where an incident occurs.</p>
               </div>
             </div>
             
@@ -36,8 +36,8 @@ export default function AboutSection() {
                 <ScaleIcon className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Legal Experts</h3>
-                <p className="text-muted-foreground">Qualified attorneys specializing in fraud recovery and financial crimes prosecution.</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Blockchain Forensics</h3>
+                <p className="text-muted-foreground">Our veteran team brings together professionals with law enforcement, military, and crypto industry backgrounds, utilizing advanced tools like Chainalysis and proprietary AI technology.</p>
               </div>
             </div>
             
@@ -46,8 +46,8 @@ export default function AboutSection() {
                 <UsersIcon className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Victim Advocates</h3>
-                <p className="text-muted-foreground">Compassionate support team dedicated to guiding victims through the recovery process.</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Proven Track Record</h3>
+                <p className="text-muted-foreground">Our relentless pursuit of justice has led to the closure of numerous fraud operations, arrest of key perpetrators, and substantial financial recoveries with an 86% success rate.</p>
               </div>
             </div>
           </div>

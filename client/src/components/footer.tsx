@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Logo variant="white" className="mb-6" />
             <p className="text-blue-100 mb-6 max-w-md">
-              Professional fraud investigators and legal experts dedicated to helping scam victims recover their lost funds with compassion and expertise.
+              Leverage AI-driven insights to investigate financial crime and fraud. Our team of over 1,300 skilled lawyers and fraud investigators has helped over 200,000 clients with an 86% success rate.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -97,8 +97,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-blue-200">
-              <li data-testid="footer-phone">1-800-TRUECLAIM</li>
-              <li data-testid="footer-email">help@trueclaim.com</li>
+              <li data-testid="footer-phone">+1 (226) 479-6091</li>
+              <li data-testid="footer-email">contact@trueclaim.com</li>
               <li>Available 24/7</li>
               <li>Emergency Hotline</li>
             </ul>

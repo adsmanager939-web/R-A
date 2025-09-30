@@ -11,27 +11,27 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      amount: "$85,000 Recovered",
-      quote: "I lost $85,000 to a crypto investment scam. TrueClaim's team worked tirelessly for 8 months and recovered 100% of my funds. I can't thank them enough.",
-      initials: "S.M.",
-      name: "Sarah M.",
-      type: "Crypto Scam Victim"
+      amount: "Six Figures Recovered",
+      quote: "Henry was so helpful with getting all my money back that I lost through crypto. He was so helpful and informative the whole way through the process. I will always recommend him to anyone who needs help recovering funds. I personally lost six figures, which he got back for me within two weeks. UNBELIEVABLE SERVICE.",
+      initials: "M.S.",
+      name: "Marie S.",
+      type: "Quebec"
     },
     {
       id: 2,
-      amount: "$42,500 Recovered",
-      quote: "After falling victim to a romance scam, I thought my money was gone forever. TrueClaim proved me wrong and got most of it back through legal channels.",
-      initials: "J.R.",
-      name: "James R.",
-      type: "Romance Scam Victim"
+      amount: "Highly Recommended",
+      quote: "The team at TrueClaim has been really amazing. Jack has been absolutely great with how he has handled my case so far with the banks. They have recovered some of my funds and are working on recovering the rest for me now. I really wasn't expecting anything back at all, so I'm very grateful for this. The whole team pays a lot of attention to detail and replies quickly to my queries.",
+      initials: "B.L.",
+      name: "Ben L.",
+      type: "Ontario"
     },
     {
       id: 3,
-      amount: "$120,000 Recovered",
-      quote: "Professional, knowledgeable, and compassionate. They recovered my retirement savings from an investment fraud and guided me through every step.",
-      initials: "M.T.",
-      name: "Maria T.",
-      type: "Investment Scam Victim"
+      amount: "Outstanding Results",
+      quote: "Anthony and his team have done an outstanding job and should be commended for their determination, professionalism, and patience in resolving my case successfully. From the very beginning, they kept me informed and worked tirelessly to ensure that my funds were recovered. Their dedication and thorough approach made all the difference.",
+      initials: "J.W.",
+      name: "Jan W.",
+      type: "Nova Scotia"
     }
   ];
 

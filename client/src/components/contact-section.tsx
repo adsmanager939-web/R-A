@@ -75,7 +75,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">24/7 Helpline</h4>
-                  <p className="text-muted-foreground" data-testid="phone-number">1-800-TRUECLAIM</p>
+                  <p className="text-muted-foreground" data-testid="phone-number">+1 (226) 479-6091</p>
                   <p className="text-sm text-muted-foreground">Available 24 hours for urgent cases</p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email Support</h4>
-                  <p className="text-muted-foreground" data-testid="email-address">help@trueclaim.com</p>
+                  <p className="text-muted-foreground" data-testid="email-address">contact@trueclaim.com</p>
                   <p className="text-sm text-muted-foreground">Secure encrypted communications</p>
                 </div>
               </div>
