@@ -24,9 +24,8 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               size="lg"
-              variant="secondary"
               onClick={() => scrollToSection("contact")}
-              className="bg-white text-primary hover:bg-gray-100 px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] hover:from-[#b8941f] hover:to-[#d4af37] text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               data-testid="button-book-consultation"
             >
               Book a Free Consultation
@@ -34,8 +33,8 @@ export default function HeroSection() {
             <Button 
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection("how-it-works")}
-              className="border-2 border-white/80 text-white hover:bg-white hover:text-primary px-8 py-6 text-lg font-semibold transition-all"
+              onClick={() => scrollToSection("investigations")}
+              className="border-2 border-white text-white hover:bg-white hover:text-[#1a3a52] px-8 py-6 text-lg font-semibold transition-all"
               data-testid="button-learn-how-works"
             >
               Learn How It Works
