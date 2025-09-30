@@ -1,7 +1,14 @@
-import { ShieldIcon, ScaleIcon, UsersIcon } from "lucide-react";
+import { Check } from "lucide-react";
 import teamImage from "@assets/image_1759269073608.png";
 
 export default function AboutSection() {
+  const features = [
+    "Professional team",
+    "Cost-effective solutions",
+    "Record time results",
+    "100% Transparency"
+  ];
+
   return (
     <section id="about" className="py-20 bg-muted">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,36 +28,19 @@ export default function AboutSection() {
               data-testid="img-team"
             />
           </div>
-          <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="bg-primary text-primary-foreground p-3 rounded-lg">
-                <ShieldIcon className="w-6 h-6" />
+          <div className="space-y-4">
+            {features.map((feature, index) => (
+              <div 
+                key={index}
+                className="flex items-center space-x-3"
+                data-testid={`feature-${index}`}
+              >
+                <div className="bg-[#d4af37] text-white p-1.5 rounded-full flex-shrink-0">
+                  <Check className="w-5 h-5" />
+                </div>
+                <p className="text-lg font-semibold text-foreground">{feature}</p>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Global Reach</h3>
-                <p className="text-muted-foreground">Our globally distributed and multilingual team provides round-the-clock support across multiple continents, allowing for swift and effective responses no matter where an incident occurs.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="bg-primary text-primary-foreground p-3 rounded-lg">
-                <ScaleIcon className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Blockchain Forensics</h3>
-                <p className="text-muted-foreground">Our veteran team brings together professionals with law enforcement, military, and crypto industry backgrounds, utilizing advanced tools like Chainalysis and proprietary AI technology.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="bg-primary text-primary-foreground p-3 rounded-lg">
-                <UsersIcon className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">Proven Track Record</h3>
-                <p className="text-muted-foreground">Our relentless pursuit of justice has led to the closure of numerous fraud operations, arrest of key perpetrators, and substantial financial recoveries with a 92% success rate.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
