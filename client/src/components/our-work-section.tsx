@@ -1,4 +1,4 @@
-import { DollarSign, Users, Award, TrendingUp, Building2, UserX, Banknote } from "lucide-react";
+import { DollarSign, Users, Award, TrendingUp, Building2, UserX, Banknote, Calendar } from "lucide-react";
 import arrestImage from "@assets/image_1759267995836.png";
 
 export default function OurWorkSection() {
@@ -10,6 +10,7 @@ export default function OurWorkSection() {
   ];
 
   const impactStats = [
+    { icon: Calendar, value: "18 Years", label: "Of Experience" },
     { icon: Building2, value: "140", label: "Fraud Companies Closed" },
     { icon: UserX, value: "3,650", label: "Fraudsters Arrested" },
     { icon: Banknote, value: "$1.2B", label: "Recovered" }
@@ -83,8 +84,8 @@ export default function OurWorkSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="flex items-center justify-center h-full">
             <img 
               src={arrestImage} 
               alt="Fraudsters arrested by authorities" 
@@ -93,7 +94,7 @@ export default function OurWorkSection() {
             />
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 flex flex-col justify-center">
             {impactStats.map((stat, index) => (
               <div 
                 key={index}
