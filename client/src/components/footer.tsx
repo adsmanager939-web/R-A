@@ -114,17 +114,14 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-white/20 mt-12 pt-8 text-center text-white">
-          <p className="mb-4 font-semibold">&copy; 2013 TrueClaim & Associates Ltd. All rights reserved.</p>
-          <div className="text-sm text-white/80 max-w-5xl mx-auto leading-relaxed space-y-2">
+        <div className="border-t border-white/20 mt-12 pt-8 text-white">
+          <p className="mb-3 text-xs">&copy; 2013 TrueClaim & Associates Ltd. All rights reserved.</p>
+          <div className="text-xs text-white/70 leading-relaxed space-y-1">
             <p>
-              TrueClaim & Associates is a trading name of TrueClaim & Associates Ltd., registered in Canada as a subsidiary of Refund & Associates, with the following identifiers: FINTRAC authorized, Business Number (BN): 842594962, Registry ID: 2112580. Registered Office Location: Cambridge, Ontario. Status: Active (incorporated). Business Type: Ontario Business Corp. Created: September 7, 2006.
+              TrueClaim & Associates is a trading name of TrueClaim & Associates Ltd., registered in Canada as a subsidiary of Refund & Associates, with the following identifiers: FINTRAC authorized, Business Number (BN): 842594962, Registry ID: 2112580. Registered Office Location: Cambridge, Ontario. Created: September 7, 2006.
             </p>
             <p>
-              TrueClaim & Associates is authorized and regulated by FINTRAC, ensuring compliance with Canadian anti-fraud and anti-money laundering regulations.
-            </p>
-            <p>
-              TrueClaim & Associates offers free initial consultations to evaluate cases of fraud and asset recovery. If clients choose to proceed with our chargeback or other fund recovery services, these are subject to retainer agreements, fees, and/or commissions based on the specific case and service level selected. Please note, TrueClaim & Associates does not provide any financial investment services or financial advice.
+              Please note, TrueClaim & Associates does not provide any financial investment services or financial advice.
             </p>
           </div>
         </div>
