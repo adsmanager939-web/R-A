@@ -12,7 +12,7 @@ export default function OurWorkSection() {
   const impactStats = [
     { icon: Building2, value: "140", label: "Fraud Companies Closed" },
     { icon: UserX, value: "3,650", label: "Fraudsters Arrested" },
-    { icon: Banknote, value: "$1.2B CAD", label: "Recovered" }
+    { icon: Banknote, value: "$1.2B", label: "Recovered" }
   ];
 
   const caseStudies = [
