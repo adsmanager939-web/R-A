@@ -25,6 +25,12 @@ export default function TeamSection() {
     { id: 4, name: "Team Member 4", position: "Position Title" },
     { id: 5, name: "Team Member 5", position: "Position Title" },
     { id: 6, name: "Team Member 6", position: "Position Title" },
+    { id: 7, name: "Team Member 7", position: "Position Title" },
+    { id: 8, name: "Team Member 8", position: "Position Title" },
+    { id: 9, name: "Team Member 9", position: "Position Title" },
+    { id: 10, name: "Team Member 10", position: "Position Title" },
+    { id: 11, name: "Team Member 11", position: "Position Title" },
+    { id: 12, name: "Team Member 12", position: "Position Title" },
   ];
 
   return (
