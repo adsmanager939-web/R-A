@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Logo variant="white" className="mb-6" />
             <p className="text-white/90 mb-6 max-w-md">
-              Leverage AI-driven insights to investigate financial crime and fraud. Our team of over 1,300 skilled lawyers and fraud investigators has helped over 200,000 clients with a 92% success rate.
+              Our mission is to give hope back to those who have been deceived. Through relentless investigation and unwavering advocacy, we help victims of fraud reclaim their confidence, their security, and their future.
             </p>
             <div className="flex space-x-4">
               <a 
