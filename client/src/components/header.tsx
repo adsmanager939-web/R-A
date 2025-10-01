@@ -18,7 +18,7 @@ export default function Header() {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "investigations", label: "Investigations" },
-    { id: "collaboration", label: "Collaboration" },
+    { id: "collaboration", label: "Partners" },
     { id: "our-work", label: "Our Work" },
     { id: "testimonials", label: "Testimonials" },
     { id: "about", label: "About us" },
