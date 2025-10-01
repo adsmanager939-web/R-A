@@ -11,7 +11,7 @@ export default function TestimonialsSection() {
       align: 'start',
       slidesToScroll: 1
     },
-    [Autoplay({ delay: 5000, stopOnInteraction: false })]
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
   );
 
   const scrollPrev = useCallback(() => {
