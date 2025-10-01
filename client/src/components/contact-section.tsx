@@ -86,7 +86,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email Support</h4>
-                  <p className="text-muted-foreground" data-testid="email-address">contact@trueclaim.com</p>
+                  <p className="text-muted-foreground" data-testid="email-address">contact@trueclaim.associates</p>
                   <p className="text-sm text-muted-foreground">Secure encrypted communications</p>
                 </div>
               </div>

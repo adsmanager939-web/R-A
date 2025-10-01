@@ -20,7 +20,6 @@ export default function Header() {
     { id: "investigations", label: "Investigations" },
     { id: "collaboration", label: "Partners" },
     { id: "our-work", label: "Our Work" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "about", label: "About us" },
     { id: "help", label: "Help" },
   ];

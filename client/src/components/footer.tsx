@@ -98,9 +98,8 @@ export default function Footer() {
             <h4 className="font-semibold mb-4 text-white">Contact</h4>
             <ul className="space-y-2 text-white/80">
               <li data-testid="footer-phone">+1 (226) 479-6091</li>
-              <li data-testid="footer-email">contact@trueclaim.com</li>
+              <li data-testid="footer-email">contact@trueclaim.associates</li>
               <li>Available 24/7</li>
-              <li>Emergency Hotline</li>
             </ul>
             
             <div className="mt-6">
