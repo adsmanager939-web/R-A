@@ -20,8 +20,8 @@ export default function Home() {
       <CollaborationSection />
       <OurWorkSection />
       <AboutSection />
-      <TestimonialsSection />
       <TeamSection />
+      <TestimonialsSection />
       <LocationsSection />
       <HelpSection />
       <ContactSection />
