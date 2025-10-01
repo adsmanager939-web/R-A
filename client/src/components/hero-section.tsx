@@ -14,8 +14,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="text-sm font-semibold mb-4 text-white/80">Professional Fraud Investigation & Asset Recovery</div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <div className="text-lg font-semibold mb-4 text-white/90">Professional Fraud Investigation & Asset Recovery</div>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             TRUSTED BY MORE THAN 200,000 CANADIANS
           </h1>
           <p className="text-lg md:text-xl mb-10 text-white/90 leading-relaxed max-w-3xl mx-auto">
