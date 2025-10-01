@@ -19,8 +19,8 @@ export default function Home() {
       <InvestigationsSection />
       <CollaborationSection />
       <OurWorkSection />
-      <TestimonialsSection />
       <AboutSection />
+      <TestimonialsSection />
       <TeamSection />
       <LocationsSection />
       <HelpSection />

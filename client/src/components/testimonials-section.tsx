@@ -68,19 +68,6 @@ export default function TestimonialsSection() {
             </div>
           ))}
         </div>
-        
-        <div className="bg-primary text-primary-foreground rounded-xl p-8 mt-12 text-center">
-          <h3 className="text-2xl font-bold mb-4">Ready to Get Your Money Back?</h3>
-          <p className="text-blue-100 mb-6">Join hundreds of satisfied clients who trusted us to recover their funds.</p>
-          <Button 
-            onClick={scrollToContact}
-            variant="secondary"
-            className="bg-white text-primary hover:bg-gray-50 px-8 py-3 font-semibold"
-            data-testid="button-free-consultation-cta"
-          >
-            Get Your Free Consultation
-          </Button>
-        </div>
       </div>
     </section>
   );
