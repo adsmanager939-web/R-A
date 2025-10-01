@@ -17,7 +17,7 @@ export default function Logo({ className = "", variant = "default" }: LogoProps)
             : "bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] border-2 border-[#d4af37]/30"
         }`}>
           <div className="relative flex items-center justify-center">
-            <Shield className={`w-6 h-6 ${isWhite ? "text-white" : "text-[#d4af37]"}`} strokeWidth={3} />
+            <Shield className="w-6 h-6 text-[#d4af37]" strokeWidth={3} />
             <Check className={`w-3 h-3 absolute ${isWhite ? "text-white" : "text-white"}`} strokeWidth={3} />
           </div>
         </div>
@@ -29,10 +29,9 @@ export default function Logo({ className = "", variant = "default" }: LogoProps)
       </div>
       
       <div className="flex flex-col -mt-1">
-        <div className={`text-2xl font-bold tracking-tight ${
-          isWhite ? "text-white" : "text-[#1a3a52]"
-        }`} style={{ fontFamily: 'Georgia, serif' }}>
-          TrueClaim
+        <div className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
+          <span className={isWhite ? "text-white" : "text-[#1a3a52]"}>True</span>
+          <span className="text-[#d4af37]">Claim</span>
         </div>
         <div className={`text-[10px] uppercase tracking-widest font-semibold -mt-1 ${
           isWhite ? "text-white/70" : "text-[#1a3a52]/60"
