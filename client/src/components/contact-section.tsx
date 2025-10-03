@@ -109,12 +109,14 @@ export default function ContactSection() {
               </div>
             </div>
             
-            <div className="mt-8 p-6 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-xl text-white shadow-lg">
-              <div className="flex items-center space-x-3 mb-3">
-                <LockIcon className="text-[#d4af37] w-7 h-7" />
-                <h4 className="font-bold text-xl">100% Confidential</h4>
+            <div className="mt-8 flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="bg-gradient-to-br from-[#d4af37] to-[#b8941f] text-white p-3 rounded-lg flex-shrink-0">
+                <LockIcon className="w-6 h-6" />
               </div>
-              <p className="text-gray-200 leading-relaxed">All communications are protected by attorney-client privilege and encrypted for your security. Your information is never shared with third parties.</p>
+              <div>
+                <h4 className="font-bold text-[#1a3a52] text-lg mb-1">100% Confidential</h4>
+                <p className="text-sm text-gray-500 mt-1">All communications are protected by attorney-client privilege and encrypted for your security.</p>
+              </div>
             </div>
           </div>
           
