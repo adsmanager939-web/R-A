@@ -10,6 +10,27 @@ The application is built as a full-stack TypeScript application with a React fro
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+**Contact Form Improvements (October 2025):**
+- Enhanced contact section with gradient background and improved card styling
+- Updated button with gold gradient, larger size, and arrow icon
+- Changed contact email to inquiry@trueclaim.associates throughout the site
+- Added success dialog popup after form submission with checkmark icon
+- Improved visual hierarchy with shadowed cards and hover effects
+- Form submissions currently stored in memory
+- **TODO**: Set up email service (Resend, SendGrid, or Gmail) to send contact form submissions to inquiry@trueclaim.associates
+
+**Team Section Updates:**
+- Added 12 professional team member photos with real names
+- P. David Andress listed as CEO
+- Alternating positions: Lawyer and Fraud Investigator
+- Carousel displays 3 members on desktop, responsive on mobile
+
+**Testimonials:**
+- Auto-scrolling carousel with 3-second intervals
+- 8 client reviews with 5-star ratings
+
 ## System Architecture
 
 ### Frontend Architecture
