@@ -1,6 +1,18 @@
 import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, User } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import andrewOringer from "@assets/andrew-l-oringer-45070_1759490816557.jpg";
+import barbaraWheaton from "@assets/barbara-k-wheaton-1506_1759490816558.jpg";
+import benjaminBruner from "@assets/benjamin-d-bruner-185931_1759490816558.png";
+import frankKnowlton from "@assets/frank-b-b-knowlton-83755_1759490816558.jpg";
+import greerMallette from "@assets/greer-b-mallette-166565_1759490816559.jpg";
+import jayEbelhar from "@assets/jay-a-ebelhar-204204_1759490816559.png";
+import johnBalhoff from "@assets/john-t-balhoff-ii-117939_1759490816559.jpg";
+import jonathanSundheimer from "@assets/jonathan-sundheimer-333814_1759490816559.jpg";
+import linseyGleason from "@assets/linsey-gleason-200324_1759490816560.jpg";
+import meganJerabek from "@assets/megan-jerabek-242237_1759490816560.jpg";
+import nicholasPagliari from "@assets/nicholas-r-pagliari-195995_1759490816560.png";
+import davidAndress from "@assets/p-david-andress-139548_1759490816560.png";
 
 export default function TeamSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -17,20 +29,19 @@ export default function TeamSection() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  // Placeholder team members - images will be added later
   const teamMembers = [
-    { id: 1, name: "Team Member 1", position: "Position Title" },
-    { id: 2, name: "Team Member 2", position: "Position Title" },
-    { id: 3, name: "Team Member 3", position: "Position Title" },
-    { id: 4, name: "Team Member 4", position: "Position Title" },
-    { id: 5, name: "Team Member 5", position: "Position Title" },
-    { id: 6, name: "Team Member 6", position: "Position Title" },
-    { id: 7, name: "Team Member 7", position: "Position Title" },
-    { id: 8, name: "Team Member 8", position: "Position Title" },
-    { id: 9, name: "Team Member 9", position: "Position Title" },
-    { id: 10, name: "Team Member 10", position: "Position Title" },
-    { id: 11, name: "Team Member 11", position: "Position Title" },
-    { id: 12, name: "Team Member 12", position: "Position Title" },
+    { id: 1, name: "P. David Andress", position: "CEO", image: davidAndress },
+    { id: 2, name: "Andrew L. Oringer", position: "Lawyer", image: andrewOringer },
+    { id: 3, name: "Barbara K. Wheaton", position: "Fraud Investigator", image: barbaraWheaton },
+    { id: 4, name: "Benjamin D. Bruner", position: "Lawyer", image: benjaminBruner },
+    { id: 5, name: "Frank B. B. Knowlton", position: "Fraud Investigator", image: frankKnowlton },
+    { id: 6, name: "Greer B. Mallette", position: "Lawyer", image: greerMallette },
+    { id: 7, name: "Jay A. Ebelhar", position: "Fraud Investigator", image: jayEbelhar },
+    { id: 8, name: "John T. Balhoff II", position: "Lawyer", image: johnBalhoff },
+    { id: 9, name: "Jonathan Sundheimer", position: "Fraud Investigator", image: jonathanSundheimer },
+    { id: 10, name: "Linsey Gleason", position: "Lawyer", image: linseyGleason },
+    { id: 11, name: "Megan Jerabek", position: "Fraud Investigator", image: meganJerabek },
+    { id: 12, name: "Nicholas R. Pagliari", position: "Lawyer", image: nicholasPagliari },
   ];
 
   return (
@@ -54,9 +65,13 @@ export default function TeamSection() {
                   data-testid={`team-member-${member.id}`}
                 >
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                    {/* Placeholder for team member image */}
-                    <div className="aspect-[3/4] bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] flex items-center justify-center">
-                      <User className="w-24 h-24 text-[#d4af37]/30" />
+                    {/* Team member image */}
+                    <div className="aspect-[3/4] overflow-hidden">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     
                     {/* Team member info */}
