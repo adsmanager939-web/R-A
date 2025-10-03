@@ -195,7 +195,7 @@ export default function ContactSection() {
                               <SelectValue placeholder="Select scam type" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent>
+                          <SelectContent className="bg-white">
                             <SelectItem value="romance">Romance Scam</SelectItem>
                             <SelectItem value="crypto">Cryptocurrency Scam</SelectItem>
                             <SelectItem value="investment">Investment Fraud</SelectItem>
@@ -316,7 +316,7 @@ export default function ContactSection() {
       </div>
 
       <AlertDialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
-        <AlertDialogContent className="max-w-md">
+        <AlertDialogContent className="max-w-md bg-white">
           <AlertDialogHeader>
             <div className="flex justify-center mb-4">
               <div className="bg-gradient-to-br from-[#d4af37] to-[#b8941f] rounded-full p-3">
