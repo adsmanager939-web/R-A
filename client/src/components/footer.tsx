@@ -107,7 +107,7 @@ export default function Footer() {
               <div className="text-sm text-white/80">
                 <p>BBB A+ Rating</p>
                 <p>NAIS Certified</p>
-                <p>Licensed in 50 States</p>
+                <p>Licensed in 53 States</p>
               </div>
             </div>
           </div>
