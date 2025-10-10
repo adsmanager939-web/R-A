@@ -20,7 +20,7 @@ export default function LegalSection() {
               <p><strong>Information Collection:</strong> We collect only information necessary to evaluate and pursue your case, including contact details, case specifics, and financial documentation.</p>
               <p><strong>Information Use:</strong> Data is used solely for case evaluation, investigation, and recovery efforts. We never sell or share personal information with third parties except as required by law.</p>
               <p><strong>Data Security:</strong> All communications are encrypted using SSL technology. Physical documents are stored in secure, access-controlled facilities.</p>
-              <p><strong>Contact:</strong> Questions about our privacy practices can be directed to privacy@trueclaim.associates</p>
+              <p><strong>Contact:</strong> Questions about our privacy practices can be directed to privacy@trueclaim-associates.com</p>
             </div>
           </div>
         </div>
