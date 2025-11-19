@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroVideo from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763588188880.mp4";
 
 export default function HeroSection() {
   const scrollToSection = (id: string) => {
@@ -10,8 +11,17 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-95"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20"></div>
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        data-testid="hero-video"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-75"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="text-lg font-semibold mb-4 text-white/90">Professional Fraud Investigation & Asset Recovery</div>
