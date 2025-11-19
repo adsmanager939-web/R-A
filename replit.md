@@ -15,11 +15,11 @@ Preferred communication style: Simple, everyday language.
 **Contact Form Improvements (October 2025):**
 - Enhanced contact section with gradient background and improved card styling
 - Updated button with gold gradient, larger size, and arrow icon
-- Changed contact email to inquiry@trueclaim-associates.com throughout the site
+- Changed contact email to inquiry@trueclaimassociates.com throughout the site
 - Added success dialog popup after form submission with checkmark icon
 - Improved visual hierarchy with shadowed cards and hover effects
 - Form submissions currently stored in memory
-- **TODO**: Set up email service (Resend, SendGrid, or Gmail) to send contact form submissions to inquiry@trueclaim-associates.com
+- **TODO**: Set up email service (Resend, SendGrid, or Gmail) to send contact form submissions to inquiry@trueclaimassociates.com
 
 **Team Section Updates:**
 - Added 12 professional team member photos with real names

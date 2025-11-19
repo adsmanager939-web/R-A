@@ -92,7 +92,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-bold text-[#1a3a52] text-lg mb-1">Email Support</h4>
-                  <p className="text-[#1a3a52] font-semibold" data-testid="email-address">inquiry@trueclaim-associates.com</p>
+                  <p className="text-[#1a3a52] font-semibold" data-testid="email-address">inquiry@trueclaimassociates.com</p>
                   <p className="text-sm text-gray-500 mt-1">Secure encrypted communications</p>
                 </div>
               </div>
