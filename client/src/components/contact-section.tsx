@@ -134,7 +134,7 @@ export default function ContactSection() {
                           <Input 
                             placeholder="John Doe" 
                             {...field}
-                            className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                            className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37] placeholder:text-gray-400"
                             data-testid="input-name"
                           />
                         </FormControl>
@@ -152,7 +152,7 @@ export default function ContactSection() {
                           <Input 
                             placeholder="(555) 123-4567" 
                             {...field}
-                            className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                            className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37] placeholder:text-gray-400"
                             data-testid="input-phone"
                           />
                         </FormControl>
@@ -173,7 +173,7 @@ export default function ContactSection() {
                           type="email"
                           placeholder="john@example.com" 
                           {...field}
-                          className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                          className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37] placeholder:text-gray-400"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -218,7 +218,7 @@ export default function ContactSection() {
                             placeholder="$50,000" 
                             {...field}
                             value={field.value ?? ""}
-                            className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                            className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37] placeholder:text-gray-400"
                             data-testid="input-amount-lost"
                           />
                         </FormControl>
@@ -240,7 +240,7 @@ export default function ContactSection() {
                           placeholder="Please provide a brief overview of what happened..."
                           {...field}
                           value={field.value ?? ""}
-                          className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                          className="border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37] placeholder:text-gray-400"
                           data-testid="textarea-description"
                         />
                       </FormControl>
