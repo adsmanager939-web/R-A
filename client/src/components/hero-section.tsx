@@ -1,14 +1,12 @@
 import { useEffect, useRef, useReducer } from "react";
 import { Button } from "@/components/ui/button";
-import heroVideo1 from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763588188880.mp4";
-import heroVideo2 from "@assets/ba772ff89765402ca74b67c3b9f98eef_1763393936 - Trim_1763588367576.mp4";
-import heroVideo3 from "@assets/sora2-89f663547e1818952b0704e149b38058 - Trim_1763590888327.mp4";
-import heroVideo4 from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763589742567.mp4";
-import heroVideo5 from "@assets/sora2-89f663547e1818952b0704e149b38058_1763589772160.mp4";
-import heroVideo6 from "@assets/3a4c3809c2944bb0b4eff29a8fa4451a_1763589709_1763589840250.mp4";
-import heroVideo7 from "@assets/video_1763589488284_1763589849836.mp4";
+import video1 from "@assets/Video 1_1763592894069.mp4";
+import video2 from "@assets/Video 2_1763592894070.mp4";
+import video3 from "@assets/Video 3_1763592894071.mp4";
+import video5 from "@assets/Video 5_1763592894072.mp4";
+import video6 from "@assets/Video 6_1763592894072.mp4";
 
-const videos = [heroVideo2, heroVideo1, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
+const videos = [video1, video2, video3, video5, video6];
 const PRELOAD_LEAD = 1.5;
 const CROSSFADE_WINDOW = 1.0;
 
@@ -110,8 +108,7 @@ export default function HeroSection() {
   };
 
   const handleCanPlayThrough = (player: 1 | 2) => {
-    const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
-    if (player === standbyPlayer && state.phase === 'preloading') {
+    if (state.phase === 'preloading' && player !== state.activePlayer) {
       dispatch({ type: 'PRELOAD_READY' });
     }
   };

@@ -13,33 +13,36 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 **Hero Section Video Sequence (November 19, 2025):**
-- Implemented 7-video sequential playback with crossfade transitions
-- Videos play in specific order: Video 1 → Video 2 → Videos 3-7 → loop back to Video 1
-- Dual-video player system with opacity crossfades (1-second duration)
+- Completely rebuilt with 5 new videos playing in sequential order: Video 1 → Video 2 → Video 3 → Video 5 → Video 6 → loop
+- Dual-video player system with smooth 1-second opacity crossfade transitions
 - Preloading logic: next video loads at 1.5s remaining, plays at 1.0s remaining
 - Fallback mechanism ensures continuous playback if timing windows are missed
 - Error handling for autoplay failures with console logging
 - Maintains muted, inline playback for cross-browser compatibility
+- Uses state machine (useReducer) for reliable phase transitions
 
-**Contact Form Improvements (October 2025):**
+**Contact Form Improvements (November 19, 2025):**
 - Enhanced contact section with gradient background and improved card styling
 - Updated button with gold gradient, larger size, and arrow icon
 - Changed contact email to inquiry@trueclaimassociates.com throughout the site
 - Added success dialog popup after form submission with checkmark icon
 - Improved visual hierarchy with shadowed cards and hover effects
 - Form submissions currently stored in memory
-- **TODO**: Set up email service (Resend, SendGrid, or Gmail) to send contact form submissions to inquiry@trueclaimassociates.com
+- **TODO**: Email integration dismissed - need to set up email service manually (Resend, SendGrid, or SMTP) to send contact form submissions to inquiry@trueclaimassociates.com. User needs to provide API keys/credentials or complete integration authorization flow.
 
 **Team Section Updates:**
 - Added 12 professional team member photos with real names
 - P. David Andress listed as CEO
-- Key team members: Jason B Law, Domenic Miller, James Ashford, Jack S Chamberlain
+- Team member #3: Jay A. Ebelhar (Fraud Investigator)
+- Team member #7: Domenic Miller (Fraud Investigator)
+- Other key members: Jason B Law, James Ashford, Jack S Chamberlain
 - Alternating positions: Lawyer and Fraud Investigator
 - Carousel displays 3 members on desktop, responsive on mobile
 
 **Testimonials:**
 - Auto-scrolling carousel with 3-second intervals
 - 8 client reviews with 5-star ratings
+- Updated references from "FSC" to "True Claim" in reviews #2 and #3
 
 ## System Architecture
 
