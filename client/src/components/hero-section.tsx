@@ -1,7 +1,13 @@
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import heroVideo from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763588188880.mp4";
+import heroVideo1 from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763588188880.mp4";
+import heroVideo2 from "@assets/ba772ff89765402ca74b67c3b9f98eef_1763393936 - Trim_1763588367576.mp4";
 
 export default function HeroSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const videos = [heroVideo1, heroVideo2];
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -9,18 +15,39 @@ export default function HeroSection() {
     }
   };
 
+  const handleVideoEnd = () => {
+    const nextIndex = (currentVideoIndex + 1) % videos.length;
+    setCurrentVideoIndex(nextIndex);
+    
+    if (videoRef.current) {
+      videoRef.current.src = videos[nextIndex];
+      videoRef.current.load();
+      videoRef.current.play().catch((error) => {
+        console.error("Video playback failed:", error);
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.src = videos[currentVideoIndex];
+      videoRef.current.load();
+      videoRef.current.play().catch((error) => {
+        console.error("Video playback failed:", error);
+      });
+    }
+  }, []);
+
   return (
     <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
       <video 
-        autoPlay 
-        loop 
+        ref={videoRef}
         muted 
         playsInline
+        onEnded={handleVideoEnd}
         className="absolute inset-0 w-full h-full object-cover"
         data-testid="hero-video"
-      >
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+      />
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-75"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
