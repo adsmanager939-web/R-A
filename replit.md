@@ -12,6 +12,14 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+**Hero Section Video Sequence (November 19, 2025):**
+- Implemented 7-video sequential playback in hero background
+- Videos play in specific order: Video 1 → Video 2 → Videos 3-7 → loop back to Video 1
+- Ref-based video switching for smooth transitions without flickering
+- Error handling for autoplay failures with console logging
+- Videos auto-advance on end without manual controls
+- Maintains muted, inline playback for cross-browser compatibility
+
 **Contact Form Improvements (October 2025):**
 - Enhanced contact section with gradient background and improved card styling
 - Updated button with gold gradient, larger size, and arrow icon
