@@ -9,8 +9,12 @@ import heroVideo6 from "@assets/3a4c3809c2944bb0b4eff29a8fa4451a_1763589709_1763
 import heroVideo7 from "@assets/video_1763589488284_1763589849836.mp4";
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [activePlayer, setActivePlayer] = useState<1 | 2>(1);
+  const transitioningRef = useRef(false);
+  const preloadedPlayerRef = useRef<1 | 2 | null>(null);
   const videos = [heroVideo1, heroVideo2, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
 
   const scrollToSection = (id: string) => {
@@ -20,24 +24,68 @@ export default function HeroSection() {
     }
   };
 
-  const handleVideoEnd = () => {
-    const nextIndex = (currentVideoIndex + 1) % videos.length;
-    setCurrentVideoIndex(nextIndex);
+  const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    const video = e.currentTarget;
+    const timeRemaining = video.duration - video.currentTime;
     
-    if (videoRef.current) {
-      videoRef.current.src = videos[nextIndex];
-      videoRef.current.load();
-      videoRef.current.play().catch((error) => {
-        console.error("Video playback failed:", error);
-      });
+    if (timeRemaining <= 1.5 && !transitioningRef.current) {
+      transitioningRef.current = true;
+      const nextIndex = (currentVideoIndex + 1) % videos.length;
+      const nextPlayer = activePlayer === 1 ? 2 : 1;
+      const nextVideoRef = nextPlayer === 1 ? video1Ref : video2Ref;
+      
+      if (nextVideoRef.current) {
+        nextVideoRef.current.src = videos[nextIndex];
+        nextVideoRef.current.load();
+        preloadedPlayerRef.current = nextPlayer;
+      }
+    }
+    
+    if (timeRemaining <= 1.0 && preloadedPlayerRef.current !== null && activePlayer !== preloadedPlayerRef.current) {
+      const nextVideoRef = preloadedPlayerRef.current === 1 ? video1Ref : video2Ref;
+      
+      if (nextVideoRef.current && nextVideoRef.current.readyState >= 3) {
+        nextVideoRef.current.play().catch((error) => {
+          console.error("Next video playback failed:", error);
+        });
+        setActivePlayer(preloadedPlayerRef.current);
+        setCurrentVideoIndex((currentVideoIndex + 1) % videos.length);
+      }
     }
   };
 
+  const handleVideoEnd = () => {
+    if (preloadedPlayerRef.current !== null && activePlayer !== preloadedPlayerRef.current) {
+      const nextVideoRef = preloadedPlayerRef.current === 1 ? video1Ref : video2Ref;
+      
+      if (nextVideoRef.current && nextVideoRef.current.readyState >= 3) {
+        nextVideoRef.current.play().catch((error) => {
+          console.error("Fallback video playback (preloaded) failed:", error);
+        });
+      } else {
+        const nextIndex = (currentVideoIndex + 1) % videos.length;
+        const nextVideoRef = preloadedPlayerRef.current === 1 ? video1Ref : video2Ref;
+        
+        if (nextVideoRef.current) {
+          nextVideoRef.current.src = videos[nextIndex];
+          nextVideoRef.current.load();
+          nextVideoRef.current.play().catch((error) => {
+            console.error("Fallback video playback (new load) failed:", error);
+          });
+        }
+      }
+      setActivePlayer(preloadedPlayerRef.current);
+      setCurrentVideoIndex((currentVideoIndex + 1) % videos.length);
+    }
+    preloadedPlayerRef.current = null;
+    transitioningRef.current = false;
+  };
+
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.src = videos[currentVideoIndex];
-      videoRef.current.load();
-      videoRef.current.play().catch((error) => {
+    if (video1Ref.current) {
+      video1Ref.current.src = videos[0];
+      video1Ref.current.load();
+      video1Ref.current.play().catch((error) => {
         console.error("Video playback failed:", error);
       });
     }
@@ -46,12 +94,22 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
       <video 
-        ref={videoRef}
+        ref={video1Ref}
         muted 
         playsInline
+        onTimeUpdate={handleTimeUpdate}
         onEnded={handleVideoEnd}
-        className="absolute inset-0 w-full h-full object-cover"
-        data-testid="hero-video"
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${activePlayer === 1 ? 'opacity-100' : 'opacity-0'}`}
+        data-testid="hero-video-1"
+      />
+      <video 
+        ref={video2Ref}
+        muted 
+        playsInline
+        onTimeUpdate={handleTimeUpdate}
+        onEnded={handleVideoEnd}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${activePlayer === 2 ? 'opacity-100' : 'opacity-0'}`}
+        data-testid="hero-video-2"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-75"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
