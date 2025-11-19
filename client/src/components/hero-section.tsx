@@ -2,11 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import heroVideo1 from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763588188880.mp4";
 import heroVideo2 from "@assets/ba772ff89765402ca74b67c3b9f98eef_1763393936 - Trim_1763588367576.mp4";
+import heroVideo3 from "@assets/ba772ff89765402ca74b67c3b9f98eef_1763393936 - Trim - Trim_1763589689650.mp4";
+import heroVideo4 from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763589742567.mp4";
+import heroVideo5 from "@assets/sora2-89f663547e1818952b0704e149b38058_1763589772160.mp4";
+import heroVideo6 from "@assets/3a4c3809c2944bb0b4eff29a8fa4451a_1763589709_1763589840250.mp4";
+import heroVideo7 from "@assets/video_1763589488284_1763589849836.mp4";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videos = [heroVideo1, heroVideo2];
+  const videos = [heroVideo1, heroVideo2, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
