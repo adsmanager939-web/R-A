@@ -32,14 +32,14 @@ export default function TestimonialsSection() {
     },
     {
       id: 2,
-      quote: "A big thank you to Jack and the team for helping me with my case and navigating all the hurdles along the way. I didn't expect to recover a penny, but with the help of FSC, a large portion of my capital was successfully recovered. Highly recommend!",
+      quote: "A big thank you to Jack and the team for helping me with my case and navigating all the hurdles along the way. I didn't expect to recover a penny, but with the help of True Claim, a large portion of my capital was successfully recovered. Highly recommend!",
       name: "Tim Klein",
       location: "Ottawa",
       rating: 5
     },
     {
       id: 3,
-      quote: "I picked up FSC on a Google search after reading the reviews, and contacted them to see if they could help me with a crypto scam. From the very start, they've been helpful and thorough. I'm only a month into the case, and they've already recovered some of my funds. Can't recommend these guys enough — true lifesavers.",
+      quote: "I picked up True Claim on a Google search after reading the reviews, and contacted them to see if they could help me with a crypto scam. From the very start, they've been helpful and thorough. I'm only a month into the case, and they've already recovered some of my funds. Can't recommend these guys enough — true lifesavers.",
       name: "Paul Richter",
       location: "British Columbia",
       rating: 5
