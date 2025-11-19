@@ -20,7 +20,7 @@ export default function LocationsSection() {
       city: "London",
       country: "United Kingdom",
       address: "25 Old Broad Street",
-      phone: "+44 20 7946 0958",
+      phone: "+44 7542 485235",
       email: "london@trueclaim-associates.com"
     },
     {
