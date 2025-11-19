@@ -8,7 +8,7 @@ import heroVideo5 from "@assets/sora2-89f663547e1818952b0704e149b38058_176358977
 import heroVideo6 from "@assets/3a4c3809c2944bb0b4eff29a8fa4451a_1763589709_1763589840250.mp4";
 import heroVideo7 from "@assets/video_1763589488284_1763589849836.mp4";
 
-const videos = [heroVideo1, heroVideo2, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
+const videos = [heroVideo2, heroVideo1, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
 const PRELOAD_LEAD = 1.5;
 const CROSSFADE_WINDOW = 1.0;
 
