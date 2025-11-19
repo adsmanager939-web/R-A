@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useReducer } from "react";
 import { Button } from "@/components/ui/button";
 import heroVideo1 from "@assets/9e7294bd8dad4612843e7549769d422a_1763393843_1763588188880.mp4";
 import heroVideo2 from "@assets/ba772ff89765402ca74b67c3b9f98eef_1763393936 - Trim_1763588367576.mp4";
@@ -8,14 +8,51 @@ import heroVideo5 from "@assets/sora2-89f663547e1818952b0704e149b38058_176358977
 import heroVideo6 from "@assets/3a4c3809c2944bb0b4eff29a8fa4451a_1763589709_1763589840250.mp4";
 import heroVideo7 from "@assets/video_1763589488284_1763589849836.mp4";
 
+const videos = [heroVideo1, heroVideo2, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
+const PRELOAD_LEAD = 1.5;
+const CROSSFADE_WINDOW = 1.0;
+
+type Phase = 'playing' | 'preloading' | 'readyToSwap' | 'swapping';
+
+interface VideoState {
+  currentIndex: number;
+  activePlayer: 1 | 2;
+  phase: Phase;
+}
+
+type VideoAction =
+  | { type: 'PRELOAD_REQUEST' }
+  | { type: 'PRELOAD_READY' }
+  | { type: 'SWAP' }
+  | { type: 'RESET_AFTER_SWAP' };
+
+function videoReducer(state: VideoState, action: VideoAction): VideoState {
+  switch (action.type) {
+    case 'PRELOAD_REQUEST':
+      return { ...state, phase: 'preloading' };
+    case 'PRELOAD_READY':
+      return { ...state, phase: 'readyToSwap' };
+    case 'SWAP':
+      return {
+        currentIndex: (state.currentIndex + 1) % videos.length,
+        activePlayer: state.activePlayer === 1 ? 2 : 1,
+        phase: 'swapping'
+      };
+    case 'RESET_AFTER_SWAP':
+      return { ...state, phase: 'playing' };
+    default:
+      return state;
+  }
+}
+
 export default function HeroSection() {
   const video1Ref = useRef<HTMLVideoElement>(null);
   const video2Ref = useRef<HTMLVideoElement>(null);
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const [activePlayer, setActivePlayer] = useState<1 | 2>(1);
-  const transitioningRef = useRef(false);
-  const preloadedPlayerRef = useRef<1 | 2 | null>(null);
-  const videos = [heroVideo1, heroVideo2, heroVideo3, heroVideo4, heroVideo5, heroVideo6, heroVideo7];
+  const [state, dispatch] = useReducer(videoReducer, {
+    currentIndex: 0,
+    activePlayer: 1,
+    phase: 'playing' as Phase
+  });
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -25,60 +62,58 @@ export default function HeroSection() {
   };
 
   const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+    if (state.phase !== 'playing' && state.phase !== 'readyToSwap') return;
+    
     const video = e.currentTarget;
     const timeRemaining = video.duration - video.currentTime;
     
-    if (timeRemaining <= 1.5 && !transitioningRef.current) {
-      transitioningRef.current = true;
-      const nextIndex = (currentVideoIndex + 1) % videos.length;
-      const nextPlayer = activePlayer === 1 ? 2 : 1;
-      const nextVideoRef = nextPlayer === 1 ? video1Ref : video2Ref;
+    if (timeRemaining <= PRELOAD_LEAD && state.phase === 'playing') {
+      dispatch({ type: 'PRELOAD_REQUEST' });
+      const nextIndex = (state.currentIndex + 1) % videos.length;
+      const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
+      const standbyVideoRef = standbyPlayer === 1 ? video1Ref : video2Ref;
       
-      if (nextVideoRef.current) {
-        nextVideoRef.current.src = videos[nextIndex];
-        nextVideoRef.current.load();
-        preloadedPlayerRef.current = nextPlayer;
+      if (standbyVideoRef.current) {
+        standbyVideoRef.current.src = videos[nextIndex];
+        standbyVideoRef.current.load();
       }
     }
     
-    if (timeRemaining <= 1.0 && preloadedPlayerRef.current !== null && activePlayer !== preloadedPlayerRef.current) {
-      const nextVideoRef = preloadedPlayerRef.current === 1 ? video1Ref : video2Ref;
+    if (timeRemaining <= CROSSFADE_WINDOW && state.phase === 'readyToSwap') {
+      dispatch({ type: 'SWAP' });
+      const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
+      const standbyVideoRef = standbyPlayer === 1 ? video1Ref : video2Ref;
       
-      if (nextVideoRef.current && nextVideoRef.current.readyState >= 3) {
-        nextVideoRef.current.play().catch((error) => {
-          console.error("Next video playback failed:", error);
+      if (standbyVideoRef.current) {
+        standbyVideoRef.current.play().catch((error) => {
+          console.error("Video playback failed:", error);
         });
-        setActivePlayer(preloadedPlayerRef.current);
-        setCurrentVideoIndex((currentVideoIndex + 1) % videos.length);
       }
     }
   };
 
   const handleVideoEnd = () => {
-    if (preloadedPlayerRef.current !== null && activePlayer !== preloadedPlayerRef.current) {
-      const nextVideoRef = preloadedPlayerRef.current === 1 ? video1Ref : video2Ref;
+    if (state.phase === 'playing') {
+      dispatch({ type: 'SWAP' });
+      const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
+      const standbyVideoRef = standbyPlayer === 1 ? video1Ref : video2Ref;
+      const nextIndex = (state.currentIndex + 1) % videos.length;
       
-      if (nextVideoRef.current && nextVideoRef.current.readyState >= 3) {
-        nextVideoRef.current.play().catch((error) => {
-          console.error("Fallback video playback (preloaded) failed:", error);
+      if (standbyVideoRef.current) {
+        standbyVideoRef.current.src = videos[nextIndex];
+        standbyVideoRef.current.load();
+        standbyVideoRef.current.play().catch((error) => {
+          console.error("Fallback video playback failed:", error);
         });
-      } else {
-        const nextIndex = (currentVideoIndex + 1) % videos.length;
-        const nextVideoRef = preloadedPlayerRef.current === 1 ? video1Ref : video2Ref;
-        
-        if (nextVideoRef.current) {
-          nextVideoRef.current.src = videos[nextIndex];
-          nextVideoRef.current.load();
-          nextVideoRef.current.play().catch((error) => {
-            console.error("Fallback video playback (new load) failed:", error);
-          });
-        }
       }
-      setActivePlayer(preloadedPlayerRef.current);
-      setCurrentVideoIndex((currentVideoIndex + 1) % videos.length);
     }
-    preloadedPlayerRef.current = null;
-    transitioningRef.current = false;
+  };
+
+  const handleCanPlayThrough = (player: 1 | 2) => {
+    const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
+    if (player === standbyPlayer && state.phase === 'preloading') {
+      dispatch({ type: 'PRELOAD_READY' });
+    }
   };
 
   useEffect(() => {
@@ -91,6 +126,14 @@ export default function HeroSection() {
     }
   }, []);
 
+  useEffect(() => {
+    if (state.phase === 'swapping') {
+      setTimeout(() => {
+        dispatch({ type: 'RESET_AFTER_SWAP' });
+      }, 100);
+    }
+  }, [state.phase]);
+
   return (
     <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
       <video 
@@ -99,7 +142,8 @@ export default function HeroSection() {
         playsInline
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleVideoEnd}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${activePlayer === 1 ? 'opacity-100' : 'opacity-0'}`}
+        onCanPlayThrough={() => handleCanPlayThrough(1)}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${state.activePlayer === 1 ? 'opacity-100' : 'opacity-0'}`}
         data-testid="hero-video-1"
       />
       <video 
@@ -108,7 +152,8 @@ export default function HeroSection() {
         playsInline
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleVideoEnd}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${activePlayer === 2 ? 'opacity-100' : 'opacity-0'}`}
+        onCanPlayThrough={() => handleCanPlayThrough(2)}
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${state.activePlayer === 2 ? 'opacity-100' : 'opacity-0'}`}
         data-testid="hero-video-2"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-75"></div>
