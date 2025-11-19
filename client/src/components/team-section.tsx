@@ -34,7 +34,7 @@ export default function TeamSection() {
     { id: 2, name: "Jason B Law", position: "Lawyer", image: andrewOringer },
     { id: 3, name: "Domenic Miller", position: "Fraud Investigator", image: barbaraWheaton },
     { id: 4, name: "James Ashford", position: "Lawyer", image: benjaminBruner },
-    { id: 5, name: "Jack S Creed", position: "Fraud Investigator", image: frankKnowlton },
+    { id: 5, name: "Jack S Chamberlain", position: "Fraud Investigator", image: frankKnowlton },
     { id: 6, name: "Greer B. Mallette", position: "Lawyer", image: greerMallette },
     { id: 7, name: "Jay A. Ebelhar", position: "Fraud Investigator", image: jayEbelhar },
     { id: 8, name: "John T. Balhoff II", position: "Lawyer", image: johnBalhoff },

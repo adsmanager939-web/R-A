@@ -24,7 +24,7 @@ Preferred communication style: Simple, everyday language.
 **Team Section Updates:**
 - Added 12 professional team member photos with real names
 - P. David Andress listed as CEO
-- Key team members: Jason B Law, Domenic Miller, James Ashford, Jack S Creed
+- Key team members: Jason B Law, Domenic Miller, James Ashford, Jack S Chamberlain
 - Alternating positions: Lawyer and Fraud Investigator
 - Carousel displays 3 members on desktop, responsive on mobile
 
