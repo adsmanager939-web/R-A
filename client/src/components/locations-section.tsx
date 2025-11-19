@@ -6,7 +6,7 @@ export default function LocationsSection() {
       city: "Toronto",
       country: "Canada",
       address: "123 Bay Street, Suite 1800",
-      phone: "+1 (226) 479-6091",
+      phone: "+1 (613) 416-0183",
       email: "toronto@trueclaim-associates.com"
     },
     {

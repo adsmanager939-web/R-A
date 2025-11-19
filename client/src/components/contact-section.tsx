@@ -81,7 +81,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-bold text-[#1a3a52] text-lg mb-1">24/7 Helpline</h4>
-                  <p className="text-[#1a3a52] font-semibold text-lg" data-testid="phone-number">+1 (226) 479-6091</p>
+                  <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer" className="text-[#1a3a52] font-semibold text-lg hover:text-[#d4af37] transition-colors" data-testid="phone-number">+1 (613) 416-0183</a>
                   <p className="text-sm text-gray-500 mt-1">Available 24 hours for urgent cases</p>
                 </div>
               </div>

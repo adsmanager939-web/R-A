@@ -97,7 +97,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-white">Contact</h4>
             <ul className="space-y-2 text-white/80">
-              <li data-testid="footer-phone">+1 (226) 479-6091</li>
+              <li data-testid="footer-phone">
+                <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer" className="hover:text-[#d4af37] transition-colors">
+                  +1 (613) 416-0183
+                </a>
+              </li>
               <li data-testid="footer-email">contact@trueclaim-associates.com</li>
               <li>Available 24/7</li>
             </ul>

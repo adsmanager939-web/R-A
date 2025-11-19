@@ -47,12 +47,14 @@ export default function Header() {
               </div>
             </div>
             <a 
-              href="tel:+12264796091" 
+              href="https://wa.me/16134160183" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-[#d4af37] transition-colors font-semibold"
               data-testid="header-phone"
             >
               <Phone className="w-4 h-4" />
-              <span>+1 (226) 479-6091</span>
+              <span>+1 (613) 416-0183</span>
             </a>
           </div>
         </div>

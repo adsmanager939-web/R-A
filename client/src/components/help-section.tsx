@@ -101,13 +101,13 @@ export default function HelpSection() {
             >
               Contact Us Now
             </Button>
-            <a href="tel:+12264796091">
+            <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white hover:text-[#1a3a52] font-bold px-8"
-                data-testid="button-call-from-help"
+                data-testid="button-whatsapp-from-help"
               >
-                Call: +1 (226) 479-6091
+                WhatsApp: +1 (613) 416-0183
               </Button>
             </a>
           </div>
