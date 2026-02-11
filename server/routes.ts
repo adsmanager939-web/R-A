@@ -5,7 +5,32 @@ import { insertContactSubmissionSchema } from "@shared/schema";
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  
+
+  app.get("/sitemap.xml", (_req, res) => {
+    const baseUrl = "https://trueclaimassociates.com";
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>`;
+    res.header("Content-Type", "application/xml");
+    res.send(sitemap);
+  });
+
+  app.get("/robots.txt", (_req, res) => {
+    const baseUrl = "https://trueclaimassociates.com";
+    const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${baseUrl}/sitemap.xml`;
+    res.header("Content-Type", "text/plain");
+    res.send(robots);
+  });
+
   app.post("/api/contact", async (req, res) => {
     try {
       const validatedData = insertContactSubmissionSchema.parse(req.body);

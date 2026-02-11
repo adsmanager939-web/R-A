@@ -1,57 +1,7 @@
-import { useEffect, useRef, useReducer } from "react";
 import { Button } from "@/components/ui/button";
-import video1 from "@assets/Video 1_1763592894069.mp4";
-import video2 from "@assets/Video 2_1763592894070.mp4";
-import video3 from "@assets/Video 3_1763592894071.mp4";
-import video5 from "@assets/Video 5_1763592894072.mp4";
-import video6 from "@assets/Video 6_1763592894072.mp4";
-
-const videos = [video1, video2, video3, video5, video6];
-const PRELOAD_LEAD = 1.5;
-const CROSSFADE_WINDOW = 1.0;
-
-type Phase = 'playing' | 'preloading' | 'readyToSwap' | 'swapping';
-
-interface VideoState {
-  currentIndex: number;
-  activePlayer: 1 | 2;
-  phase: Phase;
-}
-
-type VideoAction =
-  | { type: 'PRELOAD_REQUEST' }
-  | { type: 'PRELOAD_READY' }
-  | { type: 'SWAP' }
-  | { type: 'RESET_AFTER_SWAP' };
-
-function videoReducer(state: VideoState, action: VideoAction): VideoState {
-  switch (action.type) {
-    case 'PRELOAD_REQUEST':
-      return { ...state, phase: 'preloading' };
-    case 'PRELOAD_READY':
-      return { ...state, phase: 'readyToSwap' };
-    case 'SWAP':
-      return {
-        currentIndex: (state.currentIndex + 1) % videos.length,
-        activePlayer: state.activePlayer === 1 ? 2 : 1,
-        phase: 'swapping'
-      };
-    case 'RESET_AFTER_SWAP':
-      return { ...state, phase: 'playing' };
-    default:
-      return state;
-  }
-}
+import heroBg from "@assets/hero-bg.jpg";
 
 export default function HeroSection() {
-  const video1Ref = useRef<HTMLVideoElement>(null);
-  const video2Ref = useRef<HTMLVideoElement>(null);
-  const [state, dispatch] = useReducer(videoReducer, {
-    currentIndex: 0,
-    activePlayer: 1,
-    phase: 'playing' as Phase
-  });
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -59,99 +9,14 @@ export default function HeroSection() {
     }
   };
 
-  const handleTimeUpdate = (e: React.SyntheticEvent<HTMLVideoElement>) => {
-    if (state.phase !== 'playing' && state.phase !== 'readyToSwap') return;
-    
-    const video = e.currentTarget;
-    const timeRemaining = video.duration - video.currentTime;
-    
-    if (timeRemaining <= PRELOAD_LEAD && state.phase === 'playing') {
-      dispatch({ type: 'PRELOAD_REQUEST' });
-      const nextIndex = (state.currentIndex + 1) % videos.length;
-      const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
-      const standbyVideoRef = standbyPlayer === 1 ? video1Ref : video2Ref;
-      
-      if (standbyVideoRef.current) {
-        standbyVideoRef.current.src = videos[nextIndex];
-        standbyVideoRef.current.load();
-      }
-    }
-    
-    if (timeRemaining <= CROSSFADE_WINDOW && state.phase === 'readyToSwap') {
-      dispatch({ type: 'SWAP' });
-      const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
-      const standbyVideoRef = standbyPlayer === 1 ? video1Ref : video2Ref;
-      
-      if (standbyVideoRef.current) {
-        standbyVideoRef.current.play().catch((error) => {
-          console.error("Video playback failed:", error);
-        });
-      }
-    }
-  };
-
-  const handleVideoEnd = () => {
-    if (state.phase === 'playing') {
-      dispatch({ type: 'SWAP' });
-      const standbyPlayer = state.activePlayer === 1 ? 2 : 1;
-      const standbyVideoRef = standbyPlayer === 1 ? video1Ref : video2Ref;
-      const nextIndex = (state.currentIndex + 1) % videos.length;
-      
-      if (standbyVideoRef.current) {
-        standbyVideoRef.current.src = videos[nextIndex];
-        standbyVideoRef.current.load();
-        standbyVideoRef.current.play().catch((error) => {
-          console.error("Fallback video playback failed:", error);
-        });
-      }
-    }
-  };
-
-  const handleCanPlayThrough = (player: 1 | 2) => {
-    if (state.phase === 'preloading' && player !== state.activePlayer) {
-      dispatch({ type: 'PRELOAD_READY' });
-    }
-  };
-
-  useEffect(() => {
-    if (video1Ref.current) {
-      video1Ref.current.src = videos[0];
-      video1Ref.current.load();
-      video1Ref.current.play().catch((error) => {
-        console.error("Video playback failed:", error);
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    if (state.phase === 'swapping') {
-      setTimeout(() => {
-        dispatch({ type: 'RESET_AFTER_SWAP' });
-      }, 100);
-    }
-  }, [state.phase]);
-
   return (
     <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
-      <video 
-        ref={video1Ref}
-        muted 
-        playsInline
-        onTimeUpdate={handleTimeUpdate}
-        onEnded={handleVideoEnd}
-        onCanPlayThrough={() => handleCanPlayThrough(1)}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${state.activePlayer === 1 ? 'opacity-100' : 'opacity-0'}`}
-        data-testid="hero-video-1"
-      />
-      <video 
-        ref={video2Ref}
-        muted 
-        playsInline
-        onTimeUpdate={handleTimeUpdate}
-        onEnded={handleVideoEnd}
-        onCanPlayThrough={() => handleCanPlayThrough(2)}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${state.activePlayer === 2 ? 'opacity-100' : 'opacity-0'}`}
-        data-testid="hero-video-2"
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+        data-testid="hero-background"
       />
       <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-75"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

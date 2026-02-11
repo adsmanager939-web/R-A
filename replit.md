@@ -12,14 +12,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
-**Hero Section Video Sequence (November 19, 2025):**
-- Completely rebuilt with 5 new videos playing in sequential order: Video 1 → Video 2 → Video 3 → Video 5 → Video 6 → loop
-- Dual-video player system with smooth 1-second opacity crossfade transitions
-- Preloading logic: next video loads at 1.5s remaining, plays at 1.0s remaining
-- Fallback mechanism ensures continuous playback if timing windows are missed
-- Error handling for autoplay failures with console logging
-- Maintains muted, inline playback for cross-browser compatibility
-- Uses state machine (useReducer) for reliable phase transitions
+**Hero Section Static Background (February 11, 2026):**
+- Replaced 5-video sequential playback with a single static background image to reduce bandwidth
+- Professional stock photo with navy gradient overlay matching brand colors
+- Significantly reduces page load time and data usage
+
+**SEO & Google Search Improvements (February 11, 2026):**
+- Added sitemap.xml and robots.txt served from Express routes
+- Added Organization structured data (JSON-LD) with company info, logo, contact details
+- Added Open Graph meta tags for social media sharing
+- Created PNG logo (512x512) for Google structured data compatibility
+- Logo, email, phone, and address included in structured data
 
 **Contact Form Improvements (November 19, 2025):**
 - Enhanced contact section with gradient background and improved card styling
