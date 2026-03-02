@@ -108,7 +108,7 @@ export default function Footer() {
                   +1 (613) 416-0183
                 </a>
               </li>
-              <li data-testid="footer-email">contact@trueclaimassociates.com</li>
+              <li data-testid="footer-email">inquiry@trueclaim-associates.com</li>
               <li>Available 24/7</li>
             </ul>
             

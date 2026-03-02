@@ -7,28 +7,28 @@ export default function LocationsSection() {
       country: "Canada",
       address: "123 Bay Street, Suite 1800",
       phone: "+1 (613) 416-0183",
-      email: "toronto@trueclaimassociates.com"
+      email: "toronto@trueclaim-associates.com"
     },
     {
       city: "New York",
       country: "United States",
       address: "450 Park Avenue, 15th Floor",
       phone: "+1 (212) 555-0123",
-      email: "newyork@trueclaimassociates.com"
+      email: "newyork@trueclaim-associates.com"
     },
     {
       city: "London",
       country: "United Kingdom",
       address: "25 Old Broad Street",
       phone: "+44 7542 485235",
-      email: "london@trueclaimassociates.com"
+      email: "london@trueclaim-associates.com"
     },
     {
       city: "Singapore",
       country: "Singapore",
       address: "1 Raffles Place, #40-02",
       phone: "+65 6789 0123",
-      email: "singapore@trueclaimassociates.com"
+      email: "singapore@trueclaim-associates.com"
     }
   ];
 

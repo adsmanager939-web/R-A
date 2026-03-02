@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
               For privacy-related inquiries, you may contact our Privacy Officer at:
             </p>
             <ul className="list-none mt-2 space-y-1 pl-0">
-              <li><strong>Email:</strong> inquiry@trueclaimassociates.com</li>
+              <li><strong>Email:</strong> inquiry@trueclaim-associates.com</li>
               <li><strong>Phone / WhatsApp:</strong> +1 (613) 416-0183</li>
               <li><strong>Address:</strong> Cambridge, Ontario, Canada</li>
             </ul>
@@ -114,7 +114,7 @@ export default function PrivacyPolicy() {
               <li><strong>Withdrawal of Consent:</strong> Withdraw your consent to our use of your information (subject to legal and contractual restrictions).</li>
               <li><strong>Complaint:</strong> File a complaint with our Privacy Officer or with the <a href="https://www.priv.gc.ca" target="_blank" rel="noopener noreferrer" className="text-[#1a3a52] underline hover:text-[#d4af37]">Office of the Privacy Commissioner of Canada</a>.</li>
             </ul>
-            <p className="mt-3">To exercise any of these rights, please contact us at <strong>inquiry@trueclaimassociates.com</strong>.</p>
+            <p className="mt-3">To exercise any of these rights, please contact us at <strong>inquiry@trueclaim-associates.com</strong>.</p>
           </section>
 
           <section>
@@ -145,7 +145,7 @@ export default function PrivacyPolicy() {
             <ul className="list-none mt-3 space-y-1 pl-0">
               <li><strong>TrueClaim & Associates Ltd.</strong></li>
               <li>Cambridge, Ontario, Canada</li>
-              <li><strong>Email:</strong> inquiry@trueclaimassociates.com</li>
+              <li><strong>Email:</strong> inquiry@trueclaim-associates.com</li>
               <li><strong>Phone / WhatsApp:</strong> +1 (613) 416-0183</li>
             </ul>
           </section>
