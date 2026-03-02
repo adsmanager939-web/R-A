@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import PrivacyPolicy from "@/pages/privacy-policy";
+import AdminPage from "@/pages/admin";
 
 function Router() {
   return (
@@ -12,6 +13,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/home" component={Home} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/admin" component={AdminPage} />
       <Route>
         <Home />
       </Route>

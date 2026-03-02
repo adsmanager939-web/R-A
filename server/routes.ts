@@ -53,6 +53,11 @@ Sitemap: ${baseUrl}/sitemap.xml`;
   });
 
   app.get("/api/contact-submissions", async (req, res) => {
+    const adminPassword = process.env.ADMIN_PASSWORD;
+    const provided = req.headers["authorization"];
+    if (!adminPassword || provided !== adminPassword) {
+      return res.status(401).json({ success: false, message: "Unauthorized" });
+    }
     try {
       const submissions = await storage.getContactSubmissions();
       res.json(submissions);
