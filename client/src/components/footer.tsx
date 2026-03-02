@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import Logo from "./logo";
 import { LinkedinIcon, TwitterIcon, FacebookIcon } from "lucide-react";
 
@@ -118,7 +119,12 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-white/20 mt-12 pt-8 text-white">
-          <p className="mb-3 text-xs">&copy; 2013 TrueClaim & Associates Ltd. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4 mb-3 text-xs">
+            <span>&copy; 2013 TrueClaim & Associates Ltd. All rights reserved.</span>
+            <Link href="/privacy-policy" className="text-[#d4af37] hover:underline" data-testid="footer-link-privacy">
+              Privacy Policy
+            </Link>
+          </div>
           <div className="text-xs text-white/70 leading-relaxed space-y-1">
             <p>
               TrueClaim & Associates is a trading name of TrueClaim & Associates Ltd., registered in Canada as a subsidiary of Refund & Associates, with the following identifiers: FINTRAC authorized, Business Number (BN): 842594962, Registry ID: 2112580. Registered Office Location: Cambridge, Ontario. Created: September 7, 2006.
