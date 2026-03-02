@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-[#1a3a52] mb-3">1. Introduction</h2>
             <p>
-              TrueClaim & Associates Ltd. ("TrueClaim", "we", "our", or "us") is committed to protecting the personal information of the individuals we serve. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at <strong>trueclaimassociates.com</strong> or engage our fraud investigation and asset recovery services.
+              TrueClaim & Associates Ltd. ("TrueClaim", "we", "our", or "us") is committed to protecting the personal information of the individuals we serve. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at <strong>trueclaim.associates</strong> or engage our fraud investigation and asset recovery services.
             </p>
             <p className="mt-3">
               This policy is governed by the <strong>Personal Information Protection and Electronic Documents Act (PIPEDA)</strong> and applicable provincial privacy legislation in Canada. By using our website or services, you consent to the practices described in this policy.

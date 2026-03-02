@@ -92,6 +92,11 @@ export default function Footer() {
                   Contact
                 </button>
               </li>
+              <li>
+                <Link href="/privacy-policy" className="hover:text-[#d4af37] transition-colors" data-testid="footer-link-privacy-nav">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
           
