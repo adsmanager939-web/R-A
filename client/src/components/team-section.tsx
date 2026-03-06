@@ -13,6 +13,7 @@ import linseyGleason from "@assets/linsey-gleason-200324_1759490816560.jpg";
 import meganJerabek from "@assets/megan-jerabek-242237_1759490816560.jpg";
 import nicholasPagliari from "@assets/nicholas-r-pagliari-195995_1759490816560.png";
 import davidAndress from "@assets/p-david-andress-139548_1759490816560.png";
+import jasonLaw from "@assets/image_1772824615902.png";
 
 export default function TeamSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -31,7 +32,7 @@ export default function TeamSection() {
 
   const teamMembers = [
     { id: 1, name: "P. David Andress", position: "CEO", image: davidAndress },
-    { id: 2, name: "Jason B Law", position: "Lawyer", image: andrewOringer },
+    { id: 2, name: "Jason B Law", position: "Fraud Investigator", image: jasonLaw },
     { id: 3, name: "Jay A. Ebelhar", position: "Fraud Investigator", image: barbaraWheaton },
     { id: 4, name: "James Ashford", position: "Lawyer", image: benjaminBruner },
     { id: 5, name: "Jack S Chamberlain", position: "Fraud Investigator", image: frankKnowlton },
