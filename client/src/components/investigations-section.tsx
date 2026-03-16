@@ -23,7 +23,7 @@ export default function InvestigationsSection() {
     <section id="investigations" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1a3a52] mb-4">Our Investigation Process</h2>
+          <h2 className="text-4xl font-bold text-[#000000] mb-4">Our Investigation Process</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             A proven three-step approach to recovering your funds and bringing perpetrators to justice
           </p>
@@ -36,13 +36,13 @@ export default function InvestigationsSection() {
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex items-start gap-6"
               data-testid={`investigation-step-${index}`}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-full flex items-center justify-center flex-shrink-0">
-                <step.icon className="w-10 h-10 text-[#d4af37]" />
+              <div className="w-20 h-20 bg-gradient-to-br from-[#000000] to-[#B91C1C] rounded-full flex items-center justify-center flex-shrink-0">
+                <step.icon className="w-10 h-10 text-[#FFD700]" />
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl font-bold text-[#d4af37]">{index + 1}.</span>
-                  <h3 className="text-xl font-bold text-[#1a3a52]">{step.title}</h3>
+                  <span className="text-2xl font-bold text-[#B91C1C]">{index + 1}.</span>
+                  <h3 className="text-xl font-bold text-[#000000]">{step.title}</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>
