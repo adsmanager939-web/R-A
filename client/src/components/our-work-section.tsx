@@ -38,7 +38,7 @@ export default function OurWorkSection() {
   ];
 
   return (
-    <section id="our-work" className="py-20 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] text-white">
+    <section id="our-work" className="py-20 bg-gradient-to-br from-[#000000] to-[#111111] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Our Work & Results</h2>
@@ -61,7 +61,7 @@ export default function OurWorkSection() {
               data-testid={`stat-${index}`}
             >
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-[#d4af37]" />
+                <stat.icon className="w-8 h-8 text-[#FFD700]" />
               </div>
               <div className="text-3xl font-bold mb-2">{stat.value}</div>
               <div className="text-white/80">{stat.label}</div>
@@ -76,7 +76,7 @@ export default function OurWorkSection() {
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
               data-testid={`case-study-${index}`}
             >
-              <div className="text-[#d4af37] text-2xl font-bold mb-2">{study.amount}</div>
+              <div className="text-[#FFD700] text-2xl font-bold mb-2">{study.amount}</div>
               <div className="text-sm text-white/70 mb-3">{study.type}</div>
               <h3 className="text-xl font-bold mb-3">{study.title}</h3>
               <p className="text-white/80 leading-relaxed">{study.description}</p>
@@ -101,8 +101,8 @@ export default function OurWorkSection() {
                 className="flex items-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
                 data-testid={`impact-stat-${index}`}
               >
-                <div className="w-16 h-16 bg-[#d4af37]/20 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
-                  <stat.icon className="w-8 h-8 text-[#d4af37]" />
+                <div className="w-16 h-16 bg-[#FFD700]/20 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                  <stat.icon className="w-8 h-8 text-[#FFD700]" />
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-1">{stat.value}</div>
