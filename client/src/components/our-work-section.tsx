@@ -60,7 +60,7 @@ export default function OurWorkSection() {
               className="text-center"
               data-testid={`stat-${index}`}
             >
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#000000] to-[#B91C1C] rounded-full flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="w-8 h-8 text-[#FFD700]" />
               </div>
               <div className="text-3xl font-bold mb-2">{stat.value}</div>
