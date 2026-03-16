@@ -101,7 +101,7 @@ export default function OurWorkSection() {
                 className="flex items-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
                 data-testid={`impact-stat-${index}`}
               >
-                <div className="w-16 h-16 bg-[#FFD700]/20 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#000000] to-[#B91C1C] rounded-full flex items-center justify-center mr-6 flex-shrink-0">
                   <stat.icon className="w-8 h-8 text-[#FFD700]" />
                 </div>
                 <div>
