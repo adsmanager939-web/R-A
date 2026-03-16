@@ -83,14 +83,6 @@ export default function Header() {
               ))}
             </nav>
             
-            <Button 
-              onClick={() => scrollToSection("contact")}
-              className="hidden lg:flex bg-[#B91C1C] hover:bg-[#991B1B] text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              data-testid="button-free-consultation-header"
-            >
-              Free Consultation
-            </Button>
-            
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="lg:hidden" data-testid="button-mobile-menu">
