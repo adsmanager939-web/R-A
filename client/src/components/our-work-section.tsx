@@ -1,5 +1,4 @@
 import { DollarSign, Users, Award, TrendingUp, Building2, UserX, Banknote, Calendar } from "lucide-react";
-import arrestImage from "@assets/image_1759267995836.png";
 
 export default function OurWorkSection() {
   const stats = [
@@ -87,7 +86,7 @@ export default function OurWorkSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div className="flex items-center justify-center h-full">
             <img 
-              src={arrestImage} 
+              src="/our-work.png" 
               alt="Fraudsters arrested by authorities" 
               className="w-full h-auto rounded-xl shadow-2xl"
               data-testid="img-arrests"
