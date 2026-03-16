@@ -5,13 +5,19 @@ interface LogoProps {
 
 export default function Logo({ className = "" }: LogoProps) {
   return (
-    <div className={`flex items-center ${className}`} data-testid="logo">
-      <div className="bg-white rounded-xl px-3 py-1 shadow-md">
-        <img
-          src="/logo-refund.jpg"
-          alt="Refund & Associates"
-          className="h-12 w-auto object-contain"
-        />
+    <div className={`flex items-center gap-3 ${className}`} data-testid="logo">
+      <img
+        src="/logo-eagle.jpg"
+        alt="Refund & Associates eagle"
+        className="h-14 w-14 object-cover rounded-full"
+      />
+      <div className="flex flex-col leading-tight">
+        <span className="text-2xl font-black text-white tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
+          REFUND<span className="text-[#FFD700]">&</span>
+        </span>
+        <span className="text-sm font-bold text-[#B91C1C] uppercase tracking-widest">
+          Associates
+        </span>
       </div>
     </div>
   );
