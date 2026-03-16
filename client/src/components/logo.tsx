@@ -7,7 +7,7 @@ export default function Logo({ className = "" }: LogoProps) {
   return (
     <div className={`flex items-center ${className}`} data-testid="logo">
       <img
-        src="/logo-refund.jpg"
+        src="/logo-refund.png"
         alt="Refund & Associates"
         className="h-14 w-auto object-contain"
       />
