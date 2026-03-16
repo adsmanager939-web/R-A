@@ -13,9 +13,9 @@ export default function Logo({ className = "" }: LogoProps) {
       />
       <div className="flex flex-col leading-tight">
         <span className="text-2xl font-black text-white tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
-          REFUND<span className="text-[#FFD700]">&</span>
+          REFUND
         </span>
-        <span className="text-sm font-bold text-[#B91C1C] uppercase tracking-widest">
+        <span className="text-sm font-bold text-[#FFD700] uppercase tracking-widest">
           Associates
         </span>
       </div>
