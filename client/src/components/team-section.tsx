@@ -40,15 +40,6 @@ export default function TeamSection() {
           </p>
         </div>
         
-        <div className="mb-12">
-          <img
-            src="/team-group.jpg"
-            alt="Refund & Associates team of professionals"
-            className="w-full h-auto rounded-2xl shadow-2xl object-cover"
-            data-testid="img-team-group"
-          />
-        </div>
-
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef} data-testid="team-carousel">
             <div className="flex gap-8">

@@ -1,5 +1,4 @@
 import { Check } from "lucide-react";
-import teamImage from "@assets/image_1759269073608.png";
 
 export default function AboutSection() {
   const features = [
@@ -19,7 +18,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="flex items-center justify-center">
             <img 
-              src={teamImage} 
+              src="/team-group.jpg" 
               alt="Professional team of fraud investigators" 
               className="rounded-xl shadow-lg w-full h-auto max-h-[400px] object-cover"
               data-testid="img-team"
