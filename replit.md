@@ -1,8 +1,8 @@
-# TrueClaim - Fraud Recovery Platform
+# Refund & Associates - Fraud Recovery Platform
 
 ## Overview
 
-TrueClaim is a web application designed to help victims of fraud (romance scams, crypto fraud, investment scams, etc.) connect with fraud recovery professionals. The platform allows users to submit their case details through a secure contact form and provides information about the recovery process through a marketing-focused landing page.
+Refund & Associates is a web application designed to help victims of fraud (romance scams, crypto fraud, investment scams, etc.) connect with fraud recovery professionals. The platform allows users to submit their case details through a secure contact form and provides information about the recovery process through a marketing-focused landing page.
 
 The application is built as a full-stack TypeScript application with a React frontend and Express backend, using modern web development practices and a component-based UI architecture.
 

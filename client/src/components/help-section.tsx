@@ -60,7 +60,7 @@ export default function HelpSection() {
     <section id="help" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#1a3a52] mb-4">How Can We Help You?</h2>
+          <h2 className="text-4xl font-bold text-[#000000] mb-4">How Can We Help You?</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Get the support and information you need to start your recovery journey
           </p>
@@ -73,15 +73,15 @@ export default function HelpSection() {
               className="bg-white rounded-xl p-6 shadow-lg"
               data-testid={`help-card-${index}`}
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-lg flex items-center justify-center mb-4">
-                <resource.icon className="w-7 h-7 text-[#d4af37]" />
+              <div className="w-14 h-14 bg-gradient-to-br from-[#000000] to-[#DC2626] rounded-lg flex items-center justify-center mb-4">
+                <resource.icon className="w-7 h-7 text-[#FFD700]" />
               </div>
-              <h3 className="text-xl font-bold text-[#1a3a52] mb-3">{resource.title}</h3>
+              <h3 className="text-xl font-bold text-[#000000] mb-3">{resource.title}</h3>
               <p className="text-gray-600 mb-4">{resource.description}</p>
               <ul className="space-y-2">
                 {resource.items.map((item, i) => (
                   <li key={i} className="text-sm text-gray-500 flex items-start">
-                    <span className="text-[#d4af37] mr-2">•</span>
+                    <span className="text-[#FFD700] mr-2">•</span>
                     {item}
                   </li>
                 ))}
@@ -90,13 +90,13 @@ export default function HelpSection() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] rounded-xl p-8 text-center text-white">
+        <div className="bg-gradient-to-r from-[#000000] to-[#DC2626] rounded-xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
           <p className="mb-6">Our expert team is ready to assist you with any questions or concerns</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               onClick={() => scrollToSection("contact")}
-              className="bg-white text-[#1a3a52] hover:bg-gray-100 font-bold px-8"
+              className="bg-white text-[#000000] hover:bg-gray-100 font-bold px-8"
               data-testid="button-contact-from-help"
             >
               Contact Us Now
@@ -104,7 +104,7 @@ export default function HelpSection() {
             <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#1a3a52] font-bold px-8"
+                className="border-2 border-white text-white hover:bg-white hover:text-[#000000] font-bold px-8"
                 data-testid="button-whatsapp-from-help"
               >
                 WhatsApp: +1 (613) 416-0183

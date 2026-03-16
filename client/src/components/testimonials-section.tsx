@@ -53,28 +53,28 @@ export default function TestimonialsSection() {
     },
     {
       id: 5,
-      quote: "The team at TrueClaim has been really amazing. Jack has been absolutely great with how he has handled my case so far with the banks. They have recovered some of my funds and are working on recovering the rest for me now. I really wasn't expecting anything back at all, so I'm very grateful for this. The whole team pays a lot of attention to detail and replies quickly to my queries.",
+      quote: "The team at Refund & Associates has been really amazing. Jack has been absolutely great with how he has handled my case so far with the banks. They have recovered some of my funds and are working on recovering the rest for me now. I really wasn't expecting anything back at all, so I'm very grateful for this. The whole team pays a lot of attention to detail and replies quickly to my queries.",
       name: "Ben L.",
       location: "Ontario",
       rating: 5
     },
     {
       id: 6,
-      quote: "I was scammed in a romance fraud scheme and lost over $85,000. TrueClaim worked with international authorities to track down the perpetrators and recover most of my money. They were compassionate, professional, and kept me informed every step of the way. I can't thank them enough for giving me hope when I thought all was lost.",
+      quote: "I was scammed in a romance fraud scheme and lost over $85,000. Refund & Associates worked with international authorities to track down the perpetrators and recover most of my money. They were compassionate, professional, and kept me informed every step of the way. I can't thank them enough for giving me hope when I thought all was lost.",
       name: "Sarah M.",
       location: "Alberta",
       rating: 5
     },
     {
       id: 7,
-      quote: "After falling victim to an investment scam, I thought my retirement savings were gone forever. The investigators at TrueClaim worked tirelessly for months and managed to recover 80% of my funds. Their expertise in financial fraud is unmatched. I highly recommend their services to anyone who has been scammed.",
+      quote: "After falling victim to an investment scam, I thought my retirement savings were gone forever. The investigators at Refund & Associates worked tirelessly for months and managed to recover 80% of my funds. Their expertise in financial fraud is unmatched. I highly recommend their services to anyone who has been scammed.",
       name: "Robert K.",
       location: "Manitoba",
       rating: 5
     },
     {
       id: 8,
-      quote: "Professional, efficient, and results-driven. TrueClaim helped me recover funds from a business email compromise scam. They coordinated with banks across multiple countries and managed to freeze the accounts before the money disappeared. Their quick action saved my business. Thank you!",
+      quote: "Professional, efficient, and results-driven. Refund & Associates helped me recover funds from a business email compromise scam. They coordinated with banks across multiple countries and managed to freeze the accounts before the money disappeared. Their quick action saved my business. Thank you!",
       name: "Jennifer T.",
       location: "Saskatchewan",
       rating: 5
@@ -85,7 +85,7 @@ export default function TestimonialsSection() {
     <section id="success-stories" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1a3a52] mb-4">Success Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mb-4">Success Stories</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real recoveries from real clients. See how we've helped victims get their money back.
           </p>
@@ -103,7 +103,7 @@ export default function TestimonialsSection() {
                   <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 h-full flex flex-col">
                     <div className="flex gap-1 mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-[#d4af37] text-[#d4af37]" />
+                        <Star key={i} className="w-5 h-5 fill-[#FFD700] text-[#FFD700]" />
                       ))}
                     </div>
                     
@@ -112,11 +112,11 @@ export default function TestimonialsSection() {
                     </blockquote>
                     
                     <div className="flex items-center pt-4 border-t border-gray-100">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] rounded-full flex items-center justify-center text-white font-semibold">
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#000000] to-[#DC2626] rounded-full flex items-center justify-center text-white font-semibold">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </div>
                       <div className="ml-4">
-                        <div className="font-semibold text-[#1a3a52]">{testimonial.name}</div>
+                        <div className="font-semibold text-[#000000]">{testimonial.name}</div>
                         <div className="text-sm text-gray-500">{testimonial.location}</div>
                       </div>
                     </div>
@@ -130,7 +130,7 @@ export default function TestimonialsSection() {
             variant="outline"
             size="icon"
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-gray-200 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-gray-200 hover:border-[#FFD700] hover:bg-[#FFD700] hover:text-white transition-all z-10"
             data-testid="button-prev-testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -140,7 +140,7 @@ export default function TestimonialsSection() {
             variant="outline"
             size="icon"
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-gray-200 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-gray-200 hover:border-[#FFD700] hover:bg-[#FFD700] hover:text-white transition-all z-10"
             data-testid="button-next-testimonial"
           >
             <ChevronRight className="w-6 h-6" />

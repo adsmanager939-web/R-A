@@ -18,10 +18,10 @@ export default function HeroSection() {
         loading="eager"
         data-testid="hero-background"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a3a52] via-[#2a4a62] to-[#1a3a52] opacity-75"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#000000] via-[#111111] to-[#000000] opacity-80"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="text-lg font-semibold mb-4 text-white/90">Professional Fraud Investigation & Asset Recovery</div>
+          <div className="text-lg font-semibold mb-4 text-[#FFD700]">Professional Fraud Investigation & Asset Recovery</div>
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             TRUSTED BY MORE THAN 200,000 CANADIANS
           </h1>
@@ -32,7 +32,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] hover:from-[#b8941f] hover:to-[#d4af37] text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+              className="bg-gradient-to-r from-[#FFD700] to-[#DC2626] hover:from-[#DC2626] hover:to-[#FFD700] text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               data-testid="button-book-consultation"
             >
               Book a Free Consultation
@@ -41,23 +41,23 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("investigations")}
-              className="border-2 border-white text-white hover:bg-white hover:text-[#1a3a52] px-8 py-6 text-lg font-semibold transition-all"
+              className="border-2 border-white text-white hover:bg-white hover:text-[#000000] px-8 py-6 text-lg font-semibold transition-all"
               data-testid="button-learn-how-works"
             >
               Learn How It Works
             </Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl">
-              <div className="text-4xl font-bold mb-2" data-testid="stat-recovered">4.9 / 5</div>
+            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-[#FFD700]/30 shadow-xl">
+              <div className="text-4xl font-bold mb-2 text-[#FFD700]" data-testid="stat-recovered">4.9 / 5</div>
               <div className="text-white font-medium">Client Rating</div>
             </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl">
-              <div className="text-4xl font-bold mb-2" data-testid="stat-cases">92%</div>
+            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-[#FFD700]/30 shadow-xl">
+              <div className="text-4xl font-bold mb-2 text-[#FFD700]" data-testid="stat-cases">92%</div>
               <div className="text-white font-medium">Success Rate</div>
             </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 shadow-xl">
-              <div className="text-4xl font-bold mb-2" data-testid="stat-support">1,300+</div>
+            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-[#FFD700]/30 shadow-xl">
+              <div className="text-4xl font-bold mb-2 text-[#FFD700]" data-testid="stat-support">1,300+</div>
               <div className="text-white font-medium">Expert Team</div>
             </div>
           </div>

@@ -14,29 +14,25 @@ export default function Logo({ className = "", variant = "default" }: LogoProps)
         <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
           isWhite 
             ? "bg-white/10 backdrop-blur-sm border-2 border-white/30" 
-            : "bg-gradient-to-br from-[#1a3a52] to-[#2a4a62] border-2 border-[#d4af37]/30"
+            : "bg-gradient-to-br from-[#000000] to-[#111111] border-2 border-[#FFD700]/30"
         }`}>
           <div className="relative flex items-center justify-center">
-            <Shield className="w-6 h-6 text-[#d4af37]" strokeWidth={3} />
-            <Check className={`w-3 h-3 absolute ${isWhite ? "text-white" : "text-white"}`} strokeWidth={3} />
+            <Shield className="w-6 h-6 text-[#FFD700]" strokeWidth={3} />
+            <Check className="w-3 h-3 absolute text-white" strokeWidth={3} />
           </div>
         </div>
         <div className={`absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center ${
-          isWhite ? "bg-white/20" : "bg-[#d4af37]"
+          isWhite ? "bg-white/20" : "bg-[#DC2626]"
         }`}>
-          <Scale className={`w-3 h-3 ${isWhite ? "text-white" : "text-white"}`} strokeWidth={3} />
+          <Scale className="w-3 h-3 text-white" strokeWidth={3} />
         </div>
       </div>
       
       <div className="flex flex-col -mt-1">
         <div className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>
-          <span className={isWhite ? "text-white" : "text-[#1a3a52]"}>True</span>
-          <span className="text-[#d4af37]">Claim</span>
-        </div>
-        <div className={`text-[10px] uppercase tracking-widest font-semibold -mt-1 ${
-          isWhite ? "text-white/70" : "text-[#1a3a52]/60"
-        }`} style={{ letterSpacing: '0.15em' }}>
-          & Associates
+          <span className={isWhite ? "text-white" : "text-[#000000]"}>Refund</span>
+          <span className="text-[#FFD700]">&</span>
+          <span className={isWhite ? "text-white" : "text-[#000000]"}>Associates</span>
         </div>
       </div>
     </div>

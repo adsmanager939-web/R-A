@@ -4,73 +4,73 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(220, 39%, 11%);
-  --card: hsl(210, 40%, 98%);
-  --card-foreground: hsl(220, 39%, 11%);
+  --foreground: hsl(0, 0%, 7%);
+  --card: hsl(0, 0%, 98%);
+  --card-foreground: hsl(0, 0%, 7%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(220, 39%, 11%);
-  --primary: hsl(220, 65%, 18%);
+  --popover-foreground: hsl(0, 0%, 7%);
+  --primary: hsl(0, 0%, 7%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(215, 25%, 27%);
+  --secondary: hsl(0, 0%, 15%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(210, 40%, 98%);
-  --muted-foreground: hsl(215, 25%, 27%);
-  --accent: hsl(220, 65%, 18%);
+  --muted: hsl(0, 0%, 96%);
+  --muted-foreground: hsl(0, 0%, 40%);
+  --accent: hsl(0, 0%, 7%);
   --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(220, 13%, 91%);
-  --input: hsl(210, 40%, 98%);
-  --ring: hsl(220, 65%, 18%);
-  --chart-1: hsl(220, 65%, 18%);
-  --chart-2: hsl(160, 60%, 45%);
-  --chart-3: hsl(30, 80%, 55%);
+  --border: hsl(0, 0%, 88%);
+  --input: hsl(0, 0%, 96%);
+  --ring: hsl(45, 100%, 50%);
+  --chart-1: hsl(0, 0%, 7%);
+  --chart-2: hsl(45, 100%, 50%);
+  --chart-3: hsl(0, 84%, 45%);
   --chart-4: hsl(280, 65%, 60%);
   --chart-5: hsl(340, 75%, 55%);
-  --sidebar: hsl(210, 40%, 98%);
-  --sidebar-foreground: hsl(220, 39%, 11%);
-  --sidebar-primary: hsl(220, 65%, 18%);
+  --sidebar: hsl(0, 0%, 96%);
+  --sidebar-foreground: hsl(0, 0%, 7%);
+  --sidebar-primary: hsl(0, 0%, 7%);
   --sidebar-primary-foreground: hsl(0, 0%, 100%);
-  --sidebar-accent: hsl(220, 65%, 18%);
+  --sidebar-accent: hsl(0, 0%, 7%);
   --sidebar-accent-foreground: hsl(0, 0%, 100%);
-  --sidebar-border: hsl(220, 13%, 91%);
-  --sidebar-ring: hsl(220, 65%, 18%);
+  --sidebar-border: hsl(0, 0%, 88%);
+  --sidebar-ring: hsl(45, 100%, 50%);
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: 0.5rem;
-  --shadow-2xs: 0px 1px 2px 0px hsl(220, 65%, 18%, 0.05);
-  --shadow-xs: 0px 1px 2px 0px hsl(220, 65%, 18%, 0.05);
-  --shadow-sm: 0px 1px 3px 0px hsl(220, 65%, 18%, 0.1), 0px 1px 2px 0px hsl(220, 65%, 18%, 0.06);
-  --shadow: 0px 1px 3px 0px hsl(220, 65%, 18%, 0.1), 0px 1px 2px 0px hsl(220, 65%, 18%, 0.06);
-  --shadow-md: 0px 4px 6px -1px hsl(220, 65%, 18%, 0.1), 0px 2px 4px -1px hsl(220, 65%, 18%, 0.06);
-  --shadow-lg: 0px 10px 15px -3px hsl(220, 65%, 18%, 0.1), 0px 4px 6px -2px hsl(220, 65%, 18%, 0.05);
-  --shadow-xl: 0px 20px 25px -5px hsl(220, 65%, 18%, 0.1), 0px 10px 10px -5px hsl(220, 65%, 18%, 0.04);
-  --shadow-2xl: 0px 25px 50px -12px hsl(220, 65%, 18%, 0.25);
+  --shadow-2xs: 0px 1px 2px 0px hsl(0, 0%, 7%, 0.05);
+  --shadow-xs: 0px 1px 2px 0px hsl(0, 0%, 7%, 0.05);
+  --shadow-sm: 0px 1px 3px 0px hsl(0, 0%, 7%, 0.1), 0px 1px 2px 0px hsl(0, 0%, 7%, 0.06);
+  --shadow: 0px 1px 3px 0px hsl(0, 0%, 7%, 0.1), 0px 1px 2px 0px hsl(0, 0%, 7%, 0.06);
+  --shadow-md: 0px 4px 6px -1px hsl(0, 0%, 7%, 0.1), 0px 2px 4px -1px hsl(0, 0%, 7%, 0.06);
+  --shadow-lg: 0px 10px 15px -3px hsl(0, 0%, 7%, 0.1), 0px 4px 6px -2px hsl(0, 0%, 7%, 0.05);
+  --shadow-xl: 0px 20px 25px -5px hsl(0, 0%, 7%, 0.1), 0px 10px 10px -5px hsl(0, 0%, 7%, 0.04);
+  --shadow-2xl: 0px 25px 50px -12px hsl(0, 0%, 7%, 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 }
 
 .dark {
-  --background: hsl(220, 39%, 11%);
+  --background: hsl(0, 0%, 7%);
   --foreground: hsl(0, 0%, 95%);
-  --card: hsl(220, 39%, 11%);
+  --card: hsl(0, 0%, 7%);
   --card-foreground: hsl(0, 0%, 95%);
-  --popover: hsl(220, 39%, 11%);
+  --popover: hsl(0, 0%, 7%);
   --popover-foreground: hsl(0, 0%, 95%);
-  --primary: hsl(220, 65%, 18%);
+  --primary: hsl(0, 0%, 7%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(215, 25%, 27%);
+  --secondary: hsl(0, 0%, 15%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(215, 25%, 27%);
+  --muted: hsl(0, 0%, 15%);
   --muted-foreground: hsl(0, 0%, 70%);
-  --accent: hsl(220, 65%, 18%);
+  --accent: hsl(0, 0%, 7%);
   --accent-foreground: hsl(0, 0%, 100%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(215, 25%, 27%);
-  --input: hsl(215, 25%, 27%);
-  --ring: hsl(220, 65%, 18%);
+  --border: hsl(0, 0%, 15%);
+  --input: hsl(0, 0%, 15%);
+  --ring: hsl(45, 100%, 50%);
 }
 
 @layer base {
@@ -112,5 +112,5 @@
 
 .testimonial-card {
   background: hsl(var(--card));
-  border-left: 4px solid hsl(var(--primary));
+  border-left: 4px solid #FFD700;
 }
