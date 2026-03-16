@@ -32,7 +32,7 @@ export default function HeroSection() {
             <Button 
               size="lg"
               onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-[#FFD700] to-[#DC2626] hover:from-[#DC2626] hover:to-[#FFD700] text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+              className="bg-[#B91C1C] hover:bg-[#991B1B] text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
               data-testid="button-book-consultation"
             >
               Book a Free Consultation

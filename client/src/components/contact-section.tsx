@@ -76,7 +76,7 @@ export default function ContactSection() {
             <h3 className="text-2xl font-bold text-[#000000] mb-8">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-gradient-to-br from-[#FFD700] to-[#DC2626] text-white p-3 rounded-lg flex-shrink-0">
+                <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
                   <PhoneIcon className="w-6 h-6" />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export default function ContactSection() {
               </div>
               
               <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-gradient-to-br from-[#FFD700] to-[#DC2626] text-white p-3 rounded-lg flex-shrink-0">
+                <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
                   <MailIcon className="w-6 h-6" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export default function ContactSection() {
               </div>
               
               <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-gradient-to-br from-[#FFD700] to-[#DC2626] text-white p-3 rounded-lg flex-shrink-0">
+                <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
                   <ClockIcon className="w-6 h-6" />
                 </div>
                 <div>
@@ -110,7 +110,7 @@ export default function ContactSection() {
             </div>
             
             <div className="mt-8 flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="bg-gradient-to-br from-[#FFD700] to-[#DC2626] text-white p-3 rounded-lg flex-shrink-0">
+              <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
                 <LockIcon className="w-6 h-6" />
               </div>
               <div>
@@ -296,7 +296,7 @@ export default function ContactSection() {
                 
                 <Button 
                   type="submit" 
-                  className="w-full py-6 text-lg font-bold bg-gradient-to-r from-[#FFD700] to-[#DC2626] hover:from-[#DC2626] hover:to-[#FFD700] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="w-full py-6 text-lg font-bold bg-[#B91C1C] hover:bg-[#991B1B] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   disabled={submitMutation.isPending}
                   data-testid="button-submit-consultation"
                 >
@@ -319,7 +319,7 @@ export default function ContactSection() {
         <AlertDialogContent className="max-w-md bg-white">
           <AlertDialogHeader>
             <div className="flex justify-center mb-4">
-              <div className="bg-gradient-to-br from-[#FFD700] to-[#DC2626] rounded-full p-3">
+              <div className="bg-[#B91C1C] rounded-full p-3">
                 <CheckCircle className="w-12 h-12 text-white" />
               </div>
             </div>
@@ -333,7 +333,7 @@ export default function ContactSection() {
           <AlertDialogFooter>
             <Button 
               onClick={() => setShowSuccessDialog(false)}
-              className="w-full bg-gradient-to-r from-[#FFD700] to-[#DC2626] hover:from-[#DC2626] hover:to-[#FFD700] text-white font-semibold"
+              className="w-full bg-[#B91C1C] hover:bg-[#991B1B] text-white font-semibold"
             >
               Close
             </Button>

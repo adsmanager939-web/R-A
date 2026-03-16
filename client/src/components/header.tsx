@@ -85,7 +85,7 @@ export default function Header() {
             
             <Button 
               onClick={() => scrollToSection("contact")}
-              className="hidden lg:flex bg-gradient-to-r from-[#FFD700] to-[#DC2626] hover:from-[#DC2626] hover:to-[#FFD700] text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="hidden lg:flex bg-[#B91C1C] hover:bg-[#991B1B] text-white font-bold px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               data-testid="button-free-consultation-header"
             >
               Free Consultation
@@ -113,7 +113,7 @@ export default function Header() {
                   ))}
                   <Button 
                     onClick={() => scrollToSection("contact")}
-                    className="mt-4 bg-gradient-to-r from-[#FFD700] to-[#DC2626] hover:from-[#DC2626] hover:to-[#FFD700] text-white font-bold py-6 rounded-full"
+                    className="mt-4 bg-[#B91C1C] hover:bg-[#991B1B] text-white font-bold py-6 rounded-full"
                     data-testid="button-free-consultation-mobile"
                   >
                     Free Consultation
