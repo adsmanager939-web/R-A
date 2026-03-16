@@ -21,7 +21,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#000000] via-[#111111] to-[#000000] opacity-80"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="text-lg font-semibold mb-4 text-[#FFD700]">Professional Fraud Investigation & Asset Recovery</div>
           <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             TRUSTED BY MORE THAN 200,000 CANADIANS
           </h1>
