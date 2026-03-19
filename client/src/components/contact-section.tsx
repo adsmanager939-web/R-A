@@ -62,18 +62,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Get Started</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#000000] uppercase leading-none tracking-tight">
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Get Started</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-none tracking-tight">
             Free<br />Consultation
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-gray-500 mb-10 leading-relaxed">
+            <p className="text-white/60 mb-10 leading-relaxed">
               Take the first step towards recovering your funds. Our experts are ready to help you 24/7. We reply within 24 hours for an initial review.
             </p>
 
@@ -84,26 +84,26 @@ export default function ContactSection() {
                 { icon: ClockIcon, label: "Response Time", value: "Within 24 hours", href: null, sub: "For all case inquiries" },
                 { icon: LockIcon, label: "100% Confidential", value: "Attorney-client privilege", href: null, sub: "All communications encrypted for your security" },
               ].map((item, index) => (
-                <div key={index} className="border-t border-black/10 py-6 flex items-start gap-6">
+                <div key={index} className="border-t border-white/10 py-6 flex items-start gap-6">
                   <item.icon className="w-5 h-5 text-[#7B1418] flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">{item.label}</p>
+                    <p className="text-xs text-white/30 uppercase tracking-widest mb-1">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-bold text-[#000000] hover:text-[#7B1418] transition-colors" data-testid={`contact-${item.label.toLowerCase().replace(/\s/g, '-')}`}>
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-[#FFD700] transition-colors" data-testid={`contact-${item.label.toLowerCase().replace(/\s/g, '-')}`}>
                         {item.value}
                       </a>
                     ) : (
-                      <p className="font-bold text-[#000000]" data-testid={`contact-${item.label.toLowerCase().replace(/\s/g, '-')}`}>{item.value}</p>
+                      <p className="font-bold text-white" data-testid={`contact-${item.label.toLowerCase().replace(/\s/g, '-')}`}>{item.value}</p>
                     )}
-                    <p className="text-sm text-gray-400 mt-0.5">{item.sub}</p>
+                    <p className="text-sm text-white/40 mt-0.5">{item.sub}</p>
                   </div>
                 </div>
               ))}
-              <div className="border-t border-black/10"></div>
+              <div className="border-t border-white/10"></div>
             </div>
           </div>
 
-          <div className="border border-black/10 p-8">
+          <div className="border border-white/10 p-8">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" key={formKey}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -112,12 +112,12 @@ export default function ContactSection() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Full Name *</FormLabel>
+                        <FormLabel className="text-white/80 font-semibold text-sm uppercase tracking-wider">Full Name *</FormLabel>
                         <FormControl>
                           <Input
                             placeholder="John Doe"
                             {...field}
-                            className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
+                            className="bg-white/5 border-white/20 text-white focus:border-[#7B1418] rounded-none placeholder:text-white/20"
                             data-testid="input-name"
                           />
                         </FormControl>
@@ -130,12 +130,12 @@ export default function ContactSection() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Phone Number *</FormLabel>
+                        <FormLabel className="text-white/80 font-semibold text-sm uppercase tracking-wider">Phone Number *</FormLabel>
                         <FormControl>
                           <Input
                             placeholder="(555) 123-4567"
                             {...field}
-                            className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
+                            className="bg-white/5 border-white/20 text-white focus:border-[#7B1418] rounded-none placeholder:text-white/20"
                             data-testid="input-phone"
                           />
                         </FormControl>
@@ -150,13 +150,13 @@ export default function ContactSection() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Email Address *</FormLabel>
+                      <FormLabel className="text-white/80 font-semibold text-sm uppercase tracking-wider">Email Address *</FormLabel>
                       <FormControl>
                         <Input
                           type="email"
                           placeholder="john@example.com"
                           {...field}
-                          className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
+                          className="bg-white/5 border-white/20 text-white focus:border-[#7B1418] rounded-none placeholder:text-white/20"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -171,10 +171,10 @@ export default function ContactSection() {
                     name="scamType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Type of Scam *</FormLabel>
+                        <FormLabel className="text-white/80 font-semibold text-sm uppercase tracking-wider">Type of Scam *</FormLabel>
                         <Select key={formKey} onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="border-black/20 focus:border-[#7B1418] rounded-none" data-testid="select-scam-type">
+                            <SelectTrigger className="bg-white/5 border-white/20 text-white focus:border-[#7B1418] rounded-none" data-testid="select-scam-type">
                               <SelectValue placeholder="Select scam type" />
                             </SelectTrigger>
                           </FormControl>
@@ -195,13 +195,13 @@ export default function ContactSection() {
                     name="amountLost"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Amount Lost</FormLabel>
+                        <FormLabel className="text-white/80 font-semibold text-sm uppercase tracking-wider">Amount Lost</FormLabel>
                         <FormControl>
                           <Input
                             placeholder="$50,000"
                             {...field}
                             value={field.value ?? ""}
-                            className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
+                            className="bg-white/5 border-white/20 text-white focus:border-[#7B1418] rounded-none placeholder:text-white/20"
                             data-testid="input-amount-lost"
                           />
                         </FormControl>
@@ -216,14 +216,14 @@ export default function ContactSection() {
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Brief Description</FormLabel>
+                      <FormLabel className="text-white/80 font-semibold text-sm uppercase tracking-wider">Brief Description</FormLabel>
                       <FormControl>
                         <Textarea
                           rows={4}
                           placeholder="Please provide a brief overview of what happened..."
                           {...field}
                           value={field.value ?? ""}
-                          className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
+                          className="bg-white/5 border-white/20 text-white focus:border-[#7B1418] rounded-none placeholder:text-white/20"
                           data-testid="textarea-description"
                         />
                       </FormControl>
@@ -241,12 +241,12 @@ export default function ContactSection() {
                         <Checkbox
                           checked={field.value === "true"}
                           onCheckedChange={(checked) => field.onChange(checked ? "true" : "false")}
-                          className="border-black/30 data-[state=checked]:bg-[#7B1418] data-[state=checked]:border-[#7B1418] rounded-none"
+                          className="border-white/30 data-[state=checked]:bg-[#7B1418] data-[state=checked]:border-[#7B1418] rounded-none"
                           data-testid="checkbox-agree-terms"
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm text-gray-500 font-normal">
+                        <FormLabel className="text-sm text-white/60 font-normal">
                           I agree to the{" "}
                           <button
                             type="button"

@@ -53,18 +53,16 @@ export default function CollaborationSection() {
   ];
 
   return (
-    <section id="collaboration" className="py-24 bg-[#000000]">
+    <section id="collaboration" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section header */}
         <div className="mb-12">
-          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Case Studies</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-none tracking-tight">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Case Studies</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#000000] uppercase leading-none tracking-tight">
             Recent Cases
           </h2>
         </div>
 
-        {/* Handshake banner image */}
         <div className="mb-14">
           <img
             src="/global-network.jpg"
@@ -74,22 +72,21 @@ export default function CollaborationSection() {
           />
         </div>
 
-        {/* Case study cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-10">
           {caseStudies.map((study, index) => (
             <div
               key={index}
-              className="border border-white/10 p-8 hover:border-[#FFD700]/20 transition-colors"
+              className="border border-black/10 p-8 hover:border-[#7B1418]/20 transition-colors"
               data-testid={`collaboration-card-${index}`}
             >
-              <p className="text-xs text-white/40 uppercase tracking-widest mb-3">{study.type}</p>
+              <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">{study.type}</p>
               <div className="text-3xl font-black text-[#7B1418] mb-6">{study.amount}</div>
-              <blockquote className="text-white/60 text-sm leading-relaxed mb-6 italic">
+              <blockquote className="text-gray-500 text-sm leading-relaxed mb-6 italic">
                 "{study.quote}"
               </blockquote>
               <div className="flex flex-wrap gap-2">
                 {study.tags.map((tag, i) => (
-                  <span key={i} className="text-xs bg-white/5 text-white/40 px-3 py-1 border border-white/10">
+                  <span key={i} className="text-xs bg-black/5 text-gray-400 px-3 py-1 border border-black/10">
                     {tag}
                   </span>
                 ))}
@@ -98,13 +95,12 @@ export default function CollaborationSection() {
           ))}
         </div>
 
-        <p className="text-xs text-white/20 mb-16 leading-relaxed">
+        <p className="text-xs text-gray-300 mb-14 leading-relaxed">
           Published with client consent. Some details may be adjusted for clarity. These summaries reflect common fraud patterns we encounter.
         </p>
 
-        {/* Partner logos */}
-        <div className="border-t border-white/10 pt-12">
-          <p className="text-xs text-white/30 uppercase tracking-widest mb-8">Trusted Partners & Regulators</p>
+        <div className="border-t border-black/10 pt-12">
+          <p className="text-xs text-gray-300 uppercase tracking-widest mb-8">Trusted Partners &amp; Regulators</p>
           <div className="relative overflow-hidden">
             <style
               dangerouslySetInnerHTML={{
@@ -132,7 +128,7 @@ export default function CollaborationSection() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-12 max-w-full w-auto h-auto object-contain opacity-30 hover:opacity-60 transition-opacity"
+                    className="max-h-12 max-w-full w-auto h-auto object-contain opacity-20 hover:opacity-50 transition-opacity"
                   />
                 </div>
               ))}

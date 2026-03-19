@@ -40,15 +40,15 @@ export default function HelpSection() {
   ];
 
   return (
-    <section id="help" className="py-24 bg-[#000000]">
+    <section id="help" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16">
           <div>
-            <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">FAQ</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight mb-8">
+            <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">FAQ</p>
+            <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight mb-8">
               Common<br />Questions
             </h2>
-            <p className="text-white/50 mb-8 leading-relaxed text-sm">
+            <p className="text-gray-500 mb-8 leading-relaxed text-sm">
               Get answers to the most common questions about our process, fees, and what you can expect.
             </p>
             <Button
@@ -62,7 +62,7 @@ export default function HelpSection() {
 
           <div className="space-y-0">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-t border-white/10" data-testid={`faq-${index}`}>
+              <div key={index} className="border-t border-black/10" data-testid={`faq-${index}`}>
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full flex items-center justify-between py-6 text-left group"
@@ -72,7 +72,7 @@ export default function HelpSection() {
                     <span className="text-sm font-bold text-[#FFD700]">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-white font-semibold group-hover:text-[#FFD700] transition-colors">
+                    <span className="text-[#000000] font-semibold group-hover:text-[#7B1418] transition-colors">
                       {faq.question}
                     </span>
                   </span>
@@ -82,12 +82,12 @@ export default function HelpSection() {
                 </button>
                 {openIndex === index && (
                   <div className="pb-6 pl-10 pr-6">
-                    <p className="text-white/60 leading-relaxed">{faq.answer}</p>
+                    <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
-            <div className="border-t border-white/10"></div>
+            <div className="border-t border-black/10"></div>
           </div>
         </div>
       </div>

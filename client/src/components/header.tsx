@@ -21,7 +21,6 @@ export default function Header() {
     { id: "investigations", label: "Services" },
     { id: "how-it-works", label: "How It Works" },
     { id: "help", label: "FAQ" },
-    { id: "our-work", label: "Results" },
     { id: "collaboration", label: "Insights" },
     { id: "contact", label: "Contact" },
   ];
