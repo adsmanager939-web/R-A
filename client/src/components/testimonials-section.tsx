@@ -2,7 +2,6 @@ import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function TestimonialsSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -82,11 +81,11 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="success-stories" className="py-24 bg-white">
+    <section id="success-stories" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Testimonials</p>
-          <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight">
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Testimonials</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
             Success Stories
           </h2>
         </div>
@@ -100,24 +99,24 @@ export default function TestimonialsSection() {
                   className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0"
                   data-testid={`testimonial-${testimonial.id}`}
                 >
-                  <div className="border border-black/10 p-8 h-full flex flex-col hover:border-[#7B1418]/30 transition-colors">
+                  <div className="border border-white/10 p-8 h-full flex flex-col hover:border-[#FFD700]/20 transition-colors">
                     <div className="flex gap-1 mb-6">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-[#FFD700] text-[#FFD700]" />
                       ))}
                     </div>
 
-                    <blockquote className="text-gray-600 mb-6 flex-grow leading-relaxed text-sm">
+                    <blockquote className="text-white/60 mb-6 flex-grow leading-relaxed text-sm">
                       "{testimonial.quote}"
                     </blockquote>
 
-                    <div className="flex items-center pt-4 border-t border-black/10">
+                    <div className="flex items-center pt-4 border-t border-white/10">
                       <div className="w-10 h-10 bg-[#7B1418] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </div>
                       <div className="ml-3">
-                        <div className="font-bold text-[#000000] text-sm">{testimonial.name}</div>
-                        <div className="text-xs text-gray-400 uppercase tracking-widest">{testimonial.location}</div>
+                        <div className="font-bold text-white text-sm">{testimonial.name}</div>
+                        <div className="text-xs text-white/40 uppercase tracking-widest">{testimonial.location}</div>
                       </div>
                     </div>
                   </div>

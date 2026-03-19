@@ -31,11 +31,11 @@ export default function TeamSection() {
   ];
 
   return (
-    <section id="team" className="py-24 bg-[#000000]">
+    <section id="team" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Our People</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Our People</p>
+          <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight">
             Expert Team
           </h2>
         </div>
@@ -49,17 +49,17 @@ export default function TeamSection() {
                   className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                   data-testid={`team-member-${member.id}`}
                 >
-                  <div className="bg-[#111111] overflow-hidden">
-                    <div className="aspect-[3/4] overflow-hidden">
+                  <div className="bg-white border border-black/10 overflow-hidden">
+                    <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
                         src={member.image}
                         alt={member.name}
                         className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                       />
                     </div>
-                    <div className="p-5 border-t border-white/10">
-                      <h3 className="text-base font-bold text-white mb-1">{member.name}</h3>
-                      <p className="text-[#FFD700] text-xs uppercase tracking-widest">{member.position}</p>
+                    <div className="p-5 border-t border-black/10">
+                      <h3 className="text-base font-bold text-[#000000] mb-1">{member.name}</h3>
+                      <p className="text-[#7B1418] text-xs uppercase tracking-widest">{member.position}</p>
                     </div>
                   </div>
                 </div>

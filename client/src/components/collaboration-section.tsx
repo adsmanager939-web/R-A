@@ -31,16 +31,40 @@ export default function CollaborationSection() {
     { name: "TD Bank", logo: td },
   ];
 
+  const caseStudies = [
+    {
+      amount: "CAD 200M",
+      type: "Cryptocurrency Scam",
+      quote: "A trading platform showed consistent profits on a demo account. When I tried to withdraw, they demanded escalating fees. The dashboard kept showing gains while my money vanished.",
+      tags: ["Fake trading platform", "Withdrawal blocked", "Escalating fees"],
+    },
+    {
+      amount: "CAD 78M",
+      type: "Romance Investment Scam",
+      quote: "We talked for months before any mention of money. He introduced me to 'his broker' and I transferred funds in stages, always coached on what to say to my bank.",
+      tags: ["Long grooming period", "Coached bank transfers", "Emotional manipulation"],
+    },
+    {
+      amount: "CAD 42M",
+      type: "Broker Impersonation",
+      quote: "The platform looked legitimate — professional website, regulatory badges, a mobile app. The first small withdrawal worked, which made me trust them with more. Then the site went offline.",
+      tags: ["Cloned broker branding", "Initial withdrawal allowed", "Platform disappeared"],
+    },
+  ];
+
   return (
-    <section id="collaboration" className="py-24 bg-white">
+    <section id="collaboration" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Section header */}
         <div className="mb-12">
-          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Our Network</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#000000] uppercase leading-none tracking-tight">
-            Global<br />Partners
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Case Studies</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-none tracking-tight">
+            Recent Cases
           </h2>
         </div>
 
+        {/* Handshake banner image */}
         <div className="mb-14">
           <img
             src="/global-network.jpg"
@@ -50,21 +74,37 @@ export default function CollaborationSection() {
           />
         </div>
 
+        {/* Case study cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-16">
-          {[
-            { title: "Law Enforcement", desc: "Direct collaboration with FBI, Interpol, and local police departments worldwide." },
-            { title: "International Authorities", desc: "Partnerships with regulatory bodies and financial crime units across 50+ countries." },
-            { title: "Financial Institutions", desc: "Working relationships with major banks and payment processors for fund recovery." },
-          ].map((item, index) => (
-            <div key={index} className="border-l border-black/10 pl-8 py-4" data-testid={`collaboration-card-${index}`}>
-              <h3 className="text-lg font-bold text-[#000000] mb-2">{item.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+          {caseStudies.map((study, index) => (
+            <div
+              key={index}
+              className="border border-white/10 p-8 hover:border-[#FFD700]/20 transition-colors"
+              data-testid={`collaboration-card-${index}`}
+            >
+              <p className="text-xs text-white/40 uppercase tracking-widest mb-3">{study.type}</p>
+              <div className="text-3xl font-black text-[#7B1418] mb-6">{study.amount}</div>
+              <blockquote className="text-white/60 text-sm leading-relaxed mb-6 italic">
+                "{study.quote}"
+              </blockquote>
+              <div className="flex flex-wrap gap-2">
+                {study.tags.map((tag, i) => (
+                  <span key={i} className="text-xs bg-white/5 text-white/40 px-3 py-1 border border-white/10">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="border-t border-black/10 pt-12">
-          <p className="text-xs text-gray-400 uppercase tracking-widest mb-8">Trusted Partners & Regulators</p>
+        <p className="text-xs text-white/20 mb-16 leading-relaxed">
+          Published with client consent. Some details may be adjusted for clarity. These summaries reflect common fraud patterns we encounter.
+        </p>
+
+        {/* Partner logos */}
+        <div className="border-t border-white/10 pt-12">
+          <p className="text-xs text-white/30 uppercase tracking-widest mb-8">Trusted Partners & Regulators</p>
           <div className="relative overflow-hidden">
             <style
               dangerouslySetInnerHTML={{
@@ -92,7 +132,7 @@ export default function CollaborationSection() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-12 max-w-full w-auto h-auto object-contain opacity-50 hover:opacity-80 transition-opacity"
+                    className="max-h-12 max-w-full w-auto h-auto object-contain opacity-30 hover:opacity-60 transition-opacity"
                   />
                 </div>
               ))}

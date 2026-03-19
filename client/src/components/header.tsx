@@ -22,6 +22,7 @@ export default function Header() {
     { id: "how-it-works", label: "How It Works" },
     { id: "help", label: "FAQ" },
     { id: "our-work", label: "Results" },
+    { id: "collaboration", label: "Insights" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -36,7 +37,7 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="relative px-4 py-2 text-white/80 font-medium text-sm uppercase tracking-widest hover:text-[#FFD700] transition-colors"
+                className="relative px-3 py-2 text-white/70 font-medium text-xs uppercase tracking-widest hover:text-[#FFD700] transition-colors"
                 data-testid={`nav-${item.id}`}
               >
                 {item.label}
@@ -49,7 +50,7 @@ export default function Header() {
               href="https://wa.me/16134160183"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:flex items-center gap-2 text-white/70 hover:text-[#FFD700] transition-colors text-sm"
+              className="hidden md:flex items-center gap-2 text-white/50 hover:text-[#FFD700] transition-colors text-sm"
               data-testid="header-phone"
             >
               <Phone className="w-4 h-4" />
@@ -58,7 +59,7 @@ export default function Header() {
 
             <Button
               onClick={() => scrollToSection("contact")}
-              className="hidden lg:flex bg-[#7B1418] hover:bg-[#5E0F12] text-white font-semibold px-5 py-2 text-sm rounded"
+              className="hidden lg:flex bg-[#7B1418] hover:bg-[#5E0F12] text-white font-semibold px-5 py-2 text-xs uppercase tracking-wider rounded-none"
               data-testid="button-get-consultation-header"
             >
               Free Consultation
@@ -77,7 +78,7 @@ export default function Header() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className="text-left text-white/80 hover:text-[#FFD700] font-medium text-base py-2 uppercase tracking-widest transition-colors"
+                      className="text-left text-white/70 hover:text-[#FFD700] font-medium text-sm py-2 uppercase tracking-widest transition-colors"
                       data-testid={`mobile-nav-${item.id}`}
                     >
                       {item.label}
@@ -85,7 +86,7 @@ export default function Header() {
                   ))}
                   <Button
                     onClick={() => scrollToSection("contact")}
-                    className="mt-4 bg-[#7B1418] hover:bg-[#5E0F12] text-white font-bold py-5 rounded"
+                    className="mt-4 bg-[#7B1418] hover:bg-[#5E0F12] text-white font-bold py-5 rounded-none uppercase tracking-wider"
                     data-testid="button-free-consultation-mobile"
                   >
                     Free Consultation

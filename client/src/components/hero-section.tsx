@@ -20,7 +20,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-[#000000]/85"></div>
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl">
           <div className="inline-block bg-[#7B1418] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 mb-8">
             Cases with losses from CAD 3,000+
@@ -35,7 +35,7 @@ export default function HeroSection() {
             We help victims of online financial fraud pursue recovery through a structured, documentation-led approach. Formal demands, disputes, and escalation — not empty claims.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Button
               size="lg"
               onClick={() => scrollToSection("contact")}
@@ -55,26 +55,9 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          <p className="text-xs text-white/40 leading-relaxed max-w-lg">
+          <p className="text-xs text-white/35 leading-relaxed max-w-lg">
             Results are not guaranteed. Outcomes depend on evidence, timing, and third parties. Initial consultation is free with no commitment.
           </p>
-        </div>
-
-        <div className="absolute bottom-10 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 max-w-7xl">
-          <div className="border-t border-white/20 pt-8 grid grid-cols-3 gap-8 max-w-xl">
-            <div>
-              <div className="text-3xl font-black text-[#FFD700]" data-testid="stat-rating">4.9/5</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest mt-1">Client Rating</div>
-            </div>
-            <div>
-              <div className="text-3xl font-black text-[#FFD700]" data-testid="stat-success">92%</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest mt-1">Success Rate</div>
-            </div>
-            <div>
-              <div className="text-3xl font-black text-[#FFD700]" data-testid="stat-team">1,300+</div>
-              <div className="text-xs text-white/50 uppercase tracking-widest mt-1">Expert Team</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

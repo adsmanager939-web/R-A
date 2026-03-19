@@ -33,11 +33,11 @@ export default function LocationsSection() {
   ];
 
   return (
-    <section id="locations" className="py-24 bg-[#000000]">
+    <section id="locations" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Locations</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Locations</p>
+          <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight">
             Global Offices
           </h2>
         </div>
@@ -46,21 +46,21 @@ export default function LocationsSection() {
           {offices.map((office, index) => (
             <div
               key={index}
-              className="border-l border-white/10 pl-6 py-6 hover:border-[#FFD700]/30 transition-colors"
+              className="border-l border-black/10 pl-6 py-6 hover:border-[#7B1418]/30 transition-colors"
               data-testid={`location-card-${index}`}
             >
               <div className="flex items-center gap-2 mb-4">
-                <MapPin className="w-4 h-4 text-[#FFD700]" />
-                <h3 className="text-lg font-bold text-white">{office.city}</h3>
+                <MapPin className="w-4 h-4 text-[#7B1418]" />
+                <h3 className="text-lg font-bold text-[#000000]">{office.city}</h3>
               </div>
-              <p className="text-white/40 text-xs uppercase tracking-widest mb-4">{office.country}</p>
+              <p className="text-black/40 text-xs uppercase tracking-widest mb-4">{office.country}</p>
               <div className="space-y-2 text-sm">
-                <p className="text-white/50">{office.address}</p>
-                <div className="flex items-center gap-2 text-white/50">
+                <p className="text-gray-500">{office.address}</p>
+                <div className="flex items-center gap-2 text-gray-500">
                   <Phone className="w-3.5 h-3.5" />
                   <span>{office.phone}</span>
                 </div>
-                <div className="flex items-center gap-2 text-white/50">
+                <div className="flex items-center gap-2 text-gray-500">
                   <Mail className="w-3.5 h-3.5" />
                   <span>{office.email}</span>
                 </div>
@@ -69,7 +69,7 @@ export default function LocationsSection() {
           ))}
         </div>
 
-        <div className="border border-white/10 p-10 flex items-center gap-6">
+        <div className="border border-black/10 p-10 flex items-center gap-6 bg-[#000000]">
           <Clock className="w-10 h-10 text-[#FFD700] flex-shrink-0" />
           <div>
             <h3 className="text-xl font-bold text-white mb-1">24/7 Global Support</h3>
