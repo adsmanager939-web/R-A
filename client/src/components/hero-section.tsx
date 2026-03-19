@@ -54,10 +54,6 @@ export default function HeroSection() {
               About Us
             </Button>
           </div>
-
-          <p className="text-xs text-white/35 leading-relaxed max-w-lg">
-            Results are not guaranteed. Outcomes depend on evidence, timing, and third parties. Initial consultation is free with no commitment.
-          </p>
         </div>
       </div>
     </section>
