@@ -10,7 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative text-white min-h-[90vh] flex items-center overflow-hidden">
+    <section id="home" className="relative text-white min-h-screen flex items-center overflow-hidden">
       <img
         src={heroBg}
         alt=""
