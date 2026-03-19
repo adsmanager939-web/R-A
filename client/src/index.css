@@ -38,7 +38,7 @@
   --font-sans: "Inter", system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
-  --radius: 0.5rem;
+  --radius: 0rem;
   --shadow-2xs: 0px 1px 2px 0px hsl(0, 0%, 7%, 0.05);
   --shadow-xs: 0px 1px 2px 0px hsl(0, 0%, 7%, 0.05);
   --shadow-sm: 0px 1px 3px 0px hsl(0, 0%, 7%, 0.1), 0px 1px 2px 0px hsl(0, 0%, 7%, 0.06);
@@ -80,34 +80,14 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-size: 16px;
+    line-height: 1.6;
   }
-}
 
-.logo-seal {
-  width: 50px;
-  height: 50px;
-  background: hsl(var(--primary));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid hsl(var(--primary));
-  position: relative;
-}
-
-.logo-seal::before {
-  content: '';
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border: 2px solid hsl(var(--primary-foreground));
-  border-radius: 50%;
-}
-
-
-.step-card:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s ease-in-out;
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
 }
 
 .testimonial-card {

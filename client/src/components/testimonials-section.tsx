@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function TestimonialsSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { 
+    {
       loop: true,
       align: 'start',
       slidesToScroll: 1
@@ -25,56 +25,56 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      quote: "Anthony and his team have done an outstanding job and should be commended for their determination, professionalism, and patience in resolving my case successfully. From the very beginning, they kept me informed and worked tirelessly to ensure that my funds were recovered. Their dedication and thorough approach made all the difference. I truly appreciate their efforts and the level of care they showed throughout the process. I would highly recommend this company to anyone in need of expert assistance in recovering lost funds.",
+      quote: "Anthony and his team have done an outstanding job and should be commended for their determination, professionalism, and patience in resolving my case successfully. From the very beginning, they kept me informed and worked tirelessly to ensure that my funds were recovered.",
       name: "Jan Weber",
       location: "Nova Scotia",
       rating: 5
     },
     {
       id: 2,
-      quote: "A big thank you to Jack and the team for helping me with my case and navigating all the hurdles along the way. I didn't expect to recover a penny, but with the help of True Claim, a large portion of my capital was successfully recovered. Highly recommend!",
+      quote: "A big thank you to Jack and the team for helping me with my case and navigating all the hurdles along the way. I didn't expect to recover a penny, but with the help of Refund & Associates, a large portion of my capital was successfully recovered. Highly recommend!",
       name: "Tim Klein",
       location: "Ottawa",
       rating: 5
     },
     {
       id: 3,
-      quote: "I picked up True Claim on a Google search after reading the reviews, and contacted them to see if they could help me with a crypto scam. From the very start, they've been helpful and thorough. I'm only a month into the case, and they've already recovered some of my funds. Can't recommend these guys enough — true lifesavers.",
+      quote: "I picked up Refund & Associates on a Google search after reading the reviews, and contacted them to see if they could help me with a crypto scam. From the very start, they've been helpful and thorough. I'm only a month into the case, and they've already recovered some of my funds.",
       name: "Paul Richter",
       location: "British Columbia",
       rating: 5
     },
     {
       id: 4,
-      quote: "Henry was so helpful with getting all my money back that I lost through crypto. He was so helpful and informative the whole way through the process. I will always recommend him to anyone who needs help recovering funds. I personally lost six figures, which he got back for me within two weeks. UNBELIEVABLE SERVICE.",
+      quote: "Henry was so helpful with getting all my money back that I lost through crypto. He was so helpful and informative the whole way through the process. I personally lost six figures, which he got back for me within two weeks. UNBELIEVABLE SERVICE.",
       name: "Marie S.",
       location: "Quebec",
       rating: 5
     },
     {
       id: 5,
-      quote: "The team at Refund & Associates has been really amazing. Jack has been absolutely great with how he has handled my case so far with the banks. They have recovered some of my funds and are working on recovering the rest for me now. I really wasn't expecting anything back at all, so I'm very grateful for this. The whole team pays a lot of attention to detail and replies quickly to my queries.",
+      quote: "The team at Refund & Associates has been really amazing. Jack has been absolutely great with how he has handled my case so far with the banks. They have recovered some of my funds and are working on recovering the rest for me now.",
       name: "Ben L.",
       location: "Ontario",
       rating: 5
     },
     {
       id: 6,
-      quote: "I was scammed in a romance fraud scheme and lost over $85,000. Refund & Associates worked with international authorities to track down the perpetrators and recover most of my money. They were compassionate, professional, and kept me informed every step of the way. I can't thank them enough for giving me hope when I thought all was lost.",
+      quote: "I was scammed in a romance fraud scheme and lost over $85,000. Refund & Associates worked with international authorities to track down the perpetrators and recover most of my money. They were compassionate, professional, and kept me informed every step of the way.",
       name: "Sarah M.",
       location: "Alberta",
       rating: 5
     },
     {
       id: 7,
-      quote: "After falling victim to an investment scam, I thought my retirement savings were gone forever. The investigators at Refund & Associates worked tirelessly for months and managed to recover 80% of my funds. Their expertise in financial fraud is unmatched. I highly recommend their services to anyone who has been scammed.",
+      quote: "After falling victim to an investment scam, I thought my retirement savings were gone forever. The investigators at Refund & Associates worked tirelessly for months and managed to recover 80% of my funds. Their expertise in financial fraud is unmatched.",
       name: "Robert K.",
       location: "Manitoba",
       rating: 5
     },
     {
       id: 8,
-      quote: "Professional, efficient, and results-driven. Refund & Associates helped me recover funds from a business email compromise scam. They coordinated with banks across multiple countries and managed to freeze the accounts before the money disappeared. Their quick action saved my business. Thank you!",
+      quote: "Professional, efficient, and results-driven. Refund & Associates helped me recover funds from a business email compromise scam. They coordinated with banks across multiple countries and managed to freeze the accounts before the money disappeared.",
       name: "Jennifer T.",
       location: "Saskatchewan",
       rating: 5
@@ -82,42 +82,42 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="success-stories" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="success-stories" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mb-4">Success Stories</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real recoveries from real clients. See how we've helped victims get their money back.
-          </p>
+        <div className="mb-12">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Testimonials</p>
+          <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight">
+            Success Stories
+          </h2>
         </div>
-        
+
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-6">
               {testimonials.map((testimonial) => (
-                <div 
+                <div
                   key={testimonial.id}
                   className="flex-[0_0_100%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)] min-w-0"
                   data-testid={`testimonial-${testimonial.id}`}
                 >
-                  <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 h-full flex flex-col">
-                    <div className="flex gap-1 mb-4">
+                  <div className="border border-black/10 p-8 h-full flex flex-col hover:border-[#7B1418]/30 transition-colors">
+                    <div className="flex gap-1 mb-6">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-[#FFD700] text-[#FFD700]" />
+                        <Star key={i} className="w-4 h-4 fill-[#FFD700] text-[#FFD700]" />
                       ))}
                     </div>
-                    
-                    <blockquote className="text-gray-700 mb-6 flex-grow leading-relaxed">
-                      {testimonial.quote}
+
+                    <blockquote className="text-gray-600 mb-6 flex-grow leading-relaxed text-sm">
+                      "{testimonial.quote}"
                     </blockquote>
-                    
-                    <div className="flex items-center pt-4 border-t border-gray-100">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[#000000] to-[#DC2626] rounded-full flex items-center justify-center text-white font-semibold">
+
+                    <div className="flex items-center pt-4 border-t border-black/10">
+                      <div className="w-10 h-10 bg-[#7B1418] flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </div>
-                      <div className="ml-4">
-                        <div className="font-semibold text-[#000000]">{testimonial.name}</div>
-                        <div className="text-sm text-gray-500">{testimonial.location}</div>
+                      <div className="ml-3">
+                        <div className="font-bold text-[#000000] text-sm">{testimonial.name}</div>
+                        <div className="text-xs text-gray-400 uppercase tracking-widest">{testimonial.location}</div>
                       </div>
                     </div>
                   </div>
@@ -125,26 +125,22 @@ export default function TestimonialsSection() {
               ))}
             </div>
           </div>
-          
-          <Button
-            variant="outline"
-            size="icon"
+
+          <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-gray-200 hover:border-[#FFD700] hover:bg-[#FFD700] hover:text-white transition-all z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 bg-[#7B1418] hover:bg-[#5E0F12] p-3 transition-colors z-10"
             data-testid="button-prev-testimonial"
           >
-            <ChevronLeft className="w-6 h-6" />
-          </Button>
-          
-          <Button
-            variant="outline"
-            size="icon"
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+
+          <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg border-2 border-gray-200 hover:border-[#FFD700] hover:bg-[#FFD700] hover:text-white transition-all z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 bg-[#7B1418] hover:bg-[#5E0F12] p-3 transition-colors z-10"
             data-testid="button-next-testimonial"
           >
-            <ChevronRight className="w-6 h-6" />
-          </Button>
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
         </div>
       </div>
     </section>

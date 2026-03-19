@@ -162,7 +162,7 @@ function Dashboard({ password, onLogout }: { password: string; onLogout: () => v
                       {SCAM_LABELS[s.scamType] ?? s.scamType}
                     </Badge>
                     {s.amountLost && (
-                      <Badge variant="outline" className="border-[#FFD700] text-[#DC2626]">
+                      <Badge variant="outline" className="border-[#FFD700] text-[#7B1418]">
                         Lost: {s.amountLost}
                       </Badge>
                     )}

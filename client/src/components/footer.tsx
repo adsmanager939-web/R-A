@@ -10,111 +10,76 @@ export default function Footer() {
     }
   };
 
+  const navLinks = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "investigations", label: "Services" },
+    { id: "how-it-works", label: "How It Works" },
+    { id: "help", label: "FAQ" },
+    { id: "our-work", label: "Results" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
-    <footer className="bg-gradient-to-br from-[#000000] to-[#111111] text-white py-16">
+    <footer className="bg-[#000000] text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+
+        {/* Main footer content */}
+        <div className="py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div>
             <Logo variant="white" className="mb-6" />
-            <p className="text-white/90 mb-6 max-w-md">
-              Our mission is to give hope back to those who have been deceived. Through relentless investigation and unwavering advocacy, we help victims of fraud reclaim their confidence, their security, and their future.
+            <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+              Our mission is to give hope back to those who have been deceived. Through relentless investigation and unwavering advocacy, we help victims of fraud reclaim their financial security.
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="text-white/70 hover:text-[#FFD700] transition-colors"
-                data-testid="link-linkedin"
-              >
-                <LinkedinIcon className="w-6 h-6" />
+            <div className="flex gap-4 mt-6">
+              <a href="#" className="text-white/30 hover:text-[#FFD700] transition-colors" data-testid="link-linkedin">
+                <LinkedinIcon className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
-                className="text-white/70 hover:text-[#FFD700] transition-colors"
-                data-testid="link-twitter"
-              >
-                <TwitterIcon className="w-6 h-6" />
+              <a href="#" className="text-white/30 hover:text-[#FFD700] transition-colors" data-testid="link-twitter">
+                <TwitterIcon className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
-                className="text-white/70 hover:text-[#FFD700] transition-colors"
-                data-testid="link-facebook"
-              >
-                <FacebookIcon className="w-6 h-6" />
+              <a href="#" className="text-white/30 hover:text-[#FFD700] transition-colors" data-testid="link-facebook">
+                <FacebookIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
-          
+
           <div>
-            <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2 text-white/80">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Navigation</h4>
+            <ul className="space-y-3">
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <button
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-white/60 hover:text-[#FFD700] transition-colors text-sm"
+                    data-testid={`footer-link-${link.id}`}
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
               <li>
-                <button 
-                  onClick={() => scrollToSection("home")}
-                  className="hover:text-[#FFD700] transition-colors"
-                  data-testid="footer-link-home"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection("about")}
-                  className="hover:text-[#FFD700] transition-colors"
-                  data-testid="footer-link-about"
-                >
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection("how-it-works")}
-                  className="hover:text-[#FFD700] transition-colors"
-                  data-testid="footer-link-how-it-works"
-                >
-                  How It Works
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection("success-stories")}
-                  className="hover:text-[#FFD700] transition-colors"
-                  data-testid="footer-link-success-stories"
-                >
-                  Success Stories
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection("contact")}
-                  className="hover:text-[#FFD700] transition-colors"
-                  data-testid="footer-link-contact"
-                >
-                  Contact
-                </button>
-              </li>
-              <li>
-                <Link href="/privacy-policy" className="hover:text-[#FFD700] transition-colors" data-testid="footer-link-privacy-nav">
+                <Link href="/privacy-policy" className="text-white/60 hover:text-[#FFD700] transition-colors text-sm" data-testid="footer-link-privacy-nav">
                   Privacy Policy
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="font-semibold mb-4 text-white">Contact</h4>
-            <ul className="space-y-2 text-white/80">
-              <li data-testid="footer-phone">
-                <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFD700] transition-colors">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Contact</h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-[#FFD700] transition-colors" data-testid="footer-phone">
                   +1 (613) 416-0183
                 </a>
               </li>
-              <li data-testid="footer-email">inquiry@refund-associates.com</li>
-              <li>Available 24/7</li>
+              <li className="text-white/60" data-testid="footer-email">inquiry@refund-associates.com</li>
+              <li className="text-white/60">Available 24/7</li>
             </ul>
-            
-            <div className="mt-6">
-              <h5 className="font-semibold mb-2 text-white">Certifications</h5>
-              <div className="text-sm text-white/80">
+            <div className="mt-8">
+              <h5 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-3">Certifications</h5>
+              <div className="text-sm text-white/50 space-y-1">
                 <p>BBB A+ Rating</p>
                 <p>NAIS Certified</p>
                 <p>Licensed in 53 States</p>
@@ -122,20 +87,21 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        
-        <div className="border-t border-white/20 mt-12 pt-8 text-white">
-          <div className="flex flex-wrap items-center gap-4 mb-3 text-xs">
-            <span>&copy; 2013 Refund & Associates Ltd. All rights reserved.</span>
-            <Link href="/privacy-policy" className="text-[#FFD700] hover:underline" data-testid="footer-link-privacy">
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/10 py-8">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <span className="text-xs text-white/30">&copy; 2013 Refund & Associates Ltd. All rights reserved.</span>
+            <Link href="/privacy-policy" className="text-xs text-[#FFD700] hover:underline" data-testid="footer-link-privacy">
               Privacy Policy
             </Link>
           </div>
-          <div className="text-xs text-white/70 leading-relaxed space-y-1">
+          <div className="text-xs text-white/20 leading-relaxed space-y-1">
             <p>
-              Refund & Associates is a trading name of Refund & Associates Ltd., registered in Canada, with the following identifiers: FINTRAC authorized, Business Number (BN): 842594962, Registry ID: 2112580. Registered Office Location: Cambridge, Ontario. Created: September 7, 2006.
+              Refund & Associates is a trading name of Refund & Associates Ltd., registered in Canada. FINTRAC authorized, Business Number (BN): 842594962, Registry ID: 2112580. Registered Office Location: Cambridge, Ontario. Created: September 7, 2006.
             </p>
             <p>
-              Please note, Refund & Associates does not provide any financial investment services or financial advice.
+              Refund & Associates does not provide any financial investment services or financial advice.
             </p>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import { Building2, Globe, Users, FileCheck } from "lucide-react";
 import ciaLogo from "@assets/Govt-logos - Copy (2)_1759259283932.png";
 import hsbc from "@assets/1280px-HSBC_logo_(2018).svg_1759259266986.png";
 import wealthsimple from "@assets/Capture 12_1759259271299.png";
@@ -15,29 +14,6 @@ import rbc from "@assets/Royal-Bank-of-Canada-Logo_1759259293197.png";
 import td from "@assets/TD-Toronto-Dominion-Bank-Logo-2009-present_1759259295411.jpg";
 
 export default function CollaborationSection() {
-  const partners = [
-    {
-      icon: Building2,
-      title: "Law Enforcement Agencies",
-      description: "Direct collaboration with FBI, Interpol, and local police departments worldwide",
-    },
-    {
-      icon: Globe,
-      title: "International Authorities",
-      description: "Partnerships with regulatory bodies and financial crime units across 50+ countries",
-    },
-    {
-      icon: Users,
-      title: "Financial Institutions",
-      description: "Working relationships with major banks and payment processors for fund recovery",
-    },
-    {
-      icon: FileCheck,
-      title: "Legal Partners",
-      description: "Network of specialized attorneys and legal experts in financial crime prosecution",
-    },
-  ];
-
   const logoPartners = [
     { name: "Central Intelligence Agency", logo: ciaLogo },
     { name: "HSBC", logo: hsbc },
@@ -56,75 +32,71 @@ export default function CollaborationSection() {
   ];
 
   return (
-    <section id="collaboration" className="py-20 bg-white">
+    <section id="collaboration" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#000000] mb-4">Global Collaboration Network</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our success is built on strong partnerships with authorities and institutions worldwide
-          </p>
+        <div className="mb-12">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Our Network</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#000000] uppercase leading-none tracking-tight">
+            Global<br />Partners
+          </h2>
         </div>
 
-        <div className="mb-16 max-w-4xl mx-auto">
-          <img 
-            src="/global-network.jpg" 
-            alt="International collaboration and partnership" 
-            className="w-full h-auto rounded-xl shadow-lg"
+        <div className="mb-14">
+          <img
+            src="/global-network.jpg"
+            alt="International collaboration and partnership"
+            className="w-full h-auto"
             data-testid="img-collaboration"
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="text-center p-6"
-              data-testid={`collaboration-card-${index}`}
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#000000] to-[#B91C1C] rounded-full flex items-center justify-center mx-auto mb-4">
-                <partner.icon className="w-10 h-10 text-[#FFD700]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#000000] mb-3">{partner.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{partner.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-16">
+          {[
+            { title: "Law Enforcement", desc: "Direct collaboration with FBI, Interpol, and local police departments worldwide." },
+            { title: "International Authorities", desc: "Partnerships with regulatory bodies and financial crime units across 50+ countries." },
+            { title: "Financial Institutions", desc: "Working relationships with major banks and payment processors for fund recovery." },
+          ].map((item, index) => (
+            <div key={index} className="border-l border-black/10 pl-8 py-4" data-testid={`collaboration-card-${index}`}>
+              <h3 className="text-lg font-bold text-[#000000] mb-2">{item.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="relative overflow-hidden bg-gray-50 py-8 rounded-xl">
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `
-            @keyframes scroll-left {
-              0% {
-                transform: translateX(0);
+        <div className="border-t border-black/10 pt-12">
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-8">Trusted Partners & Regulators</p>
+          <div className="relative overflow-hidden">
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
+              @keyframes scroll-left {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
               }
-              100% {
-                transform: translateX(-50%);
+              .animate-scroll-left {
+                animation: scroll-left 30s linear infinite;
               }
-            }
-            .animate-scroll-left {
-              animation: scroll-left 30s linear infinite;
-            }
-            .animate-scroll-left:hover {
-              animation-play-state: paused;
-            }
-          `,
-            }}
-          />
-          <div className="flex animate-scroll-left" data-testid="logo-marquee">
-            {[...logoPartners, ...logoPartners].map((partner, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 mx-8 flex items-center justify-center w-40 h-20"
-                data-testid={`partner-logo-${index}`}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-16 max-w-full w-auto h-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                />
-              </div>
-            ))}
+              .animate-scroll-left:hover {
+                animation-play-state: paused;
+              }
+            `,
+              }}
+            />
+            <div className="flex animate-scroll-left" data-testid="logo-marquee">
+              {[...logoPartners, ...logoPartners].map((partner, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 mx-10 flex items-center justify-center w-36 h-16"
+                  data-testid={`partner-logo-${index}`}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-12 max-w-full w-auto h-auto object-contain opacity-50 hover:opacity-80 transition-opacity"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

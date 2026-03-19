@@ -1,50 +1,60 @@
-import { FileText, ShieldCheck, CircleDollarSign } from "lucide-react";
-
 export default function InvestigationsSection() {
-  const steps = [
+  const services = [
     {
-      icon: FileText,
-      title: "Gather the evidence",
-      description: "We collect essential documentation, including bank statements, transaction history, and relevant correspondence, to thoroughly pursue your case. All information is kept strictly confidential and used solely for internal purposes, with general contact details, like your email, occasionally used to connect with individuals in similar situations."
+      number: "01",
+      title: "Investment & Broker Fraud",
+      description: "We take formal steps to pursue recovery in investment and broker fraud cases through the appropriate channels."
     },
     {
-      icon: ShieldCheck,
-      title: "Cooperation with authorities",
-      description: "Systematically confronting entities involved in the illicit transfer of your assets, we leverage our proven expertise and tenacity to recover your funds. Our team collaborates with the appropriate government departments and international investigative agencies to track transactions, identify perpetrators, and bring them to justice."
+      number: "02",
+      title: "Crypto Fraud",
+      description: "We pursue recovery actions in crypto fraud cases based on available evidence and the payment trail."
     },
     {
-      icon: CircleDollarSign,
-      title: "Recover the funds",
-      description: "Conducting a thorough preliminary assessment, we carefully evaluate each case's recovery potential, leveraging our 92% success rate to guide our approach. We prioritize secure, legally compliant transactions to ensure a safe recovery process and are committed to achieving the best possible outcomes to help individuals recover their lost funds."
+      number: "03",
+      title: "Romance Scam",
+      description: "We support romance scam cases using a confidential, structured intake and evidence review."
+    },
+    {
+      number: "04",
+      title: "Job Scam",
+      description: "We assist with job scam cases and guide you through the formal steps and documentation."
+    },
+    {
+      number: "05",
+      title: "Phishing",
+      description: "We help challenge unauthorized transactions and reduce further loss after phishing incidents."
+    },
+    {
+      number: "06",
+      title: "Other Online Scams",
+      description: "We review other online scam cases. Submit details and we'll confirm eligibility for support."
     }
   ];
 
   return (
-    <section id="investigations" className="py-20 bg-gray-50">
+    <section id="investigations" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#000000] mb-4">Our Investigation Process</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A proven three-step approach to recovering your funds and bringing perpetrators to justice
-          </p>
+        <div className="mb-16">
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Our Services</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-none tracking-tight">
+            What We<br />Handle
+          </h2>
         </div>
-        
-        <div className="space-y-8 max-w-5xl mx-auto">
-          {steps.map((step, index) => (
-            <div 
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          {services.map((service, index) => (
+            <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex items-start gap-6"
-              data-testid={`investigation-step-${index}`}
+              className="border-t border-white/10 py-10 px-2 md:pr-16 flex gap-8 group hover:border-[#FFD700]/40 transition-colors"
+              data-testid={`service-${index}`}
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-[#000000] to-[#B91C1C] rounded-full flex items-center justify-center flex-shrink-0">
-                <step.icon className="w-10 h-10 text-[#FFD700]" />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl font-bold text-[#B91C1C]">{index + 1}.</span>
-                  <h3 className="text-xl font-bold text-[#000000]">{step.title}</h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              <span className="text-5xl font-black text-[#FFD700]/30 group-hover:text-[#FFD700]/60 transition-colors leading-none flex-shrink-0 w-16">
+                {service.number}
+              </span>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-white/50 leading-relaxed text-sm">{service.description}</p>
               </div>
             </div>
           ))}

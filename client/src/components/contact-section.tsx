@@ -25,7 +25,7 @@ export default function ContactSection() {
   const { toast } = useToast();
   const [formKey, setFormKey] = useState(0);
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
-  
+
   const form = useForm<InsertContactSubmission>({
     resolver: zodResolver(insertContactSubmissionSchema),
     defaultValues: {
@@ -62,79 +62,62 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="contact" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-4">Get Your Free Consultation</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Take the first step towards recovering your funds. Our experts are ready to help you 24/7.
-          </p>
+        <div className="mb-16">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Get Started</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#000000] uppercase leading-none tracking-tight">
+            Free<br />Consultation
+          </h2>
         </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-2xl font-bold text-[#000000] mb-8">Contact Information</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
-                  <PhoneIcon className="w-6 h-6" />
+            <p className="text-gray-500 mb-10 leading-relaxed">
+              Take the first step towards recovering your funds. Our experts are ready to help you 24/7. We reply within 24 hours for an initial review.
+            </p>
+
+            <div className="space-y-0">
+              {[
+                { icon: PhoneIcon, label: "24/7 Helpline", value: "+1 (613) 416-0183", href: "https://wa.me/16134160183", sub: "Available 24 hours for urgent cases" },
+                { icon: MailIcon, label: "Email Support", value: "inquiry@refund-associates.com", href: null, sub: "Secure encrypted communications" },
+                { icon: ClockIcon, label: "Response Time", value: "Within 24 hours", href: null, sub: "For all case inquiries" },
+                { icon: LockIcon, label: "100% Confidential", value: "Attorney-client privilege", href: null, sub: "All communications encrypted for your security" },
+              ].map((item, index) => (
+                <div key={index} className="border-t border-black/10 py-6 flex items-start gap-6">
+                  <item.icon className="w-5 h-5 text-[#7B1418] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">{item.label}</p>
+                    {item.href ? (
+                      <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-bold text-[#000000] hover:text-[#7B1418] transition-colors" data-testid={`contact-${item.label.toLowerCase().replace(/\s/g, '-')}`}>
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="font-bold text-[#000000]" data-testid={`contact-${item.label.toLowerCase().replace(/\s/g, '-')}`}>{item.value}</p>
+                    )}
+                    <p className="text-sm text-gray-400 mt-0.5">{item.sub}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-[#000000] text-lg mb-1">24/7 Helpline</h4>
-                  <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer" className="text-[#000000] font-semibold text-lg hover:text-[#FFD700] transition-colors" data-testid="phone-number">+1 (613) 416-0183</a>
-                  <p className="text-sm text-gray-500 mt-1">Available 24 hours for urgent cases</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
-                  <MailIcon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#000000] text-lg mb-1">Email Support</h4>
-                  <p className="text-[#000000] font-semibold" data-testid="email-address">inquiry@trueclaim-associates.com</p>
-                  <p className="text-sm text-gray-500 mt-1">Secure encrypted communications</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
-                  <ClockIcon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#000000] text-lg mb-1">Response Time</h4>
-                  <p className="text-[#000000] font-semibold text-lg">Within 2 hours</p>
-                  <p className="text-sm text-gray-500 mt-1">For all case inquiries</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-8 flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <div className="bg-[#B91C1C] text-white p-3 rounded-lg flex-shrink-0">
-                <LockIcon className="w-6 h-6" />
-              </div>
-              <div>
-                <h4 className="font-bold text-[#000000] text-lg mb-1">100% Confidential</h4>
-                <p className="text-sm text-gray-500 mt-1">All communications are protected by attorney-client privilege and encrypted for your security.</p>
-              </div>
+              ))}
+              <div className="border-t border-black/10"></div>
             </div>
           </div>
-          
-          <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+
+          <div className="border border-black/10 p-8">
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" key={formKey}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold">Full Name *</FormLabel>
+                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Full Name *</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="John Doe" 
+                          <Input
+                            placeholder="John Doe"
                             {...field}
-                            className="border-gray-300 focus:border-[#FFD700] focus:ring-[#FFD700] placeholder:text-gray-400"
+                            className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
                             data-testid="input-name"
                           />
                         </FormControl>
@@ -147,12 +130,12 @@ export default function ContactSection() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold">Phone Number *</FormLabel>
+                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Phone Number *</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="(555) 123-4567" 
+                          <Input
+                            placeholder="(555) 123-4567"
                             {...field}
-                            className="border-gray-300 focus:border-[#FFD700] focus:ring-[#FFD700] placeholder:text-gray-400"
+                            className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
                             data-testid="input-phone"
                           />
                         </FormControl>
@@ -161,19 +144,19 @@ export default function ContactSection() {
                     )}
                   />
                 </div>
-                
+
                 <FormField
                   control={form.control}
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[#000000] font-semibold">Email Address *</FormLabel>
+                      <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Email Address *</FormLabel>
                       <FormControl>
-                        <Input 
+                        <Input
                           type="email"
-                          placeholder="john@example.com" 
+                          placeholder="john@example.com"
                           {...field}
-                          className="border-gray-300 focus:border-[#FFD700] focus:ring-[#FFD700] placeholder:text-gray-400"
+                          className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -181,21 +164,21 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
                     name="scamType"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold">Type of Scam *</FormLabel>
+                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Type of Scam *</FormLabel>
                         <Select key={formKey} onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="border-gray-300 focus:border-[#FFD700] focus:ring-[#FFD700]" data-testid="select-scam-type">
+                            <SelectTrigger className="border-black/20 focus:border-[#7B1418] rounded-none" data-testid="select-scam-type">
                               <SelectValue placeholder="Select scam type" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent className="bg-white">
+                          <SelectContent className="bg-white rounded-none">
                             <SelectItem value="romance">Romance Scam</SelectItem>
                             <SelectItem value="crypto">Cryptocurrency Scam</SelectItem>
                             <SelectItem value="investment">Investment Fraud</SelectItem>
@@ -212,13 +195,13 @@ export default function ContactSection() {
                     name="amountLost"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-[#000000] font-semibold">Amount Lost</FormLabel>
+                        <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Amount Lost</FormLabel>
                         <FormControl>
-                          <Input 
-                            placeholder="$50,000" 
+                          <Input
+                            placeholder="$50,000"
                             {...field}
                             value={field.value ?? ""}
-                            className="border-gray-300 focus:border-[#FFD700] focus:ring-[#FFD700] placeholder:text-gray-400"
+                            className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
                             data-testid="input-amount-lost"
                           />
                         </FormControl>
@@ -227,20 +210,20 @@ export default function ContactSection() {
                     )}
                   />
                 </div>
-                
+
                 <FormField
                   control={form.control}
                   name="description"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-[#000000] font-semibold">Brief Description of Your Case</FormLabel>
+                      <FormLabel className="text-[#000000] font-semibold text-sm uppercase tracking-wider">Brief Description</FormLabel>
                       <FormControl>
-                        <Textarea 
+                        <Textarea
                           rows={4}
                           placeholder="Please provide a brief overview of what happened..."
                           {...field}
                           value={field.value ?? ""}
-                          className="border-gray-300 focus:border-[#FFD700] focus:ring-[#FFD700] placeholder:text-gray-400"
+                          className="border-black/20 focus:border-[#7B1418] rounded-none placeholder:text-gray-300"
                           data-testid="textarea-description"
                         />
                       </FormControl>
@@ -248,7 +231,7 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="agreeToTerms"
@@ -258,20 +241,20 @@ export default function ContactSection() {
                         <Checkbox
                           checked={field.value === "true"}
                           onCheckedChange={(checked) => field.onChange(checked ? "true" : "false")}
-                          className="border-gray-300 data-[state=checked]:bg-[#FFD700] data-[state=checked]:border-[#FFD700]"
+                          className="border-black/30 data-[state=checked]:bg-[#7B1418] data-[state=checked]:border-[#7B1418] rounded-none"
                           data-testid="checkbox-agree-terms"
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel className="text-sm text-gray-600 font-normal">
+                        <FormLabel className="text-sm text-gray-500 font-normal">
                           I agree to the{" "}
                           <button
                             type="button"
                             onClick={() => {
-                              const element = document.getElementById("legal");
-                              if (element) element.scrollIntoView({ behavior: 'smooth' });
+                              const el = document.getElementById("legal");
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
                             }}
-                            className="text-[#FFD700] hover:underline font-semibold"
+                            className="text-[#7B1418] hover:underline font-semibold"
                           >
                             Privacy Policy
                           </button>{" "}
@@ -279,10 +262,10 @@ export default function ContactSection() {
                           <button
                             type="button"
                             onClick={() => {
-                              const element = document.getElementById("legal");
-                              if (element) element.scrollIntoView({ behavior: 'smooth' });
+                              const el = document.getElementById("legal");
+                              if (el) el.scrollIntoView({ behavior: 'smooth' });
                             }}
-                            className="text-[#FFD700] hover:underline font-semibold"
+                            className="text-[#7B1418] hover:underline font-semibold"
                           >
                             Legal Disclaimer
                           </button>
@@ -293,10 +276,10 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
-                <Button 
-                  type="submit" 
-                  className="w-full py-6 text-lg font-bold bg-[#B91C1C] hover:bg-[#991B1B] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+
+                <Button
+                  type="submit"
+                  className="w-full py-6 text-base font-bold bg-[#7B1418] hover:bg-[#5E0F12] text-white uppercase tracking-wider rounded-none transition-colors"
                   disabled={submitMutation.isPending}
                   data-testid="button-submit-consultation"
                 >
@@ -316,24 +299,24 @@ export default function ContactSection() {
       </div>
 
       <AlertDialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
-        <AlertDialogContent className="max-w-md bg-white">
+        <AlertDialogContent className="max-w-md bg-white rounded-none border border-black/10">
           <AlertDialogHeader>
             <div className="flex justify-center mb-4">
-              <div className="bg-[#B91C1C] rounded-full p-3">
-                <CheckCircle className="w-12 h-12 text-white" />
+              <div className="bg-[#7B1418] p-3">
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
             </div>
-            <AlertDialogTitle className="text-center text-2xl text-[#000000]">
+            <AlertDialogTitle className="text-center text-2xl text-[#000000] font-black uppercase">
               Inquiry Sent Successfully!
             </AlertDialogTitle>
-            <AlertDialogDescription className="text-center text-gray-600 text-base">
-              Thank you for reaching out to Refund & Associates. A fraud recovery specialist will contact you within 2 hours to discuss your case.
+            <AlertDialogDescription className="text-center text-gray-500 text-base">
+              Thank you for reaching out to Refund & Associates. A fraud recovery specialist will contact you within 24 hours to discuss your case.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <Button 
+            <Button
               onClick={() => setShowSuccessDialog(false)}
-              className="w-full bg-[#B91C1C] hover:bg-[#991B1B] text-white font-semibold"
+              className="w-full bg-[#7B1418] hover:bg-[#5E0F12] text-white font-bold rounded-none uppercase tracking-wider"
             >
               Close
             </Button>

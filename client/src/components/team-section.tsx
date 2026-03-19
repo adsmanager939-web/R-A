@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function TeamSection() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
     slidesToScroll: 1
@@ -31,36 +31,35 @@ export default function TeamSection() {
   ];
 
   return (
-    <section id="team" className="py-20 bg-gray-50">
+    <section id="team" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#000000] mb-4">Our Expert Team</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A global network of seasoned investigators, attorneys, and fraud recovery specialists
-          </p>
+        <div className="mb-12">
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Our People</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
+            Expert Team
+          </h2>
         </div>
-        
+
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef} data-testid="team-carousel">
-            <div className="flex gap-8">
+            <div className="flex gap-6">
               {teamMembers.map((member) => (
-                <div 
+                <div
                   key={member.id}
                   className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                   data-testid={`team-member-${member.id}`}
                 >
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                  <div className="bg-[#111111] overflow-hidden">
                     <div className="aspect-[3/4] overflow-hidden">
-                      <img 
-                        src={member.image} 
+                      <img
+                        src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                       />
                     </div>
-                    
-                    <div className="p-6 text-center">
-                      <h3 className="text-xl font-bold text-[#000000] mb-2">{member.name}</h3>
-                      <p className="text-gray-600">{member.position}</p>
+                    <div className="p-5 border-t border-white/10">
+                      <h3 className="text-base font-bold text-white mb-1">{member.name}</h3>
+                      <p className="text-[#FFD700] text-xs uppercase tracking-widest">{member.position}</p>
                     </div>
                   </div>
                 </div>
@@ -70,25 +69,21 @@ export default function TeamSection() {
 
           <button
             onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10"
+            className="absolute left-0 top-[45%] -translate-y-1/2 -translate-x-3 bg-[#7B1418] hover:bg-[#5E0F12] p-3 transition-colors z-10"
             aria-label="Previous team member"
             data-testid="carousel-prev"
           >
-            <ChevronLeft className="w-6 h-6 text-[#000000]" />
+            <ChevronLeft className="w-5 h-5 text-white" />
           </button>
-          
+
           <button
             onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10"
+            className="absolute right-0 top-[45%] -translate-y-1/2 translate-x-3 bg-[#7B1418] hover:bg-[#5E0F12] p-3 transition-colors z-10"
             aria-label="Next team member"
             data-testid="carousel-next"
           >
-            <ChevronRight className="w-6 h-6 text-[#000000]" />
+            <ChevronRight className="w-5 h-5 text-white" />
           </button>
-        </div>
-
-        <div className="text-center mt-8 text-gray-500 text-sm">
-          Use the arrow buttons or swipe to view more team members
         </div>
       </div>
     </section>

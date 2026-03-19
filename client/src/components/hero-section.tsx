@@ -10,7 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative text-white py-24 md:py-32 overflow-hidden">
+    <section id="home" className="relative text-white min-h-[90vh] flex items-center overflow-hidden">
       <img
         src={heroBg}
         alt=""
@@ -18,46 +18,61 @@ export default function HeroSection() {
         loading="eager"
         data-testid="hero-background"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#000000] via-[#111111] to-[#000000] opacity-80"></div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            TRUSTED BY MORE THAN 200,000 CANADIANS
+      <div className="absolute inset-0 bg-[#000000]/85"></div>
+
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="max-w-3xl">
+          <div className="inline-block bg-[#7B1418] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 mb-8">
+            Cases with losses from CAD 3,000+
+          </div>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-none mb-6 tracking-tight uppercase">
+            Trusted by More Than<br />
+            <span className="text-[#FFD700]">200,000</span> Canadians
           </h1>
-          <p className="text-lg md:text-xl mb-10 text-white/90 leading-relaxed max-w-3xl mx-auto">
-            Leverage AI-driven insights to investigate financial crime and fraud, illuminate blockchain transactions, and resolve crypto cases with speed and confidence. Our veteran investigators use advanced forensics tools to track fund flows across banking systems and multiple blockchains, delivering actionable intelligence for asset recovery and criminal prosecution.
+
+          <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-xl">
+            We help victims of online financial fraud pursue recovery through a structured, documentation-led approach. Formal demands, disputes, and escalation — not empty claims.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button 
+
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <Button
               size="lg"
               onClick={() => scrollToSection("contact")}
-              className="bg-[#B91C1C] hover:bg-[#991B1B] text-white px-8 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105"
+              className="bg-[#7B1418] hover:bg-[#5E0F12] text-white px-8 py-6 text-base font-bold uppercase tracking-wider rounded-none"
               data-testid="button-book-consultation"
             >
-              Book a Free Consultation
+              Get Free Consultation
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection("investigations")}
-              className="border-2 border-white text-white hover:bg-white hover:text-[#000000] px-8 py-6 text-lg font-semibold transition-all"
-              data-testid="button-learn-how-works"
+              onClick={() => scrollToSection("about")}
+              className="border border-white/40 text-white hover:bg-white/10 hover:border-white px-8 py-6 text-base font-bold uppercase tracking-wider rounded-none bg-transparent"
+              data-testid="button-about-us"
             >
-              Learn How It Works
+              About Us
             </Button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-[#FFD700]/30 shadow-xl">
-              <div className="text-4xl font-bold mb-2 text-[#FFD700]" data-testid="stat-recovered">4.9 / 5</div>
-              <div className="text-white font-medium">Client Rating</div>
+
+          <p className="text-xs text-white/40 leading-relaxed max-w-lg">
+            Results are not guaranteed. Outcomes depend on evidence, timing, and third parties. Initial consultation is free with no commitment.
+          </p>
+        </div>
+
+        <div className="absolute bottom-10 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8 max-w-7xl">
+          <div className="border-t border-white/20 pt-8 grid grid-cols-3 gap-8 max-w-xl">
+            <div>
+              <div className="text-3xl font-black text-[#FFD700]" data-testid="stat-rating">4.9/5</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest mt-1">Client Rating</div>
             </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-[#FFD700]/30 shadow-xl">
-              <div className="text-4xl font-bold mb-2 text-[#FFD700]" data-testid="stat-cases">92%</div>
-              <div className="text-white font-medium">Success Rate</div>
+            <div>
+              <div className="text-3xl font-black text-[#FFD700]" data-testid="stat-success">92%</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest mt-1">Success Rate</div>
             </div>
-            <div className="bg-white/15 backdrop-blur-md rounded-xl p-6 border border-[#FFD700]/30 shadow-xl">
-              <div className="text-4xl font-bold mb-2 text-[#FFD700]" data-testid="stat-support">1,300+</div>
-              <div className="text-white font-medium">Expert Team</div>
+            <div>
+              <div className="text-3xl font-black text-[#FFD700]" data-testid="stat-team">1,300+</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest mt-1">Expert Team</div>
             </div>
           </div>
         </div>

@@ -10,49 +10,59 @@ export default function ProcessSection() {
 
   const steps = [
     {
-      number: 1,
-      title: "Gather the Evidence",
-      description: "We collect essential documentation, including bank statements, transaction history, and relevant correspondence, to thoroughly pursue your case. All information is kept strictly confidential and used solely for internal purposes."
+      number: "01",
+      title: "Send Your Request",
+      description: "Contact us through the online form. Share your details — we reply within 24 hours for an initial review."
     },
     {
-      number: 2,
-      title: "Cooperation with Authorities",
-      description: "Systematically confronting entities involved in the illicit transfer of your assets, we leverage our proven expertise and tenacity to recover your funds. Our team collaborates with government departments and international investigative agencies to track transactions, identify perpetrators, and bring them to justice."
+      number: "02",
+      title: "Case Review & Strategy",
+      description: "We review the facts, check the payment trail, and outline a recovery route based on the strongest available path."
     },
     {
-      number: 3,
-      title: "Recover the Funds",
-      description: "Conducting a thorough preliminary assessment, we carefully evaluate each case's recovery potential, leveraging our 92% success rate to guide our approach. We prioritize secure, legally compliant transactions to ensure a safe recovery process."
+      number: "03",
+      title: "Agreement & Formal Action",
+      description: "After an agreement is in place, we begin formal steps and handle requests, disputes, and escalation where applicable."
+    },
+    {
+      number: "04",
+      title: "Recovery & Resolution",
+      description: "We follow the process through the relevant channels to an outcome and keep you updated along the way."
     }
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
+    <section id="how-it-works" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">How We Help You Recover Your Funds</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our proven 3-step process has helped over 200,000 clients recover their lost funds with a 92% success rate.
-          </p>
+        <div className="mb-16">
+          <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">The Process</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#000000] uppercase leading-none tracking-tight">
+            How We<br />Help You
+          </h2>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step) => (
-            <div key={step.number} className="step-card bg-card p-8 rounded-xl text-center" data-testid={`step-${step.number}`}>
-              <div className="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+
+        <div className="space-y-0">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="border-t border-black/10 py-10 grid grid-cols-1 md:grid-cols-[120px_1fr_1fr] gap-6 md:gap-12 group hover:border-[#7B1418]/30 transition-colors"
+              data-testid={`step-${index + 1}`}
+            >
+              <span className="text-6xl font-black text-[#FFD700] leading-none">
                 {step.number}
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-4">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
+              </span>
+              <h3 className="text-2xl font-bold text-[#000000] self-center">{step.title}</h3>
+              <p className="text-gray-500 leading-relaxed self-center">{step.description}</p>
             </div>
           ))}
+          <div className="border-t border-black/10"></div>
         </div>
-        
-        <div className="text-center mt-12">
-          <Button 
+
+        <div className="mt-12">
+          <Button
             size="lg"
             onClick={scrollToContact}
-            className="px-8 py-4 text-lg font-semibold"
+            className="bg-[#7B1418] hover:bg-[#5E0F12] text-white px-8 py-6 text-base font-bold uppercase tracking-wider rounded-none"
             data-testid="button-start-recovery"
           >
             Start Your Recovery Today

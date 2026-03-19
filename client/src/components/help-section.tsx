@@ -1,7 +1,10 @@
-import { HelpCircle, FileText, MessageCircle, Book } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function HelpSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -9,107 +12,82 @@ export default function HelpSection() {
     }
   };
 
-  const helpResources = [
+  const faqs = [
     {
-      icon: HelpCircle,
-      title: "FAQ",
-      description: "Find answers to commonly asked questions about our services and process",
-      items: [
-        "How long does the recovery process take?",
-        "What are your success rates?",
-        "How much does it cost?",
-        "What types of fraud do you handle?"
-      ]
+      question: "Which fraud types fall within your scope of work?",
+      answer: "We focus on financial fraud cases involving documented losses, including cryptocurrency schemes, broker and forex fraud, investment fraud, romance-linked fraud, and business email compromise. We accept cases with losses starting from CAD 3,000. We do not handle e-commerce or marketplace disputes."
     },
     {
-      icon: FileText,
-      title: "Documentation",
-      description: "What documents you need to prepare for your case",
-      items: [
-        "Transaction records and receipts",
-        "Communication history with scammer",
-        "Bank statements and financial records",
-        "Any contracts or agreements"
-      ]
+      question: "What outcomes can I realistically expect?",
+      answer: "Recovery prospects depend on multiple case-specific factors: timing of the report, quality of available documentation, loss amount, traceability of funds, and payment method used. We provide an honest assessment during the initial consultation and only proceed when we see a realistic path to recovery."
     },
     {
-      icon: MessageCircle,
-      title: "Support",
-      description: "Multiple ways to get in touch with our team",
-      items: [
-        "24/7 Phone Support",
-        "Live Chat",
-        "Email Support",
-        "Schedule a Consultation"
-      ]
+      question: "How is your fee structure organized?",
+      answer: "We offer transparent fee arrangements: a success-based fee (percentage of recovered funds — you pay only if we succeed), a hybrid arrangement (reduced retainer plus lower success fee), or an hourly rate for complex matters. The initial consultation is free with no commitment. Third-party costs are discussed separately."
     },
     {
-      icon: Book,
-      title: "Resources",
-      description: "Educational materials to help you understand fraud recovery",
-      items: [
-        "Fraud Prevention Guide",
-        "Recovery Process Overview",
-        "Legal Rights & Options",
-        "Case Studies & Success Stories"
-      ]
+      question: "What is the typical timeline for recovery?",
+      answer: "Timelines vary: chargeback disputes typically take 30–90 days, bank recall requests 1–4 weeks if initiated promptly, straightforward domestic cases 3–6 months, and complex cross-border matters 6–18 months or longer. We begin work immediately upon engagement and provide regular updates."
+    },
+    {
+      question: "Can you assist if the perpetrator operates abroad?",
+      answer: "Yes. The majority of our cases involve international elements. We coordinate with legal counsel in relevant jurisdictions, pursue cross-border asset tracing and freezing applications, and conduct blockchain analysis to follow the money across borders."
+    },
+    {
+      question: "What documents do I need to prepare?",
+      answer: "Typically: bank statements and transaction records, communication history with the scammer (emails, chats, messages), any contracts or investment agreements, proof of payments made, and any screenshots or correspondence with the platform or person involved."
     }
   ];
 
   return (
-    <section id="help" className="py-20 bg-gray-50">
+    <section id="help" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#000000] mb-4">How Can We Help You?</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Get the support and information you need to start your recovery journey
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {helpResources.map((resource, index) => (
-            <div 
-              key={index}
-              className="bg-white rounded-xl p-6 shadow-lg"
-              data-testid={`help-card-${index}`}
-            >
-              <div className="w-14 h-14 bg-gradient-to-br from-[#000000] to-[#DC2626] rounded-lg flex items-center justify-center mb-4">
-                <resource.icon className="w-7 h-7 text-[#FFD700]" />
-              </div>
-              <h3 className="text-xl font-bold text-[#000000] mb-3">{resource.title}</h3>
-              <p className="text-gray-600 mb-4">{resource.description}</p>
-              <ul className="space-y-2">
-                {resource.items.map((item, i) => (
-                  <li key={i} className="text-sm text-gray-500 flex items-start">
-                    <span className="text-[#FFD700] mr-2">•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-gradient-to-r from-[#000000] to-[#DC2626] rounded-xl p-8 text-center text-white">
-          <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
-          <p className="mb-6">Our expert team is ready to assist you with any questions or concerns</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16">
+          <div>
+            <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">FAQ</p>
+            <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight mb-8">
+              Common<br />Questions
+            </h2>
+            <p className="text-gray-500 mb-8 leading-relaxed text-sm">
+              Get answers to the most common questions about our process, fees, and what you can expect.
+            </p>
+            <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-white text-[#000000] hover:bg-gray-100 font-bold px-8"
+              className="bg-[#7B1418] hover:bg-[#5E0F12] text-white font-bold uppercase tracking-wider rounded-none px-6 py-5"
               data-testid="button-contact-from-help"
             >
-              Contact Us Now
+              Ask Us Directly
             </Button>
-            <a href="https://wa.me/16134160183" target="_blank" rel="noopener noreferrer">
-              <Button 
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-[#000000] font-bold px-8"
-                data-testid="button-whatsapp-from-help"
-              >
-                WhatsApp: +1 (613) 416-0183
-              </Button>
-            </a>
+          </div>
+
+          <div className="space-y-0">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-t border-black/10" data-testid={`faq-${index}`}>
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  className="w-full flex items-center justify-between py-6 text-left group"
+                  data-testid={`faq-toggle-${index}`}
+                >
+                  <span className="flex items-center gap-4">
+                    <span className="text-sm font-bold text-[#FFD700]">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-[#000000] font-semibold group-hover:text-[#7B1418] transition-colors">
+                      {faq.question}
+                    </span>
+                  </span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-[#FFD700] flex-shrink-0 ml-4 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                {openIndex === index && (
+                  <div className="pb-6 pl-10 pr-6">
+                    <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+            <div className="border-t border-black/10"></div>
           </div>
         </div>
       </div>

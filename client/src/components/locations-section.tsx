@@ -7,61 +7,61 @@ export default function LocationsSection() {
       country: "Canada",
       address: "123 Bay Street, Suite 1800",
       phone: "+1 (613) 416-0183",
-      email: "toronto@trueclaim-associates.com"
+      email: "inquiry@refund-associates.com"
     },
     {
       city: "New York",
       country: "United States",
       address: "450 Park Avenue, 15th Floor",
       phone: "+1 (212) 555-0123",
-      email: "newyork@trueclaim-associates.com"
+      email: "inquiry@refund-associates.com"
     },
     {
       city: "London",
       country: "United Kingdom",
       address: "25 Old Broad Street",
       phone: "+44 7542 485235",
-      email: "london@trueclaim-associates.com"
+      email: "inquiry@refund-associates.com"
     },
     {
       city: "Singapore",
       country: "Singapore",
       address: "1 Raffles Place, #40-02",
       phone: "+65 6789 0123",
-      email: "singapore@trueclaim-associates.com"
+      email: "inquiry@refund-associates.com"
     }
   ];
 
   return (
-    <section id="locations" className="py-20 bg-white">
+    <section id="locations" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#000000] mb-4">Our Global Locations</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Offices strategically located around the world to serve you better
-          </p>
+        <div className="mb-12">
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Locations</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
+            Global Offices
+          </h2>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 mb-12">
           {offices.map((office, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow"
+              className="border-l border-white/10 pl-6 py-6 hover:border-[#FFD700]/30 transition-colors"
               data-testid={`location-card-${index}`}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#000000] to-[#B91C1C] rounded-lg flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-[#FFD700]" />
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="w-4 h-4 text-[#FFD700]" />
+                <h3 className="text-lg font-bold text-white">{office.city}</h3>
               </div>
-              <h3 className="text-xl font-bold text-[#000000] mb-1">{office.city}</h3>
-              <p className="text-gray-500 text-sm mb-4">{office.country}</p>
-              <div className="space-y-3 text-sm">
-                <p className="text-gray-600">{office.address}</p>
-                <div className="flex items-center gap-2 text-gray-600">
-                  <Phone className="w-4 h-4" />
+              <p className="text-white/40 text-xs uppercase tracking-widest mb-4">{office.country}</p>
+              <div className="space-y-2 text-sm">
+                <p className="text-white/50">{office.address}</p>
+                <div className="flex items-center gap-2 text-white/50">
+                  <Phone className="w-3.5 h-3.5" />
                   <span>{office.phone}</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
-                  <Mail className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-white/50">
+                  <Mail className="w-3.5 h-3.5" />
                   <span>{office.email}</span>
                 </div>
               </div>
@@ -69,10 +69,12 @@ export default function LocationsSection() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-[#000000] to-[#B91C1C] rounded-xl p-8 text-white text-center">
-          <Clock className="w-12 h-12 mx-auto mb-4 text-[#FFD700]" />
-          <h3 className="text-2xl font-bold mb-2">24/7 Global Support</h3>
-          <p className="text-white/90">Our team is available around the clock to assist you, no matter where you are in the world</p>
+        <div className="border border-white/10 p-10 flex items-center gap-6">
+          <Clock className="w-10 h-10 text-[#FFD700] flex-shrink-0" />
+          <div>
+            <h3 className="text-xl font-bold text-white mb-1">24/7 Global Support</h3>
+            <p className="text-white/50 text-sm">Our team is available around the clock to assist you, no matter where you are in the world.</p>
+          </div>
         </div>
       </div>
     </section>
