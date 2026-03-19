@@ -45,14 +45,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="hidden lg:flex bg-[#7B1418] hover:bg-[#5E0F12] text-white font-semibold px-5 py-2 text-xs uppercase tracking-wider rounded-none"
-              data-testid="button-get-consultation-header"
-            >
-              Free Consultation
-            </Button>
-
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="lg:hidden" data-testid="button-mobile-menu">
