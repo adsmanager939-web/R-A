@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { MenuIcon, Phone } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import Logo from "./logo";
 
 export default function Header() {
@@ -45,17 +45,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <a
-              href="https://wa.me/16134160183"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:flex items-center gap-2 text-white/50 hover:text-[#FFD700] transition-colors text-sm"
-              data-testid="header-phone"
-            >
-              <Phone className="w-4 h-4" />
-              <span>+1 (613) 416-0183</span>
-            </a>
-
             <Button
               onClick={() => scrollToSection("contact")}
               className="hidden lg:flex bg-[#7B1418] hover:bg-[#5E0F12] text-white font-semibold px-5 py-2 text-xs uppercase tracking-wider rounded-none"
