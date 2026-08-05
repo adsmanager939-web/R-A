@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "sF5nn31Vdhqc0E6_x0a6b"
+uri = "file://public/logo-export.png"
+type = "image"
+title = "Refund & Associates — Logo (PNG)"
+description = "High-resolution PNG on white background, ready for Gemini or any document editor."
+
+[[outputs]]
+id = "UPqQlzi6DK3yGiDwPOcHg"
+uri = "file://public/logo-export.svg"
+type = "image"
+title = "Refund & Associates — Logo (SVG)"
+description = "Vector SVG — scales to any size without quality loss."

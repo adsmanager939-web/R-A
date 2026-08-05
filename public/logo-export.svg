@@ -1,0 +1,21 @@
+<svg width="400" height="80" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield icon -->
+  <g transform="translate(0, 5)">
+    <path d="M35 1L6 13V37C6 54 18.5 69 35 73C51.5 69 64 54 64 37V13L35 1Z" fill="#7B1418"/>
+    <path d="M35 5L10 15.5V37C10 52 20.8 65.5 35 69.5C49.2 65.5 60 52 60 37V15.5L35 5Z" fill="#5E0F12"/>
+    <path d="M35 5L10 15.5V37C10 52 20.8 65.5 35 69.5C49.2 65.5 60 52 60 37V15.5L35 5Z" fill="url(#shieldGrad)"/>
+    <text x="35" y="42" text-anchor="middle" font-family="Georgia, serif" font-weight="900" font-size="24" fill="#FFD700" letter-spacing="-0.5">R</text>
+    <text x="35" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="white" letter-spacing="2">&amp;A</text>
+    <defs>
+      <linearGradient id="shieldGrad" x1="35" y1="5" x2="35" y2="70" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="#991B1E" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#3D0608" stop-opacity="0.4"/>
+      </linearGradient>
+    </defs>
+  </g>
+
+  <!-- Text -->
+  <text x="82" y="36" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="26" fill="#1a1a1a" letter-spacing="-0.5" text-decoration="none">REFUND &amp; ASSOCIATES</text>
+  <text x="84" y="56" font-family="Arial, sans-serif" font-weight="600" font-size="11" fill="#7B1418" letter-spacing="3">FRAUD RECOVERY SPECIALISTS</text>
+  <line x1="82" y1="62" x2="398" y2="62" stroke="#7B1418" stroke-width="1.5" opacity="0.3"/>
+</svg>
