@@ -31,10 +31,7 @@ export default function HeroSection() {
             <span className="text-[#FFD700]">200,000</span> Canadians
           </h1>
 
-          <p className="text-base text-white/60 mb-10 leading-relaxed max-w-lg">
-            We help victims of online financial fraud pursue recovery through a structured,
-            documentation-led approach. Formal demands, disputes, and escalation — not empty claims.
-          </p>
+          <p className="text-base text-white/60 mb-10 leading-relaxed max-w-lg">We help victims of online financial fraud pursue recovery through a structured, documentation-led approach. Formal demands, disputes, and escalation  not empty claims.</p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
