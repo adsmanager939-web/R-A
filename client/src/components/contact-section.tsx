@@ -1,97 +1,76 @@
-import { PhoneIcon, MailIcon, Clock, ShieldCheck } from "lucide-react";
+import { PhoneIcon, MailIcon } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-24 bg-[#000000]">
+    <section id="contact" className="py-32 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="mb-20">
-          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Contact Us</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-none tracking-tight">
-            We Are Here<br />
-            <span className="text-[#7B1418]">Around The Clock</span>
-          </h2>
-          <p className="mt-6 text-white/50 max-w-xl leading-relaxed">
-            Our team of fraud recovery specialists is available 24 hours a day, 7 days a week.
-            Reach out through any channel below — we typically respond within the hour.
-          </p>
-        </div>
-
-        {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10">
-
-          {/* Phone */}
-          <div className="bg-[#000000] p-10 flex flex-col gap-6 group hover:bg-white/5 transition-colors">
-            <div className="w-12 h-12 bg-[#7B1418] flex items-center justify-center flex-shrink-0">
-              <PhoneIcon className="w-5 h-5 text-white" />
-            </div>
+        <div className="border-t border-white/10 pt-16 mb-24">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <div>
-              <p className="text-xs text-white/30 uppercase tracking-widest mb-2">24 / 7 Helpline</p>
-              <a
-                href="https://wa.me/16134160183"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl font-black text-white hover:text-[#FFD700] transition-colors block leading-tight"
-                data-testid="contact-phone"
-              >
-                +1 (613) 416-0183
-              </a>
-              <p className="mt-3 text-sm text-white/40 leading-relaxed">
-                Available at all hours for urgent cases. Also reachable via WhatsApp.
-              </p>
+              <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-5">Contact</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
+                Speak With a<br />Specialist
+              </h2>
             </div>
-          </div>
-
-          {/* Email */}
-          <div className="bg-[#000000] p-10 flex flex-col gap-6 group hover:bg-white/5 transition-colors">
-            <div className="w-12 h-12 bg-[#7B1418] flex items-center justify-center flex-shrink-0">
-              <MailIcon className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <p className="text-xs text-white/30 uppercase tracking-widest mb-2">Email Support</p>
-              <a
-                href="mailto:inquiry@refund-associates.com"
-                className="text-xl font-black text-white hover:text-[#FFD700] transition-colors block leading-tight break-all"
-                data-testid="contact-email"
-              >
-                inquiry@refund-associates.com
-              </a>
-              <p className="mt-3 text-sm text-white/40 leading-relaxed">
-                All communications are encrypted and strictly confidential. We reply within the hour.
-              </p>
-            </div>
-          </div>
-
-          {/* Hours */}
-          <div className="bg-[#000000] p-10 flex flex-col gap-6 group hover:bg-white/5 transition-colors">
-            <div className="w-12 h-12 bg-[#7B1418] flex items-center justify-center flex-shrink-0">
-              <Clock className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <p className="text-xs text-white/30 uppercase tracking-widest mb-2">Availability</p>
-              <p className="text-2xl font-black text-white leading-tight">
-                24 hrs — 7 Days
-              </p>
-              <p className="mt-3 text-sm text-white/40 leading-relaxed">
-                No appointments needed. Our specialists are standing by across all time zones.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Trust bar */}
-        <div className="mt-px bg-white/10">
-          <div className="bg-[#0a0a0a] px-10 py-6 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <ShieldCheck className="w-5 h-5 text-[#FFD700] flex-shrink-0" />
-            <p className="text-sm text-white/40 leading-relaxed">
-              All case information shared with Refund &amp; Associates is protected under strict confidentiality obligations.
-              We are FINTRAC-authorized and adhere to Canadian federal privacy law (PIPEDA).
+            <p className="text-white/40 text-sm leading-relaxed max-w-xs md:text-right">
+              Our team is available around the clock.<br />
+              All communications are strictly confidential.
             </p>
           </div>
         </div>
 
+        {/* Contact rows */}
+        <div className="space-y-0">
+
+          <a
+            href="https://wa.me/16134160183"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between border-t border-white/10 py-10 hover:border-white/30 transition-colors"
+            data-testid="contact-phone"
+          >
+            <div className="flex items-center gap-8">
+              <PhoneIcon className="w-4 h-4 text-[#7B1418] flex-shrink-0" />
+              <div>
+                <p className="text-xs text-white/25 uppercase tracking-widest mb-2">24 / 7 Helpline</p>
+                <p className="text-2xl md:text-3xl font-black text-white group-hover:text-[#FFD700] transition-colors tracking-tight">
+                  +1 (613) 416-0183
+                </p>
+              </div>
+            </div>
+            <p className="hidden md:block text-xs text-white/25 uppercase tracking-widest">
+              Phone &amp; WhatsApp
+            </p>
+          </a>
+
+          <a
+            href="mailto:inquiry@refund-associates.com"
+            className="group flex items-center justify-between border-t border-white/10 py-10 hover:border-white/30 transition-colors"
+            data-testid="contact-email"
+          >
+            <div className="flex items-center gap-8">
+              <MailIcon className="w-4 h-4 text-[#7B1418] flex-shrink-0" />
+              <div>
+                <p className="text-xs text-white/25 uppercase tracking-widest mb-2">Email</p>
+                <p className="text-2xl md:text-3xl font-black text-white group-hover:text-[#FFD700] transition-colors tracking-tight break-all">
+                  inquiry@refund-associates.com
+                </p>
+              </div>
+            </div>
+            <p className="hidden md:block text-xs text-white/25 uppercase tracking-widest">
+              Encrypted &amp; Secure
+            </p>
+          </a>
+
+          <div className="border-t border-white/10 pt-10 mt-2">
+            <p className="text-xs text-white/20 leading-relaxed max-w-2xl">
+              FINTRAC Authorized &nbsp;·&nbsp; BN 842594962 &nbsp;·&nbsp; All case information shared with Refund &amp; Associates is protected under strict confidentiality obligations and Canadian federal privacy law (PIPEDA).
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
   );
