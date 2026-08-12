@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueClaim & Associates</title>
+
+<!-- Preload the LCP image with high priority -->
+<link rel="preload" as="image" href="hero-office.webp" fetchpriority="high"
+      imagesrcset="hero-office-640.webp 640w, hero-office-1024.webp 1024w, hero-office-1920.webp 1920w"
+      imagesizes="100vw">
+
+<!-- JSON-LD for a legal/financial recovery service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "TrueClaim & Associates",
+  "areaServed": "CA",
+  "description": "Assists victims of online financial fraud in pursuing recovery through a structured, documentation-led process."
+}
+</script>
+
+<style>
+  :root {
+    --color-bg: #0d0d0d;
+    --color-red: #b3121f;      /* verify 4.5:1 against white text */
+    --color-yellow: #f2c200;
+    --color-text: #ffffff;
+    --overlay-start: rgba(0,0,0,.75);
+    --overlay-end: rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--color-text);
+  }
+
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Real <img> instead of CSS background so it gets fetchpriority + srcset */
+  .hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+
+  /* Fixed-opacity scrim, independent of image content, guarantees contrast */
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(100deg, var(--overlay-start) 0%, var(--overlay-start) 45%, var(--overlay-end) 100%);
+  }
+
+  .hero__content {
+    max-width: 46rem;
+    padding: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .hero__kicker {
+    display: inline-block;
+    background: var(--color-red);
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .04em;
+    padding: .5rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Real h1, fluid type scale via clamp() instead of fixed breakpoints */
+  .hero__title {
+    font-size: clamp(2rem, 5.5vw, 3.75rem);
+    line-height: 1.05;
+    margin: 0 0 1.25rem;
+    font-weight: 800;
+  }
+
+  .hero__title mark {
+    background: none;
+    color: var(--color-yellow);
+  }
+
+  .hero__body {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.5;
+    max-width: 38ch;
+    margin: 0 0 2rem;
+    color: rgba(255,255,255,.9);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;           /* WCAG/HIG tap target */
+    padding: .9rem 1.75rem;
+    font-weight: 700;
+    font-size: .95rem;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .btn--primary {
+    background: var(--color-red);
+    color: var(--color-text);
+    border: 2px solid var(--color-red);
+  }
+  .btn--primary:hover { background: #8f0f19; }
+
+  .btn--outline {
+    background: transparent;
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+  }
+  .btn--outline:hover { background: rgba(255,255,255,.1); }
+
+  /* Visible focus state for keyboard users on a photographic background */
+  .btn:focus-visible {
+    outline: 3px solid var(--color-yellow);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <img
+    class="hero__img"
+    src="hero-office.webp"
+    srcset="hero-office-640.webp 640w, hero-office-1024.webp 1024w, hero-office-1920.webp 1920w"
+    sizes="100vw"
+    width="1920" height="1080"
+    alt="TrueClaim & Associates office, forensics analyst reviewing a case file"
+    fetchpriority="high">
+  <div class="hero__scrim"></div>
+
+  <div class="hero__content">
+    <p class="hero__kicker">Cases with losses from CAD 3,000+</p>
+    <h1 class="hero__title">
+      Trusted by more than<br>
+      <mark>200,000</mark> Canadians
+    </h1>
+    <p class="hero__body">
+      We help victims of online financial fraud pursue recovery through a
+      structured, documentation-led approach. Formal demands, disputes,
+      and escalation — not empty claims.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/consultation">Get free consultation</a>
+      <a class="btn btn--outline" href="/about">About us</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
