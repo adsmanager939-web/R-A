@@ -18,7 +18,11 @@ export default function HeroSection() {
         loading="eager"
         data-testid="hero-background"
       />
-      <div className="absolute inset-0 bg-[#000000]/85"></div>
+      {/* Directional scrim: opaque left (text legibility) → semi-transparent right (photo breathes) */}
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(100deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.82) 42%, rgba(0,0,0,0.38) 100%)" }}
+      />
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl">
           <div className="inline-block bg-[#7B1418] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 mb-8">
