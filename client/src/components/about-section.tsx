@@ -1,11 +1,9 @@
-import { CheckCircle } from "lucide-react";
-
 export default function AboutSection() {
   const features = [
-    "Professional team of 1,300+ lawyers & investigators",
+    "Professional team of 1,300+ lawyers and investigators",
     "Cost-effective, transparent fee structure",
-    "Record time results with a 92% success rate",
-    "100% Confidential & secure handling",
+    "92% case success rate",
+    "100% confidential and secure case handling",
   ];
 
   return (
@@ -15,7 +13,7 @@ export default function AboutSection() {
           <div>
             <img
               src="/team-group.jpg"
-              alt="Refund & Associates team of professionals"
+              alt="Refund & Associates team"
               className="w-full h-auto"
               data-testid="img-team"
             />
@@ -25,21 +23,24 @@ export default function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight mb-8">
               A Team of Seasoned<br />Professionals
             </h2>
-            <p className="text-gray-500 mb-10 leading-relaxed">
-              Our team includes over 1,300 skilled lawyers and fraud investigators, each bringing specialized expertise to every case. With deep industry knowledge and advanced investigative tools, we handle even the most complex fraud cases with precision and dedication.
+            <p className="text-gray-400 mb-10 leading-relaxed text-sm">
+              Our team includes over 1,300 skilled lawyers and fraud investigators, each bringing
+              specialized expertise to every case. With deep industry knowledge and advanced
+              investigative tools, we handle even the most complex fraud cases with precision
+              and discretion.
             </p>
-            <div className="space-y-4">
+            <ul className="space-y-4">
               {features.map((feature, index) => (
-                <div
+                <li
                   key={index}
-                  className="flex items-start gap-3"
+                  className="flex items-start gap-4 text-sm text-[#000000]"
                   data-testid={`feature-${index}`}
                 >
-                  <CheckCircle className="w-5 h-5 text-[#FFD700] flex-shrink-0 mt-0.5" />
-                  <p className="text-[#000000] font-medium">{feature}</p>
-                </div>
+                  <span className="text-[#7B1418] font-bold flex-shrink-0 mt-px">—</span>
+                  <span>{feature}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

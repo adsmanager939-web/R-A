@@ -7,7 +7,7 @@ export default function InvestigationsSection() {
     },
     {
       number: "02",
-      title: "Crypto Fraud",
+      title: "Cryptocurrency Fraud",
       description: "We pursue recovery actions in crypto fraud cases based on available evidence and the payment trail."
     },
     {
@@ -28,7 +28,7 @@ export default function InvestigationsSection() {
     {
       number: "06",
       title: "Other Online Scams",
-      description: "We review other online scam cases. Submit details and we'll confirm eligibility for support."
+      description: "We review other online scam cases. Submit details and we will confirm eligibility for support."
     }
   ];
 
@@ -36,9 +36,9 @@ export default function InvestigationsSection() {
     <section id="investigations" className="py-24 bg-[#000000]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Our Services</p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-none tracking-tight">
-            What We<br />Handle
+          <p className="text-xs text-[#FFD700] uppercase tracking-widest font-bold mb-4">Services</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase leading-none tracking-tight">
+            What We Handle
           </h2>
         </div>
 
@@ -46,15 +46,15 @@ export default function InvestigationsSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border-t border-white/10 py-10 px-2 md:pr-16 flex gap-8 group hover:border-[#FFD700]/20 transition-colors"
+              className="border-t border-white/10 py-10 md:pr-16 grid grid-cols-[48px_1fr] gap-6"
               data-testid={`service-${index}`}
             >
-              <span className="text-5xl font-black text-[#FFD700]/30 group-hover:text-[#FFD700]/60 transition-colors leading-none flex-shrink-0 w-16">
+              <span className="text-xs font-bold text-white/20 uppercase tracking-widest pt-1">
                 {service.number}
               </span>
               <div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-white/50 leading-relaxed text-sm">{service.description}</p>
+                <h3 className="text-base font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-white/40 leading-relaxed text-sm">{service.description}</p>
               </div>
             </div>
           ))}

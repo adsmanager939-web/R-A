@@ -7,9 +7,7 @@ export default function HelpSection() {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   const faqs = [
@@ -19,7 +17,7 @@ export default function HelpSection() {
     },
     {
       question: "What outcomes can I realistically expect?",
-      answer: "Recovery prospects depend on multiple case-specific factors: timing of the report, quality of available documentation, loss amount, traceability of funds, and payment method used. We provide an honest assessment during the initial consultation and only proceed when we see a realistic path to recovery."
+      answer: "Recovery prospects depend on multiple case-specific factors: timing of the report, quality of available documentation, loss amount, traceability of funds, and payment method used. We provide an honest assessment during the initial review and only proceed when we see a realistic path to recovery."
     },
     {
       question: "How is your fee structure organized?",
@@ -35,7 +33,7 @@ export default function HelpSection() {
     },
     {
       question: "What documents do I need to prepare?",
-      answer: "Typically: bank statements and transaction records, communication history with the scammer (emails, chats, messages), any contracts or investment agreements, proof of payments made, and any screenshots or correspondence with the platform or person involved."
+      answer: "Typically: bank statements and transaction records, communication history with the scammer, any contracts or investment agreements, proof of payments made, and any screenshots or correspondence with the platform involved."
     }
   ];
 
@@ -48,19 +46,19 @@ export default function HelpSection() {
             <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight mb-8">
               Common<br />Questions
             </h2>
-            <p className="text-gray-500 mb-8 leading-relaxed text-sm">
-              Get answers to the most common questions about our process, fees, and what you can expect.
+            <p className="text-gray-400 mb-10 leading-relaxed text-sm">
+              Answers to the most common questions about our process, fees, and what you can realistically expect.
             </p>
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-[#7B1418] hover:bg-[#5E0F12] text-white font-bold uppercase tracking-wider rounded-none px-6 py-5"
+              className="bg-[#7B1418] hover:bg-[#5E0F12] text-white font-bold uppercase tracking-wider rounded-none px-6 py-5 text-sm"
               data-testid="button-contact-from-help"
             >
               Ask Us Directly
             </Button>
           </div>
 
-          <div className="space-y-0">
+          <div>
             {faqs.map((faq, index) => (
               <div key={index} className="border-t border-black/10" data-testid={`faq-${index}`}>
                 <button
@@ -68,26 +66,21 @@ export default function HelpSection() {
                   className="w-full flex items-center justify-between py-6 text-left group"
                   data-testid={`faq-toggle-${index}`}
                 >
-                  <span className="flex items-center gap-4">
-                    <span className="text-sm font-bold text-[#FFD700]">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-[#000000] font-semibold group-hover:text-[#7B1418] transition-colors">
-                      {faq.question}
-                    </span>
+                  <span className="text-[#000000] font-semibold text-sm group-hover:text-[#7B1418] transition-colors pr-8">
+                    {faq.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#FFD700] flex-shrink-0 ml-4 transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 text-black/30 flex-shrink-0 transition-transform duration-200 ${openIndex === index ? "rotate-180" : ""}`}
                   />
                 </button>
                 {openIndex === index && (
-                  <div className="pb-6 pl-10 pr-6">
-                    <p className="text-gray-500 leading-relaxed">{faq.answer}</p>
+                  <div className="pb-6">
+                    <p className="text-gray-400 leading-relaxed text-sm">{faq.answer}</p>
                   </div>
                 )}
               </div>
             ))}
-            <div className="border-t border-black/10"></div>
+            <div className="border-t border-black/10" />
           </div>
         </div>
       </div>
