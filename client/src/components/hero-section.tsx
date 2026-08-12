@@ -19,7 +19,6 @@ export default function HeroSection() {
         data-testid="hero-background"
       />
       <div className="absolute inset-0 bg-[#000000]/85"></div>
-
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl">
           <div className="inline-block bg-[#7B1418] text-white text-xs font-bold uppercase tracking-widest px-4 py-2 mb-8">
@@ -31,9 +30,7 @@ export default function HeroSection() {
             <span className="text-[#FFD700]">200,000</span> Canadians
           </h1>
 
-          <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-xl">
-            We help victims of online financial fraud pursue recovery through a structured, documentation-led approach. Formal demands, disputes, and escalation — not empty claims.
-          </p>
+          <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-xl">We help victims of online financial fraud pursue recovery through a structured, documentation-led approach. Formal demands, disputes, and escalation  not empty claims.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <Button
