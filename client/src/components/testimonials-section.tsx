@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="success-stories" className="py-24 bg-[#F6F2EE]">
+    <section id="success-stories" className="py-24 bg-[#EDE5DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Testimonials</p>

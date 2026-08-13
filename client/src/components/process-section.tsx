@@ -30,7 +30,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#F6F2EE]">
+    <section id="how-it-works" className="py-24 bg-[#EDE5DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">The Process</p>
