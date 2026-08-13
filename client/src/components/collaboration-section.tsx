@@ -53,7 +53,7 @@ export default function CollaborationSection() {
   ];
 
   return (
-    <section id="collaboration" className="py-24 bg-white">
+    <section id="collaboration" className="py-24 bg-[#F6F2EE]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="mb-16">

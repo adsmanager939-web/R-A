@@ -49,7 +49,7 @@ export default function TeamSection() {
                   className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]"
                   data-testid={`team-member-${member.id}`}
                 >
-                  <div className="bg-white overflow-hidden">
+                  <div className="bg-[#F6F2EE] overflow-hidden">
                     <div className="aspect-[3/4] overflow-hidden bg-gray-100">
                       <img
                         src={member.image}
