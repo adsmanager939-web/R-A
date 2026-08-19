@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="success-stories" className="py-24 bg-[#EDE5DC]">
+    <section id="success-stories" className="py-24 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">Testimonials</p>
@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
                   data-testid={`testimonial-${t.id}`}
                 >
                   <div className="border-l border-black/10 pl-8 pr-6 py-8 h-full flex flex-col">
-                    <blockquote className="text-gray-400 flex-grow leading-relaxed text-sm mb-8 italic">
+                    <blockquote className="text-[#343434] flex-grow leading-relaxed text-base mb-8 italic">
                       "{t.quote}"
                     </blockquote>
                     <div className="border-t border-black/10 pt-5">

@@ -7,7 +7,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#EDE5DC]">
+    <section id="about" className="py-24 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -23,7 +23,7 @@ export default function AboutSection() {
             <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight mb-8">
               A Team of Seasoned<br />Professionals
             </h2>
-            <p className="text-gray-400 mb-10 leading-relaxed text-sm">
+            <p className="text-[#343434] mb-10 leading-relaxed text-base">
               Our team includes over 1,300 skilled lawyers and fraud investigators, each bringing
               specialized expertise to every case. With deep industry knowledge and advanced
               investigative tools, we handle even the most complex fraud cases with precision

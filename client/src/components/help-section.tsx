@@ -38,7 +38,7 @@ export default function HelpSection() {
   ];
 
   return (
-    <section id="help" className="py-24 bg-[#EDE5DC]">
+    <section id="help" className="py-24 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-16">
           <div>
@@ -46,7 +46,7 @@ export default function HelpSection() {
             <h2 className="text-4xl md:text-5xl font-black text-[#000000] uppercase leading-none tracking-tight mb-8">
               Common<br />Questions
             </h2>
-            <p className="text-gray-400 mb-10 leading-relaxed text-sm">
+            <p className="text-[#343434] mb-10 leading-relaxed text-base">
               Answers to the most common questions about our process, fees, and what you can realistically expect.
             </p>
             <Button
@@ -75,7 +75,7 @@ export default function HelpSection() {
                 </button>
                 {openIndex === index && (
                   <div className="pb-6">
-                    <p className="text-gray-400 leading-relaxed text-sm">{faq.answer}</p>
+                    <p className="text-[#343434] leading-relaxed text-base">{faq.answer}</p>
                   </div>
                 )}
               </div>

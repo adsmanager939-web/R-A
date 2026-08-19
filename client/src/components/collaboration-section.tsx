@@ -53,7 +53,7 @@ export default function CollaborationSection() {
   ];
 
   return (
-    <section id="collaboration" className="py-24 bg-[#EDE5DC]">
+    <section id="collaboration" className="py-24 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="mb-16">
@@ -72,7 +72,7 @@ export default function CollaborationSection() {
             >
               <p className="text-xs text-black/25 uppercase tracking-widest mb-3">{study.type}</p>
               <div className="text-3xl font-black text-[#7B1418] mb-6">{study.amount}</div>
-              <blockquote className="text-gray-400 text-sm leading-relaxed mb-6 italic">
+              <blockquote className="text-[#343434] text-base leading-relaxed mb-6 italic">
                 "{study.quote}"
               </blockquote>
               <div className="flex flex-wrap gap-2">

@@ -30,7 +30,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#EDE5DC]">
+    <section id="how-it-works" className="py-24 bg-[#F8F7F4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-xs text-[#7B1418] uppercase tracking-widest font-bold mb-4">The Process</p>
@@ -50,7 +50,7 @@ export default function ProcessSection() {
                 {step.number}
               </span>
               <h3 className="text-lg font-bold text-[#000000]">{step.title}</h3>
-              <p className="text-gray-400 leading-relaxed text-sm">{step.description}</p>
+              <p className="text-[#343434] leading-relaxed text-base">{step.description}</p>
             </div>
           ))}
           <div className="border-t border-black/10" />
