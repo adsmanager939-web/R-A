@@ -18,13 +18,13 @@ export default function TeamSection() {
   }, [emblaApi]);
 
   const teamMembers = [
-    { id: 1, name: "P. David Andress", position: "CEO", image: "/team/member1.png" },
+    { id: 1, name: "P. David Andress", position: "Fraud Investigator", image: "/team/member1.png" },
     { id: 2, name: "Jason B Law", position: "Fraud Investigator", image: "/team/member2.png" },
     { id: 3, name: "Jay A. Ebelhar", position: "Fraud Investigator", image: "/team/member3.png" },
     { id: 4, name: "James Ashford", position: "Lawyer", image: "/team/member4.png" },
     { id: 5, name: "Jack S Chamberlain", position: "Fraud Investigator", image: "/team/member5.png" },
     { id: 6, name: "Greer B. Mallette", position: "Lawyer", image: "/team/member6.png" },
-    { id: 7, name: "Domenic Miller", position: "Fraud Investigator", image: "/team/member7.png" },
+    { id: 7, name: "Domenic Miller", position: "CEO", image: "/team/member7.png" },
     { id: 8, name: "John T. Balhoff II", position: "Lawyer", image: "/team/member8.png" },
     { id: 9, name: "Jonathan Sundheimer", position: "Fraud Investigator", image: "/team/member9.png" },
     { id: 10, name: "Linsey Gleason", position: "Lawyer", image: "/team/member10.png" },
