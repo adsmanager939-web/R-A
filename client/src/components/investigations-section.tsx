@@ -46,15 +46,15 @@ export default function InvestigationsSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border-t border-white/10 py-10 md:pr-16 grid grid-cols-[48px_1fr] gap-6"
+              className="border-t border-white/15 py-10 md:pr-16 grid grid-cols-[48px_1fr] gap-6"
               data-testid={`service-${index}`}
             >
-              <span className="text-xs font-bold text-white/20 uppercase tracking-widest pt-1">
+              <span className="text-xs font-bold text-white/40 uppercase tracking-widest pt-1">
                 {service.number}
               </span>
               <div>
-                <h3 className="text-base font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-white/40 leading-relaxed text-sm">{service.description}</p>
+                <h3 className="text-lg font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-white/70 leading-relaxed text-base">{service.description}</p>
               </div>
             </div>
           ))}
