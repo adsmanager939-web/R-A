@@ -113,7 +113,7 @@ export default function CollaborationSection() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-10 max-w-full w-auto h-auto object-contain opacity-15 hover:opacity-40 transition-opacity"
+                    className="max-h-10 max-w-full w-auto h-auto object-contain opacity-40 hover:opacity-75 transition-opacity"
                   />
                 </div>
               ))}
